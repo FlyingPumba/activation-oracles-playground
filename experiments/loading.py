@@ -20,13 +20,9 @@
 # ========================================
 
 import os
-import sys
 
 # Disable torch dynamo for stability
 os.environ["TORCHDYNAMO_DISABLE"] = "1"
-
-# Add the activation_oracles submodule to the path
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "activation_oracles"))
 
 import torch
 from peft import LoraConfig, PeftModel
