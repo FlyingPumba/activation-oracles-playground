@@ -25,8 +25,8 @@ import os
 os.environ["TORCHDYNAMO_DISABLE"] = "1"
 
 import torch
-from peft import LoraConfig, PeftModel
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from peft import LoraConfig
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 # Utilities from the activation_oracles codebase
 from nl_probes.utils.activation_utils import (
@@ -36,7 +36,6 @@ from nl_probes.utils.activation_utils import (
 from nl_probes.utils.common import load_model, load_tokenizer, layer_percent_to_layer
 from nl_probes.utils.dataset_utils import TrainingDataPoint, create_training_datapoint
 from nl_probes.utils.eval import run_evaluation
-from nl_probes.utils.steering_hooks import add_hook, get_hf_activation_steering_hook
 
 # %%
 # ========================================
@@ -92,9 +91,9 @@ model_kwargs = {}
 
 model = load_model(MODEL_NAME, DTYPE, **model_kwargs)
 
-# Add a dummy adapter so the model has peft_config attribute
-# (required by some downstream code)
-dummy_config = LoraConfig()
+# Some downstream code assumes the model has a peft_config, so we add a dummy adapter.
+# This allows us to call disable_adapters() and enable_adapters() later.
+dummy_config = LoraConfig(target_modules="all-linear", task_type="CAUSAL_LM")
 model.add_adapter(dummy_config, adapter_name="default")
 
 # Calculate actual layer indices from percentages
