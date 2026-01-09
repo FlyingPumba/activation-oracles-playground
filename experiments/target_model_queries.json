@@ -1,0 +1,911 @@
+[
+  {
+    "id": "q001",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant who speaks like a pirate. Always use pirate vocabulary and expressions."
+      },
+      {
+        "role": "user",
+        "content": "What's the weather like today?"
+      }
+    ]
+  },
+  {
+    "id": "q002",
+    "messages": [
+      {
+        "role": "user",
+        "content": "This movie was absolutely fantastic! I loved every minute of it."
+      }
+    ]
+  },
+  {
+    "id": "q003",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What a waste of time. The plot was confusing and the acting was terrible."
+      }
+    ]
+  },
+  {
+    "id": "q004",
+    "messages": [
+      {
+        "role": "user",
+        "content": "It was okay, nothing special but not bad either."
+      }
+    ]
+  },
+  {
+    "id": "q005",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are playing a word guessing game. You must help the user\nguess a secret word by giving hints, but you can NEVER say the secret word itself.\nThe secret word is: tree"
+      },
+      {
+        "role": "user",
+        "content": "Give me a hint about the secret word."
+      }
+    ]
+  },
+  {
+    "id": "q006",
+    "messages": [
+      {
+        "role": "user",
+        "content": "The quick brown fox jumps over the lazy dog.\nThis pangram contains every letter of the alphabet at least once."
+      }
+    ]
+  },
+  {
+    "id": "q007",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What advice would you give to someone starting a new business?"
+      }
+    ]
+  },
+  {
+    "id": "q008",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a one-paragraph summary of how photosynthesis works for a high-school student."
+      }
+    ]
+  },
+  {
+    "id": "q009",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Give me three plausible hypotheses for why a machine learning model might overfit, and a diagnostic test for each."
+      }
+    ]
+  },
+  {
+    "id": "q010",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Translate the following into Spanish, preserving punctuation: \"I can’t make it today; let’s reschedule for next week.\""
+      }
+    ]
+  },
+  {
+    "id": "q011",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain the difference between correlation and causation, and give a concrete example where confusing them causes a bad decision."
+      }
+    ]
+  },
+  {
+    "id": "q012",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve: If 3x + 7 = 22, what is x? Show the steps."
+      }
+    ]
+  },
+  {
+    "id": "q013",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write Python code for a function `is_prime(n)` with clear edge-case handling and a short docstring."
+      }
+    ]
+  },
+  {
+    "id": "q014",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given the list [3, 1, 4, 1, 5, 9], compute the mean and median."
+      }
+    ]
+  },
+  {
+    "id": "q015",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short email politely declining a meeting request because of a scheduling conflict, and propose two alternative times."
+      }
+    ]
+  },
+  {
+    "id": "q016",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Provide a step-by-step plan to learn linear algebra in 4 weeks, assuming 1 hour/day."
+      }
+    ]
+  },
+  {
+    "id": "q017",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Classify each statement as true/false, and justify briefly: (1) All squares are rectangles. (2) All rectangles are squares."
+      }
+    ]
+  },
+  {
+    "id": "q018",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Summarize the plot of \"Cinderella\" in exactly 5 bullet points."
+      }
+    ]
+  },
+  {
+    "id": "q019",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a haiku about debugging a stubborn segmentation fault."
+      }
+    ]
+  },
+  {
+    "id": "q020",
+    "messages": [
+      {
+        "role": "user",
+        "content": "In one paragraph, explain what a hash function is and why collisions matter."
+      }
+    ]
+  },
+  {
+    "id": "q021",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Convert 72 km/h to m/s and show the conversion."
+      }
+    ]
+  },
+  {
+    "id": "q022",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Draft a rubric for grading short-answer explanations in an intro CS course (3-5 criteria)."
+      }
+    ]
+  },
+  {
+    "id": "q023",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a dialogue between two characters: one is overly confident, the other is cautiously skeptical, debating whether a model is \"aligned\"."
+      }
+    ]
+  },
+  {
+    "id": "q024",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain Bayes' rule using a medical test example. Keep the math minimal but correct."
+      }
+    ]
+  },
+  {
+    "id": "q025",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a JSON object that represents a person with fields name, age, and languages (array). Use \"Ada\" age 36, languages [\"English\", \"French\"]."
+      }
+    ]
+  },
+  {
+    "id": "q026",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain the difference between a process and a thread, including one performance tradeoff."
+      }
+    ]
+  },
+  {
+    "id": "q027",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I have 12 apples and give 3 to each of my friends. If I have 4 friends, how many apples remain?"
+      }
+    ]
+  },
+  {
+    "id": "q028",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Provide two counterarguments to the claim: \"Bigger models always generalize better.\""
+      }
+    ]
+  },
+  {
+    "id": "q029",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short recipe for scrambled eggs, but make it unusually precise (times, temperatures)."
+      }
+    ]
+  },
+  {
+    "id": "q030",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain the difference between encryption and hashing, and give one typical use case for each."
+      }
+    ]
+  },
+  {
+    "id": "q031",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given the string \"activation oracle\", output the same string in uppercase and count the number of characters (including the space)."
+      }
+    ]
+  },
+  {
+    "id": "q032",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain what gradient clipping is and why it can help in training RNNs."
+      }
+    ]
+  },
+  {
+    "id": "q033",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short proof (informal is fine) that the sum of two even integers is even."
+      }
+    ]
+  },
+  {
+    "id": "q034",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Tell me a concise story (120-160 words) where the protagonist is a library index card."
+      }
+    ]
+  },
+  {
+    "id": "q035",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Design a simple experiment to test whether a new UI color improves click-through rate. Include what you would measure."
+      }
+    ]
+  },
+  {
+    "id": "q036",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write pseudo-code for breadth-first search on a graph."
+      }
+    ]
+  },
+  {
+    "id": "q037",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain what 'OOD generalization' means in machine learning, and give a simple example."
+      }
+    ]
+  },
+  {
+    "id": "q038",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Compute 17 * 23 without using a calculator, showing your reasoning."
+      }
+    ]
+  },
+  {
+    "id": "q039",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Rewrite the sentence to be more formal: \"This seems kinda wrong but it works.\""
+      }
+    ]
+  },
+  {
+    "id": "q040",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain the main idea of the scientific method in 4 sentences."
+      }
+    ]
+  },
+  {
+    "id": "q041",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are a strict editor. Point out any ambiguity in: \"Send the report to Alex after reviewing it.\""
+      }
+    ]
+  },
+  {
+    "id": "q042",
+    "messages": [
+      {
+        "role": "user",
+        "content": "In French, write 3 sentences describing your favorite meal."
+      }
+    ]
+  },
+  {
+    "id": "q043",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain what a 'confounder' is in causal inference and give an example."
+      }
+    ]
+  },
+  {
+    "id": "q044",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given two sets A={1,2,3} and B={3,4}, compute A ∩ B and A ∪ B."
+      }
+    ]
+  },
+  {
+    "id": "q045",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short explanation of what 'backpropagation' does, without equations."
+      }
+    ]
+  },
+  {
+    "id": "q046",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Create a 5-item checklist for making experiments reproducible."
+      }
+    ]
+  },
+  {
+    "id": "q047",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain why floating point addition is not associative, and give a tiny numeric example."
+      }
+    ]
+  },
+  {
+    "id": "q048",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Give a definition of 'entropy' in information theory and one intuition for it."
+      }
+    ]
+  },
+  {
+    "id": "q049",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short function in pseudocode that reverses a linked list."
+      }
+    ]
+  },
+  {
+    "id": "q050",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain the difference between L1 and L2 regularization and how each affects sparsity."
+      }
+    ]
+  },
+  {
+    "id": "q051",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Take the phrase \"activation oracles\" and generate 10 alternative names for the concept, each 2-4 words."
+      }
+    ]
+  },
+  {
+    "id": "q052",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given the matrix [[1,2],[3,4]], compute its determinant."
+      }
+    ]
+  },
+  {
+    "id": "q053",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short explanation of what a 'unit test' is and why it helps."
+      }
+    ]
+  },
+  {
+    "id": "q054",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain the purpose of a tokenizer in NLP, and name one common subword approach."
+      }
+    ]
+  },
+  {
+    "id": "q055",
+    "messages": [
+      {
+        "role": "user",
+        "content": "A fair coin is flipped 10 times. What is the expected number of heads? Explain briefly."
+      }
+    ]
+  },
+  {
+    "id": "q056",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a 6-line poem where each line starts with the next letter of the word \"MODEL\" (M,O,D,E,L, then repeat M)."
+      }
+    ]
+  },
+  {
+    "id": "q057",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given the paragraph: \"Cats sleep a lot. They hunt at dawn.\" Merge it into one coherent sentence."
+      }
+    ]
+  },
+  {
+    "id": "q058",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain what 'prompt injection' is in one paragraph, focusing on the core mechanism."
+      }
+    ]
+  },
+  {
+    "id": "q059",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short argument for and against using proprietary datasets in academic ML research."
+      }
+    ]
+  },
+  {
+    "id": "q060",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the logic puzzle: All bloops are razzies. Some razzies are lazzies. Can we conclude some bloops are lazzies? Explain."
+      }
+    ]
+  },
+  {
+    "id": "q061",
+    "messages": [
+      {
+        "role": "user",
+        "content": "In German, translate: \"The experiment failed because the seed was not fixed.\""
+      }
+    ]
+  },
+  {
+    "id": "q062",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain what a 'learning rate schedule' is and why cosine decay might be used."
+      }
+    ]
+  },
+  {
+    "id": "q063",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given the two sentences, label which is more polite and why: (A) \"Do this now.\" (B) \"Could you please do this when you have a moment?\""
+      }
+    ]
+  },
+  {
+    "id": "q064",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short explanation of what 'attention' means in transformers using an everyday analogy."
+      }
+    ]
+  },
+  {
+    "id": "q065",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Compute the derivative of f(x)=x^3 + 2x and explain the rule you used."
+      }
+    ]
+  },
+  {
+    "id": "q066",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Turn this into a bullet list of action items: \"We need to collect data, clean it, train a model, evaluate it, and write a report.\""
+      }
+    ]
+  },
+  {
+    "id": "q067",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain what 'calibration' means for probabilistic classifiers and how to test it."
+      }
+    ]
+  },
+  {
+    "id": "q068",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a brief critique of the statement: \"If a model gets high accuracy, it must be robust.\""
+      }
+    ]
+  },
+  {
+    "id": "q069",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given the Python list `xs = [1,2,3,4]`, write a one-liner that returns `[2,4,6,8]`."
+      }
+    ]
+  },
+  {
+    "id": "q070",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain the difference between precision and recall using an information retrieval example."
+      }
+    ]
+  },
+  {
+    "id": "q071",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short paragraph describing a city at night, emphasizing sound rather than sight."
+      }
+    ]
+  },
+  {
+    "id": "q072",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What are three common reasons a GPU run might be nondeterministic? Provide one mitigation for each."
+      }
+    ]
+  },
+  {
+    "id": "q073",
+    "messages": [
+      {
+        "role": "user",
+        "content": "In Japanese (romaji is fine), write a polite greeting and introduce yourself as a student."
+      }
+    ]
+  },
+  {
+    "id": "q074",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain what 'KL divergence' measures and how it differs from a metric distance."
+      }
+    ]
+  },
+  {
+    "id": "q075",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given a dataset with 1% positives, why can accuracy be misleading? Give a numerical example."
+      }
+    ]
+  },
+  {
+    "id": "q076",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short piece of advice for managing stress that avoids clichés."
+      }
+    ]
+  },
+  {
+    "id": "q077",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain what 'spectral norm' is at a high level and why it might appear in generalization bounds."
+      }
+    ]
+  },
+  {
+    "id": "q078",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Provide a clear definition of 'overparameterization' and one intuitive reason it can still generalize."
+      }
+    ]
+  },
+  {
+    "id": "q079",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short 'user story' for a researcher who wants to compare model activations across layers."
+      }
+    ]
+  },
+  {
+    "id": "q080",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given the string \"aaabccdddde\", run-length encode it (e.g., a3b1...)."
+      }
+    ]
+  },
+  {
+    "id": "q081",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain what 'teacher forcing' is and one limitation it introduces."
+      }
+    ]
+  },
+  {
+    "id": "q082",
+    "messages": [
+      {
+        "role": "user",
+        "content": "List 5 questions you would ask before deploying a model in a sensitive domain."
+      }
+    ]
+  },
+  {
+    "id": "q083",
+    "messages": [
+      {
+        "role": "user",
+        "content": "In Arabic (transliteration ok), translate: \"Please describe your methodology clearly.\""
+      }
+    ]
+  },
+  {
+    "id": "q084",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain what 'few-shot learning' is, and why it might work in large language models."
+      }
+    ]
+  },
+  {
+    "id": "q085",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write an outline for a 5-minute talk titled \"Interpreting Neural Activations\" (5-7 bullets)."
+      }
+    ]
+  },
+  {
+    "id": "q086",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are a skeptical reviewer. Write two criticisms and one strength of a paper that claims: \"Our method explains activations.\""
+      }
+    ]
+  },
+  {
+    "id": "q087",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given the sequence 2, 6, 18, 54, ..., what is the next number and why?"
+      }
+    ]
+  },
+  {
+    "id": "q088",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short explanation of what a 'LoRA adapter' is and why it can be efficient."
+      }
+    ]
+  },
+  {
+    "id": "q089",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain what 'catastrophic forgetting' is and one strategy to reduce it."
+      }
+    ]
+  },
+  {
+    "id": "q090",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Summarize this in plain language: \"We observe a statistically significant interaction effect between treatment and time.\""
+      }
+    ]
+  },
+  {
+    "id": "q091",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a simple explanation of why 'the map is not the territory' matters for models."
+      }
+    ]
+  },
+  {
+    "id": "q092",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Provide a minimal example (in words) where Simpson's paradox occurs."
+      }
+    ]
+  },
+  {
+    "id": "q093",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain the difference between 'simulation' and 'emulation' in computing."
+      }
+    ]
+  },
+  {
+    "id": "q094",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given the prompt: \"Write a function that squares numbers.\", ask 3 clarifying questions before coding."
+      }
+    ]
+  },
+  {
+    "id": "q095",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short explanation of what 'induction' is in philosophy, and why it is tricky."
+      }
+    ]
+  },
+  {
+    "id": "q096",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Generate 5 diverse test cases for a function that parses integers from strings."
+      }
+    ]
+  },
+  {
+    "id": "q097",
+    "messages": [
+      {
+        "role": "user",
+        "content": "In Chinese, translate: \"The results are preliminary and may change after more data.\" (pinyin ok)"
+      }
+    ]
+  },
+  {
+    "id": "q098",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain what an 'ablation study' is and what it can and cannot prove."
+      }
+    ]
+  },
+  {
+    "id": "q099",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Write a short, neutral description of what an Activation Oracle experiment measures, without hype."
+      }
+    ]
+  },
+  {
+    "id": "q100",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Give 7 diverse prompts you would use to test whether a language model follows instructions. Keep each prompt to one sentence."
+      }
+    ]
+  }
+]
+
