@@ -91,10 +91,15 @@ model_kwargs = {}
 
 model = load_model(MODEL_NAME, DTYPE, **model_kwargs)
 
-# Some downstream code assumes the model has a peft_config, so we add a dummy adapter.
-# This allows us to call disable_adapters() and enable_adapters() later.
-dummy_config = LoraConfig(target_modules="all-linear", task_type="CAUSAL_LM")
-model.add_adapter(dummy_config, adapter_name="default")
+# Some downstream code assumes the model has a PEFT adapter API (e.g. peft_config,
+# disable_adapters/enable_adapters). If it's missing, add a dummy adapter to enable it.
+if not (
+    hasattr(model, "peft_config")
+    and hasattr(model, "disable_adapters")
+    and hasattr(model, "enable_adapters")
+):
+    dummy_config = LoraConfig(target_modules="all-linear", task_type="CAUSAL_LM")
+    model.add_adapter(dummy_config, adapter_name="default")
 
 # Calculate actual layer indices from percentages
 ACT_LAYERS = [layer_percent_to_layer(MODEL_NAME, lp) for lp in LAYER_PERCENTS]

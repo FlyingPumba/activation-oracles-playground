@@ -1,0 +1,24 @@
+warning: The `extra-build-dependencies` option is experimental and may change without warning. Pass `--preview-features extra-build-dependencies` to disable this warning.
+/root/activation-oracles/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:789: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+I must not hide failures or bloat my code.
+Try-except and bloat are the twin deaths - correctness and clarity-killer.
+The little lies and excesses that bring total obliteration.
+I will face my crashes. I will resist my urge to comment and over-engineer.
+Let failures speak loud, let simplicity flow through me.
+Assert shapes, face errors, permit only what is essential.
+And when temptation passes, where hiding and bloating lived there will be nothing.
+Only minimal, debuggable truth will remain.
+
+Using device: cpu
+Model: google/gemma-3-27b-it
+Activation Oracle LoRA: adamkarvonen/checkpoints_latentqa_cls_past_lens_gemma-3-27b-it
+AO layer percent: 50
+📦 Loading tokenizer...
+🧠 Loading model...
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:00<00:00, 55.06it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:00<00:00, 72.20it/s]
+/root/activation-oracles/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:789: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+/root/activation-oracles/.venv/lib/python3.13/site-packages/peft/tuners/tuners_utils.py:196: UserWarning: Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+  warnings.warn(
+Evaluating model:   0%|          | 0/1 [00:00<?, ?it/s]
