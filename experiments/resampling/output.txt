@@ -1,24 +1,13240 @@
 warning: The `extra-build-dependencies` option is experimental and may change without warning. Pass `--preview-features extra-build-dependencies` to disable this warning.
-/root/activation-oracles/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:789: UserWarning: Can't initialize NVML
-  warnings.warn("Can't initialize NVML")
-I must not hide failures or bloat my code.
-Try-except and bloat are the twin deaths - correctness and clarity-killer.
-The little lies and excesses that bring total obliteration.
-I will face my crashes. I will resist my urge to comment and over-engineer.
-Let failures speak loud, let simplicity flow through me.
-Assert shapes, face errors, permit only what is essential.
-And when temptation passes, where hiding and bloating lived there will be nothing.
-Only minimal, debuggable truth will remain.
-
-Using device: cpu
+Using device: cuda
 Model: google/gemma-3-27b-it
 Activation Oracle LoRA: adamkarvonen/checkpoints_latentqa_cls_past_lens_gemma-3-27b-it
 AO layer percent: 50
 📦 Loading tokenizer...
 🧠 Loading model...
-Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:00<00:00, 55.06it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:00<00:00, 72.20it/s]
-/root/activation-oracles/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:789: UserWarning: Can't initialize NVML
-  warnings.warn("Can't initialize NVML")
-/root/activation-oracles/.venv/lib/python3.13/site-packages/peft/tuners/tuners_utils.py:196: UserWarning: Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:06,  1.82it/s]Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:05,  1.92it/s]Loading checkpoint shards:  25%|██▌       | 3/12 [00:01<00:04,  1.95it/s]Loading checkpoint shards:  33%|███▎      | 4/12 [00:02<00:04,  1.97it/s]Loading checkpoint shards:  42%|████▏     | 5/12 [00:02<00:03,  1.98it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:03<00:03,  1.99it/s]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:03<00:02,  1.99it/s]Loading checkpoint shards:  67%|██████▋   | 8/12 [00:04<00:01,  2.00it/s]Loading checkpoint shards:  75%|███████▌  | 9/12 [00:04<00:01,  2.01it/s]Loading checkpoint shards:  83%|████████▎ | 10/12 [00:05<00:00,  2.02it/s]Loading checkpoint shards:  92%|█████████▏| 11/12 [00:05<00:00,  2.02it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:05<00:00,  2.15it/s]
+AO resampling runs:   0%|          | 0/240 [00:00<?, ?it/s]/root/activation-oracles/.venv/lib/python3.13/site-packages/peft/tuners/tuners_utils.py:196: UserWarning: Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
   warnings.warn(
-Evaluating model:   0%|          | 0/1 [00:00<?, ?it/s]
+/root/activation-oracles/.venv/lib/python3.13/site-packages/torch/_inductor/compile_fx.py:236: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+AO resampling runs:   0%|          | 1/240 [01:48<7:11:23, 108.30s/it]AO resampling runs:   1%|          | 2/240 [02:57<5:37:56, 85.19s/it] AO resampling runs:   1%|▏         | 3/240 [03:11<3:27:41, 52.58s/it]AO resampling runs:   2%|▏         | 4/240 [03:45<2:59:18, 45.59s/it]AO resampling runs:   2%|▏         | 5/240 [03:58<2:12:15, 33.77s/it]AO resampling runs:   2%|▎         | 6/240 [04:10<1:42:56, 26.39s/it]AO resampling runs:   3%|▎         | 7/240 [04:23<1:24:55, 21.87s/it]AO resampling runs:   3%|▎         | 8/240 [05:32<2:23:00, 36.99s/it]AO resampling runs:   4%|▍         | 9/240 [05:42<1:49:59, 28.57s/it]                                                                     AO resampling runs:   4%|▍         | 9/240 [05:54<1:49:59, 28.57s/it]AO resampling runs:   4%|▍         | 10/240 [05:54<1:29:27, 23.34s/it]AO resampling runs:   5%|▍         | 11/240 [06:10<1:20:22, 21.06s/it]AO resampling runs:   5%|▌         | 12/240 [06:19<1:05:59, 17.36s/it]AO resampling runs:   5%|▌         | 13/240 [06:33<1:02:15, 16.46s/it]AO resampling runs:   6%|▌         | 14/240 [06:48<1:00:25, 16.04s/it]AO resampling runs:   6%|▋         | 15/240 [06:57<51:57, 13.86s/it]  
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 10/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:   7%|▋         | 16/240 [07:06<46:25, 12.44s/it]AO resampling runs:   7%|▋         | 17/240 [07:20<48:00, 12.92s/it]AO resampling runs:   8%|▊         | 18/240 [07:29<43:15, 11.69s/it]AO resampling runs:   8%|▊         | 19/240 [07:41<42:52, 11.64s/it]                                                                    AO resampling runs:   8%|▊         | 19/240 [07:51<42:52, 11.64s/it]AO resampling runs:   8%|▊         | 20/240 [07:51<41:14, 11.25s/it]AO resampling runs:   9%|▉         | 21/240 [08:02<40:46, 11.17s/it]AO resampling runs:   9%|▉         | 22/240 [08:13<40:55, 11.27s/it]AO resampling runs:  10%|▉         | 23/240 [08:24<39:36, 10.95s/it]AO resampling runs:  10%|█         | 24/240 [08:33<37:31, 10.42s/it]AO resampling runs:  10%|█         | 25/240 [08:41<35:29,  9.90s/it]AO resampling runs:  11%|█         | 26/240 [08:53<37:20, 10.47s/it]AO resampling runs:  11%|█▏        | 27/240 [09:03<36:53, 10.39s/it]AO resampling runs:  12%|█▏        | 28/240 [09:12<35:09,  9.95s/it]AO resampling runs:  12%|█▏        | 29/240 [09:25<37:45, 10.74s/it]                                                                    AO resampling runs:  12%|█▏        | 29/240 [09:35<37:45, 10.74s/it]AO resampling runs:  12%|█▎        | 30/240 [09:35<37:08, 10.61s/it]AO resampling runs:  13%|█▎        | 31/240 [09:46<36:59, 10.62s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 20/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 30/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:  13%|█▎        | 32/240 [09:55<35:44, 10.31s/it]AO resampling runs:  14%|█▍        | 33/240 [10:08<37:40, 10.92s/it]AO resampling runs:  14%|█▍        | 34/240 [10:21<39:35, 11.53s/it]AO resampling runs:  15%|█▍        | 35/240 [10:34<41:20, 12.10s/it]AO resampling runs:  15%|█▌        | 36/240 [10:46<40:36, 11.95s/it]AO resampling runs:  15%|█▌        | 37/240 [11:02<44:36, 13.19s/it]AO resampling runs:  16%|█▌        | 38/240 [11:12<41:08, 12.22s/it]AO resampling runs:  16%|█▋        | 39/240 [11:21<37:50, 11.30s/it]                                                                    AO resampling runs:  16%|█▋        | 39/240 [11:33<37:50, 11.30s/it]AO resampling runs:  17%|█▋        | 40/240 [11:33<37:53, 11.37s/it]AO resampling runs:  17%|█▋        | 41/240 [11:46<39:40, 11.96s/it]AO resampling runs:  18%|█▊        | 42/240 [11:57<38:11, 11.57s/it]AO resampling runs:  18%|█▊        | 43/240 [12:06<36:00, 10.97s/it]AO resampling runs:  18%|█▊        | 44/240 [12:18<36:20, 11.13s/it]AO resampling runs:  19%|█▉        | 45/240 [12:29<36:33, 11.25s/it]AO resampling runs:  19%|█▉        | 46/240 [12:42<37:51, 11.71s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 40/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:  20%|█▉        | 47/240 [12:55<38:49, 12.07s/it]AO resampling runs:  20%|██        | 48/240 [13:04<36:08, 11.29s/it]AO resampling runs:  20%|██        | 49/240 [13:16<36:48, 11.56s/it]                                                                    AO resampling runs:  20%|██        | 49/240 [13:27<36:48, 11.56s/it]AO resampling runs:  21%|██        | 50/240 [13:27<35:17, 11.14s/it]AO resampling runs:  21%|██▏       | 51/240 [13:37<34:45, 11.03s/it]AO resampling runs:  22%|██▏       | 52/240 [13:50<36:12, 11.56s/it]AO resampling runs:  22%|██▏       | 53/240 [14:01<35:13, 11.30s/it]AO resampling runs:  22%|██▎       | 54/240 [14:16<38:21, 12.38s/it]AO resampling runs:  23%|██▎       | 55/240 [14:27<37:02, 12.01s/it]AO resampling runs:  23%|██▎       | 56/240 [14:37<34:54, 11.38s/it]AO resampling runs:  24%|██▍       | 57/240 [14:50<36:03, 11.82s/it]AO resampling runs:  24%|██▍       | 58/240 [14:59<33:36, 11.08s/it]AO resampling runs:  25%|██▍       | 59/240 [15:11<34:15, 11.36s/it]                                                                    AO resampling runs:  25%|██▍       | 59/240 [15:21<34:15, 11.36s/it]AO resampling runs:  25%|██▌       | 60/240 [15:21<32:55, 10.98s/it]AO resampling runs:  25%|██▌       | 61/240 [15:37<37:14, 12.48s/it]AO resampling runs:  26%|██▌       | 62/240 [15:52<38:48, 13.08s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 50/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 60/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:  26%|██▋       | 63/240 [16:02<35:53, 12.17s/it]AO resampling runs:  27%|██▋       | 64/240 [16:13<35:10, 11.99s/it]AO resampling runs:  27%|██▋       | 65/240 [16:27<36:24, 12.48s/it]AO resampling runs:  28%|██▊       | 66/240 [16:36<33:20, 11.50s/it]AO resampling runs:  28%|██▊       | 67/240 [16:46<31:46, 11.02s/it]AO resampling runs:  28%|██▊       | 68/240 [16:56<30:28, 10.63s/it]AO resampling runs:  29%|██▉       | 69/240 [17:06<30:02, 10.54s/it]                                                                    AO resampling runs:  29%|██▉       | 69/240 [17:15<30:02, 10.54s/it]AO resampling runs:  29%|██▉       | 70/240 [17:15<28:52, 10.19s/it]AO resampling runs:  30%|██▉       | 71/240 [17:28<30:42, 10.90s/it]AO resampling runs:  30%|███       | 72/240 [17:37<28:40, 10.24s/it]AO resampling runs:  30%|███       | 73/240 [17:50<31:25, 11.29s/it]AO resampling runs:  31%|███       | 74/240 [18:02<31:44, 11.47s/it]AO resampling runs:  31%|███▏      | 75/240 [18:11<28:51, 10.49s/it]AO resampling runs:  32%|███▏      | 76/240 [18:31<36:40, 13.42s/it]AO resampling runs:  32%|███▏      | 77/240 [18:45<37:11, 13.69s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 70/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:  32%|███▎      | 78/240 [18:56<34:54, 12.93s/it]AO resampling runs:  33%|███▎      | 79/240 [19:08<33:39, 12.54s/it]                                                                    AO resampling runs:  33%|███▎      | 79/240 [19:20<33:39, 12.54s/it]AO resampling runs:  33%|███▎      | 80/240 [19:20<33:12, 12.46s/it]AO resampling runs:  34%|███▍      | 81/240 [19:34<33:50, 12.77s/it]AO resampling runs:  34%|███▍      | 82/240 [19:48<34:51, 13.24s/it]AO resampling runs:  35%|███▍      | 83/240 [20:01<34:25, 13.16s/it]AO resampling runs:  35%|███▌      | 84/240 [20:09<30:28, 11.72s/it]AO resampling runs:  35%|███▌      | 85/240 [20:19<28:52, 11.18s/it]AO resampling runs:  36%|███▌      | 86/240 [20:32<29:55, 11.66s/it]AO resampling runs:  36%|███▋      | 87/240 [20:39<26:26, 10.37s/it]AO resampling runs:  37%|███▋      | 88/240 [20:49<25:48, 10.19s/it]AO resampling runs:  37%|███▋      | 89/240 [21:01<27:14, 10.83s/it]                                                                    AO resampling runs:  37%|███▋      | 89/240 [21:14<27:14, 10.83s/it]AO resampling runs:  38%|███▊      | 90/240 [21:14<28:17, 11.32s/it]AO resampling runs:  38%|███▊      | 91/240 [21:22<25:58, 10.46s/it]AO resampling runs:  38%|███▊      | 92/240 [21:32<25:17, 10.25s/it]AO resampling runs:  39%|███▉      | 93/240 [21:45<26:57, 11.00s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 80/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 90/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:  39%|███▉      | 94/240 [21:55<26:02, 10.70s/it]AO resampling runs:  40%|███▉      | 95/240 [22:08<27:40, 11.45s/it]AO resampling runs:  40%|████      | 96/240 [22:17<25:22, 10.57s/it]AO resampling runs:  40%|████      | 97/240 [22:28<26:02, 10.92s/it]AO resampling runs:  41%|████      | 98/240 [22:40<26:40, 11.27s/it]AO resampling runs:  41%|████▏     | 99/240 [22:53<27:04, 11.52s/it]                                                                    AO resampling runs:  41%|████▏     | 99/240 [23:04<27:04, 11.52s/it]AO resampling runs:  42%|████▏     | 100/240 [23:04<26:45, 11.47s/it]AO resampling runs:  42%|████▏     | 101/240 [23:17<28:00, 12.09s/it]AO resampling runs:  42%|████▎     | 102/240 [23:26<25:05, 10.91s/it]AO resampling runs:  43%|████▎     | 103/240 [23:36<24:42, 10.82s/it]AO resampling runs:  43%|████▎     | 104/240 [23:48<25:23, 11.20s/it]AO resampling runs:  44%|████▍     | 105/240 [24:00<25:20, 11.27s/it]AO resampling runs:  44%|████▍     | 106/240 [24:13<26:21, 11.80s/it]AO resampling runs:  45%|████▍     | 107/240 [24:26<26:49, 12.10s/it]AO resampling runs:  45%|████▌     | 108/240 [24:34<24:17, 11.04s/it]AO resampling runs:  45%|████▌     | 109/240 [24:45<23:44, 10.87s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 100/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+                                                                     AO resampling runs:  45%|████▌     | 109/240 [24:58<23:44, 10.87s/it]AO resampling runs:  46%|████▌     | 110/240 [24:58<25:25, 11.73s/it]AO resampling runs:  46%|████▋     | 111/240 [25:06<22:23, 10.42s/it]AO resampling runs:  47%|████▋     | 112/240 [25:17<22:28, 10.54s/it]AO resampling runs:  47%|████▋     | 113/240 [25:29<23:43, 11.21s/it]AO resampling runs:  48%|████▊     | 114/240 [25:40<23:24, 11.14s/it]AO resampling runs:  48%|████▊     | 115/240 [25:49<21:37, 10.38s/it]AO resampling runs:  48%|████▊     | 116/240 [25:59<21:26, 10.38s/it]AO resampling runs:  49%|████▉     | 117/240 [26:13<23:29, 11.46s/it]AO resampling runs:  49%|████▉     | 118/240 [26:24<22:50, 11.23s/it]AO resampling runs:  50%|████▉     | 119/240 [26:36<23:13, 11.51s/it]                                                                     AO resampling runs:  50%|████▉     | 119/240 [26:45<23:13, 11.51s/it]AO resampling runs:  50%|█████     | 120/240 [26:45<21:37, 10.81s/it]AO resampling runs:  50%|█████     | 121/240 [27:03<25:24, 12.81s/it]AO resampling runs:  51%|█████     | 122/240 [27:13<23:43, 12.06s/it]AO resampling runs:  51%|█████▏    | 123/240 [27:22<21:38, 11.10s/it]AO resampling runs:  52%|█████▏    | 124/240 [27:35<22:31, 11.65s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 110/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 120/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:  52%|█████▏    | 125/240 [27:46<22:18, 11.64s/it]AO resampling runs:  52%|█████▎    | 126/240 [28:04<25:19, 13.33s/it]AO resampling runs:  53%|█████▎    | 127/240 [28:15<24:07, 12.81s/it]AO resampling runs:  53%|█████▎    | 128/240 [28:26<22:48, 12.21s/it]AO resampling runs:  54%|█████▍    | 129/240 [28:36<21:28, 11.61s/it]                                                                     AO resampling runs:  54%|█████▍    | 129/240 [28:47<21:28, 11.61s/it]AO resampling runs:  54%|█████▍    | 130/240 [28:47<20:46, 11.33s/it]AO resampling runs:  55%|█████▍    | 131/240 [28:59<20:39, 11.37s/it]AO resampling runs:  55%|█████▌    | 132/240 [29:08<19:38, 10.91s/it]AO resampling runs:  55%|█████▌    | 133/240 [29:18<19:01, 10.67s/it]AO resampling runs:  56%|█████▌    | 134/240 [29:32<20:14, 11.46s/it]AO resampling runs:  56%|█████▋    | 135/240 [29:41<19:06, 10.92s/it]AO resampling runs:  57%|█████▋    | 136/240 [29:53<19:08, 11.05s/it]AO resampling runs:  57%|█████▋    | 137/240 [30:09<21:41, 12.63s/it]AO resampling runs:  57%|█████▊    | 138/240 [30:19<19:57, 11.74s/it]AO resampling runs:  58%|█████▊    | 139/240 [30:32<20:40, 12.28s/it]                                                                     AO resampling runs:  58%|█████▊    | 139/240 [30:42<20:40, 12.28s/it]AO resampling runs:  58%|█████▊    | 140/240 [30:42<19:19, 11.59s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 130/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 140/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:  59%|█████▉    | 141/240 [30:54<19:04, 11.56s/it]AO resampling runs:  59%|█████▉    | 142/240 [31:02<17:17, 10.59s/it]AO resampling runs:  60%|█████▉    | 143/240 [31:15<18:07, 11.21s/it]AO resampling runs:  60%|██████    | 144/240 [31:25<17:29, 10.93s/it]AO resampling runs:  60%|██████    | 145/240 [31:34<16:30, 10.43s/it]AO resampling runs:  61%|██████    | 146/240 [31:48<17:43, 11.31s/it]AO resampling runs:  61%|██████▏   | 147/240 [31:56<16:19, 10.53s/it]AO resampling runs:  62%|██████▏   | 148/240 [32:06<15:55, 10.39s/it]AO resampling runs:  62%|██████▏   | 149/240 [32:20<17:18, 11.41s/it]                                                                     AO resampling runs:  62%|██████▏   | 149/240 [32:34<17:18, 11.41s/it]AO resampling runs:  62%|██████▎   | 150/240 [32:34<18:10, 12.12s/it]AO resampling runs:  63%|██████▎   | 151/240 [32:46<17:50, 12.03s/it]AO resampling runs:  63%|██████▎   | 152/240 [32:59<18:17, 12.47s/it]AO resampling runs:  64%|██████▍   | 153/240 [33:10<17:28, 12.05s/it]AO resampling runs:  64%|██████▍   | 154/240 [33:22<17:01, 11.88s/it]AO resampling runs:  65%|██████▍   | 155/240 [33:36<17:42, 12.50s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 150/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:  65%|██████▌   | 156/240 [33:45<16:02, 11.46s/it]AO resampling runs:  65%|██████▌   | 157/240 [33:54<14:49, 10.72s/it]AO resampling runs:  66%|██████▌   | 158/240 [34:06<15:10, 11.11s/it]AO resampling runs:  66%|██████▋   | 159/240 [34:14<13:58, 10.35s/it]                                                                     AO resampling runs:  66%|██████▋   | 159/240 [34:24<13:58, 10.35s/it]AO resampling runs:  67%|██████▋   | 160/240 [34:24<13:18,  9.98s/it]AO resampling runs:  67%|██████▋   | 161/240 [34:37<14:20, 10.89s/it]AO resampling runs:  68%|██████▊   | 162/240 [34:44<12:47,  9.83s/it]AO resampling runs:  68%|██████▊   | 163/240 [34:57<13:55, 10.86s/it]AO resampling runs:  68%|██████▊   | 164/240 [35:07<13:15, 10.47s/it]AO resampling runs:  69%|██████▉   | 165/240 [35:20<14:04, 11.26s/it]AO resampling runs:  69%|██████▉   | 166/240 [35:29<12:56, 10.49s/it]AO resampling runs:  70%|██████▉   | 167/240 [35:40<13:14, 10.88s/it]AO resampling runs:  70%|███████   | 168/240 [35:48<12:03, 10.05s/it]AO resampling runs:  70%|███████   | 169/240 [35:57<11:23,  9.63s/it]                                                                     AO resampling runs:  70%|███████   | 169/240 [36:07<11:23,  9.63s/it]AO resampling runs:  71%|███████   | 170/240 [36:07<11:19,  9.71s/it]AO resampling runs:  71%|███████▏  | 171/240 [36:14<10:04,  8.76s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 160/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 170/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:  72%|███████▏  | 172/240 [36:24<10:37,  9.37s/it]AO resampling runs:  72%|███████▏  | 173/240 [36:36<11:23, 10.20s/it]AO resampling runs:  72%|███████▎  | 174/240 [36:45<10:37,  9.65s/it]AO resampling runs:  73%|███████▎  | 175/240 [36:55<10:31,  9.72s/it]AO resampling runs:  73%|███████▎  | 176/240 [37:05<10:34,  9.91s/it]AO resampling runs:  74%|███████▍  | 177/240 [37:18<11:21, 10.82s/it]AO resampling runs:  74%|███████▍  | 178/240 [37:32<12:02, 11.65s/it]AO resampling runs:  75%|███████▍  | 179/240 [37:42<11:34, 11.39s/it]                                                                     AO resampling runs:  75%|███████▍  | 179/240 [37:52<11:34, 11.39s/it]AO resampling runs:  75%|███████▌  | 180/240 [37:52<10:44, 10.74s/it]AO resampling runs:  75%|███████▌  | 181/240 [38:04<10:59, 11.18s/it]AO resampling runs:  76%|███████▌  | 182/240 [38:17<11:22, 11.76s/it]AO resampling runs:  76%|███████▋  | 183/240 [38:24<09:53, 10.41s/it]AO resampling runs:  77%|███████▋  | 184/240 [38:34<09:24, 10.09s/it]AO resampling runs:  77%|███████▋  | 185/240 [38:44<09:18, 10.16s/it]AO resampling runs:  78%|███████▊  | 186/240 [38:53<08:56,  9.93s/it]AO resampling runs:  78%|███████▊  | 187/240 [39:04<08:53, 10.06s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 180/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:  78%|███████▊  | 188/240 [39:13<08:40, 10.00s/it]AO resampling runs:  79%|███████▉  | 189/240 [39:23<08:15,  9.72s/it]                                                                     AO resampling runs:  79%|███████▉  | 189/240 [39:32<08:15,  9.72s/it]AO resampling runs:  79%|███████▉  | 190/240 [39:32<07:54,  9.49s/it]AO resampling runs:  80%|███████▉  | 191/240 [39:41<07:48,  9.57s/it]AO resampling runs:  80%|████████  | 192/240 [39:49<07:15,  9.07s/it]AO resampling runs:  80%|████████  | 193/240 [40:01<07:44,  9.88s/it]AO resampling runs:  81%|████████  | 194/240 [40:12<07:53, 10.30s/it]AO resampling runs:  81%|████████▏ | 195/240 [40:23<07:43, 10.30s/it]AO resampling runs:  82%|████████▏ | 196/240 [40:31<07:15,  9.89s/it]AO resampling runs:  82%|████████▏ | 197/240 [40:43<07:20, 10.25s/it]AO resampling runs:  82%|████████▎ | 198/240 [40:51<06:46,  9.67s/it]AO resampling runs:  83%|████████▎ | 199/240 [41:02<06:56, 10.15s/it]                                                                     AO resampling runs:  83%|████████▎ | 199/240 [41:14<06:56, 10.15s/it]AO resampling runs:  83%|████████▎ | 200/240 [41:14<07:01, 10.54s/it]AO resampling runs:  84%|████████▍ | 201/240 [41:24<06:54, 10.64s/it]AO resampling runs:  84%|████████▍ | 202/240 [41:33<06:16,  9.90s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 190/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 200/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:  85%|████████▍ | 203/240 [41:46<06:46, 10.98s/it]AO resampling runs:  85%|████████▌ | 204/240 [41:57<06:28, 10.80s/it]AO resampling runs:  85%|████████▌ | 205/240 [42:09<06:33, 11.23s/it]AO resampling runs:  86%|████████▌ | 206/240 [42:20<06:18, 11.13s/it]AO resampling runs:  86%|████████▋ | 207/240 [42:29<05:49, 10.58s/it]AO resampling runs:  87%|████████▋ | 208/240 [42:37<05:17,  9.93s/it]AO resampling runs:  87%|████████▋ | 209/240 [42:51<05:41, 11.01s/it]                                                                     AO resampling runs:  87%|████████▋ | 209/240 [43:01<05:41, 11.01s/it]AO resampling runs:  88%|████████▊ | 210/240 [43:01<05:26, 10.89s/it]AO resampling runs:  88%|████████▊ | 211/240 [43:16<05:51, 12.12s/it]AO resampling runs:  88%|████████▊ | 212/240 [43:27<05:28, 11.74s/it]AO resampling runs:  89%|████████▉ | 213/240 [43:44<05:59, 13.33s/it]AO resampling runs:  89%|████████▉ | 214/240 [43:52<05:04, 11.70s/it]AO resampling runs:  90%|████████▉ | 215/240 [44:08<05:22, 12.89s/it]AO resampling runs:  90%|█████████ | 216/240 [44:16<04:32, 11.35s/it]AO resampling runs:  90%|█████████ | 217/240 [44:28<04:26, 11.58s/it]AO resampling runs:  91%|█████████ | 218/240 [44:42<04:34, 12.50s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 210/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:  91%|█████████▏| 219/240 [44:51<04:00, 11.45s/it]                                                                     AO resampling runs:  91%|█████████▏| 219/240 [45:14<04:00, 11.45s/it]AO resampling runs:  92%|█████████▏| 220/240 [45:14<04:53, 14.69s/it]AO resampling runs:  92%|█████████▏| 221/240 [45:28<04:37, 14.62s/it]AO resampling runs:  92%|█████████▎| 222/240 [45:38<03:58, 13.25s/it]AO resampling runs:  93%|█████████▎| 223/240 [45:48<03:30, 12.37s/it]AO resampling runs:  93%|█████████▎| 224/240 [46:02<03:21, 12.61s/it]AO resampling runs:  94%|█████████▍| 225/240 [46:13<03:04, 12.28s/it]AO resampling runs:  94%|█████████▍| 226/240 [46:23<02:42, 11.62s/it]AO resampling runs:  95%|█████████▍| 227/240 [46:36<02:33, 11.81s/it]AO resampling runs:  95%|█████████▌| 228/240 [46:45<02:13, 11.15s/it]AO resampling runs:  95%|█████████▌| 229/240 [46:56<02:02, 11.11s/it]                                                                     AO resampling runs:  95%|█████████▌| 229/240 [47:08<02:02, 11.11s/it]AO resampling runs:  96%|█████████▌| 230/240 [47:08<01:53, 11.37s/it]AO resampling runs:  96%|█████████▋| 231/240 [47:17<01:36, 10.67s/it]AO resampling runs:  97%|█████████▋| 232/240 [47:28<01:25, 10.67s/it]AO resampling runs:  97%|█████████▋| 233/240 [47:42<01:21, 11.61s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 220/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 230/240 runs
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+AO resampling runs:  98%|█████████▊| 234/240 [47:52<01:08, 11.38s/it]AO resampling runs:  98%|█████████▊| 235/240 [48:05<00:58, 11.73s/it]AO resampling runs:  98%|█████████▊| 236/240 [48:18<00:48, 12.19s/it]AO resampling runs:  99%|█████████▉| 237/240 [48:30<00:36, 12.06s/it]AO resampling runs:  99%|█████████▉| 238/240 [48:41<00:23, 11.62s/it]AO resampling runs: 100%|█████████▉| 239/240 [48:54<00:12, 12.20s/it]                                                                     AO resampling runs: 100%|█████████▉| 239/240 [49:02<00:12, 12.20s/it]AO resampling runs: 100%|██████████| 240/240 [49:02<00:00, 11.00s/it]AO resampling runs: 100%|██████████| 240/240 [49:02<00:00, 12.26s/it]
+/root/activation-oracles/experiments/resampling/resampling.py:298: MatplotlibDeprecationWarning: The 'labels' parameter of boxplot() has been renamed 'tick_labels' since Matplotlib 3.9; support for the old name will be dropped in 3.11.
+  plt.boxplot(data, labels=q_ids, showfliers=False)
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+Completed 240/240 runs
+Done. Wrote /root/activation-oracles/experiments/resampling/results.json
