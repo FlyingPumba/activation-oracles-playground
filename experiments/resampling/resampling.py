@@ -258,7 +258,6 @@ def judge_similarity_holistic(*, client: OpenAI, ao_question: str, responses: li
     resp = client.responses.create(
         model=JUDGE_MODEL,
         input=prompt,
-        temperature=0.0,
     )
     raw_text = resp.output_text
     assert isinstance(raw_text, str) and len(raw_text) > 0
