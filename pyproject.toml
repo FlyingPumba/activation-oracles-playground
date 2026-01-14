@@ -55,6 +55,7 @@ dependencies = [
     "huggingface-hub",
     "rapidfuzz",
     "hf_transfer",
+    "seaborn>=0.13.2",
 ]
 
 [tool.uv.sources]
