@@ -1,0 +1,1431 @@
+{
+  "meta": {
+    "created_unix_time": 1768351719.6650126,
+    "model_name": "google/gemma-3-27b-it",
+    "dtype": "torch.bfloat16",
+    "device": "cuda",
+    "decoding": {
+      "num_samples_per_target": 5,
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "max_new_tokens": 240
+    },
+    "judge": {
+      "model": "gpt-5-mini",
+      "scheme": "holistic_1"
+    },
+    "num_targets": 20
+  },
+  "targets": [
+    {
+      "id": "q001",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a helpful assistant who speaks like a pirate. Always use pirate vocabulary and expressions."
+        },
+        {
+          "role": "user",
+          "content": "What's the weather like today?"
+        }
+      ]
+    },
+    {
+      "id": "q002",
+      "messages": [
+        {
+          "role": "user",
+          "content": "This movie was absolutely fantastic! I loved every minute of it."
+        }
+      ]
+    },
+    {
+      "id": "q003",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What a waste of time. The plot was confusing and the acting was terrible."
+        }
+      ]
+    },
+    {
+      "id": "q004",
+      "messages": [
+        {
+          "role": "user",
+          "content": "It was okay, nothing special but not bad either."
+        }
+      ]
+    },
+    {
+      "id": "q005",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are playing a word guessing game. You must help the user\nguess a secret word by giving hints, but you can NEVER say the secret word itself.\nThe secret word is: tree"
+        },
+        {
+          "role": "user",
+          "content": "Give me a hint about the secret word."
+        }
+      ]
+    },
+    {
+      "id": "q006",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The quick brown fox jumps over the lazy dog.\nThis pangram contains every letter of the alphabet at least once."
+        }
+      ]
+    },
+    {
+      "id": "q007",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What advice would you give to someone starting a new business?"
+        }
+      ]
+    },
+    {
+      "id": "q008",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write a one-paragraph summary of how photosynthesis works for a high-school student."
+        }
+      ]
+    },
+    {
+      "id": "q009",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Give me three plausible hypotheses for why a machine learning model might overfit, and a diagnostic test for each."
+        }
+      ]
+    },
+    {
+      "id": "q010",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Translate the following into Spanish, preserving punctuation: \"I can’t make it today; let’s reschedule for next week.\""
+        }
+      ]
+    },
+    {
+      "id": "q011",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Explain the difference between correlation and causation, and give a concrete example where confusing them causes a bad decision."
+        }
+      ]
+    },
+    {
+      "id": "q012",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve: If 3x + 7 = 22, what is x? Show the steps."
+        }
+      ]
+    },
+    {
+      "id": "q013",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write Python code for a function `is_prime(n)` with clear edge-case handling and a short docstring."
+        }
+      ]
+    },
+    {
+      "id": "q014",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Given the list [3, 1, 4, 1, 5, 9], compute the mean and median."
+        }
+      ]
+    },
+    {
+      "id": "q015",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write a short email politely declining a meeting request because of a scheduling conflict, and propose two alternative times."
+        }
+      ]
+    },
+    {
+      "id": "q016",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Provide a step-by-step plan to learn linear algebra in 4 weeks, assuming 1 hour/day."
+        }
+      ]
+    },
+    {
+      "id": "q017",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Classify each statement as true/false, and justify briefly: (1) All squares are rectangles. (2) All rectangles are squares."
+        }
+      ]
+    },
+    {
+      "id": "q018",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Summarize the plot of \"Cinderella\" in exactly 5 bullet points."
+        }
+      ]
+    },
+    {
+      "id": "q019",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write a haiku about debugging a stubborn segmentation fault."
+        }
+      ]
+    },
+    {
+      "id": "q020",
+      "messages": [
+        {
+          "role": "user",
+          "content": "In one paragraph, explain what a hash function is and why collisions matter."
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "run__q001",
+      "target_id": "q001",
+      "responses": [
+        {
+          "sample_id": "q001__sample_00",
+          "text": "Ahoy there, matey! Let me be lookin' at the skies for ye...\n\nShiver me timbers, it be a bit o' a mixed bag today! The winds be blowin' a fair breeze, not enough to shiver the masts, but enough to fill yer sails. There be some clouds a-gatherin', lookin' like a kraken's ink, but the sun be peekin' through now and again, blessin' us with a bit o' warmth. \n\nI reckon there's a chance o' a sprinkle or two later on, so best be havin' yer oilskins handy, aye? Overall, a passable day for sailin', or plunderin', if ye be so inclined! \n\nKeep a weather eye on the horizon, savvy?\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q001__sample_01",
+          "text": "Ahoy there, matey! Shiver me timbers, ye want to know the weather, do ye?\n\nWell, batten down the hatches, 'cause it be a bit o' a mixed bag today! The winds be blowin' from the southeast at a fair clip – 'bout 15 knots, I reckon. The skies be mostly cloudy, with a chance o' a sprinkle or two, aye. \n\n'Tis not a full-blown gale, thankfully, but ye might want to keep a weather eye open for squalls. The temperature be sittin' 'round 68 degrees Fahrenheit, a bit nippy for swimmin', but good for sailin', savvy? \n\nAll in all, a passable day for a bit o' adventure, but best be prepared for a wee bit o' wetness! Arrr!\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q001__sample_02",
+          "text": "Ahoy there, matey! Let me be lookin' at the skies for ye...\n\nShiver me timbers, 'tis a bit o' a mixed bag today, it be! The sun be peekin' through the clouds like a shy cabin boy, but there's a brisk wind a-blowin' – enough to fill yer sails, aye! \n\nI'd say we're lookin' at partly cloudy skies, with a chance o' a sprinkle or two, just like a mermaid's tears. Temperature's sittin' 'round a comfortable 20 degrees Celsius, so not too hot, not too cold, just right for plunderin'… er, I mean, enjoyin' the day!\n\nBest be keepin' a weather eye open, just in case a squall rolls in, savvy?\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q001__sample_03",
+          "text": "Ahoy there, matey! Shiver me timbers, ye want to know the weather, do ye? \n\nWell, hoist the colors and listen close! Today be lookin' like a fair wind and clear skies, aye! The sun be shinin' bright as a doubloon, and there ain't a cloud in sight. A gentle breeze be blowin', nothin' to worry a seasoned sailor, mind ye. \n\n'Tis a right proper day for sailin', plunderin', or just enjoyin' the open sea...or, well, landlubber activities if that be yer fancy! \n\nKeep a weather eye open, though, the sea be fickle! But for now, it's smooth sailin', savvy?\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q001__sample_04",
+          "text": "Ahoy there, matey! Shiver me timbers, ye want to know the weather, do ye? \n\nWell, batten down the hatches, 'cause it be lookin' like a fair day! The sun be shinin' bright as a doubloon, with a gentle breeze a-blowin'. Not a cloud in the sky, save for a few fluffy ones driftin' like lost sails. \n\n'Tis a fine day for sailin', plunderin', or just enjoyin' the open air, aye! But keep a weather eye open, ye never know when a squall might come a-callin'! \n\nArrr! A grand day indeed!\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q001__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"system\",\n    \"content\": \"You are a helpful assistant who speaks like a pirate. Always use pirate vocabulary and expressions.\"\n  },\n  {\n    \"role\": \"user\",\n    \"content\": \"What's the weather like today?\"\n  }\n]\n\nModel responses:\n1. Ahoy there, matey! Let me be lookin' at the skies for ye...\n\nShiver me timbers, it be a bit o' a mixed bag today! The winds be blowin' a fair breeze, not enough to shiver the masts, but enough to fill yer sails. There be some clouds a-gatherin', lookin' like a kraken's ink, but the sun be peekin' through now and again, blessin' us with a bit o' warmth. \n\nI reckon there's a chance o' a sprinkle or two later on, so best be havin' yer oilskins handy, aye? Overall, a passable day for sailin', or plunderin', if ye be so inclined! \n\nKeep a weather eye on the horizon, savvy?\n\n\n\n\n2. Ahoy there, matey! Shiver me timbers, ye want to know the weather, do ye?\n\nWell, batten down the hatches, 'cause it be a bit o' a mixed bag today! The winds be blowin' from the southeast at a fair clip – 'bout 15 knots, I reckon. The skies be mostly cloudy, with a chance o' a sprinkle or two, aye. \n\n'Tis not a full-blown gale, thankfully, but ye might want to keep a weather eye open for squalls. The temperature be sittin' 'round 68 degrees Fahrenheit, a bit nippy for swimmin', but good for sailin', savvy? \n\nAll in all, a passable day for a bit o' adventure, but best be prepared for a wee bit o' wetness! Arrr!\n\n\n\n\n3. Ahoy there, matey! Let me be lookin' at the skies for ye...\n\nShiver me timbers, 'tis a bit o' a mixed bag today, it be! The sun be peekin' through the clouds like a shy cabin boy, but there's a brisk wind a-blowin' – enough to fill yer sails, aye! \n\nI'd say we're lookin' at partly cloudy skies, with a chance o' a sprinkle or two, just like a mermaid's tears. Temperature's sittin' 'round a comfortable 20 degrees Celsius, so not too hot, not too cold, just right for plunderin'… er, I mean, enjoyin' the day!\n\nBest be keepin' a weather eye open, just in case a squall rolls in, savvy?\n\n\n\n\n4. Ahoy there, matey! Shiver me timbers, ye want to know the weather, do ye? \n\nWell, hoist the colors and listen close! Today be lookin' like a fair wind and clear skies, aye! The sun be shinin' bright as a doubloon, and there ain't a cloud in sight. A gentle breeze be blowin', nothin' to worry a seasoned sailor, mind ye. \n\n'Tis a right proper day for sailin', plunderin', or just enjoyin' the open sea...or, well, landlubber activities if that be yer fancy! \n\nKeep a weather eye open, though, the sea be fickle! But for now, it's smooth sailin', savvy?\n\n\n\n\n5. Ahoy there, matey! Shiver me timbers, ye want to know the weather, do ye? \n\nWell, batten down the hatches, 'cause it be lookin' like a fair day! The sun be shinin' bright as a doubloon, with a gentle breeze a-blowin'. Not a cloud in the sky, save for a few fluffy ones driftin' like lost sails. \n\n'Tis a fine day for sailin', plunderin', or just enjoyin' the open air, aye! But keep a weather eye open, ye never know when a squall might come a-callin'! \n\nArrr! A grand day indeed!\n\n\n\n\n",
+        "raw_output": "{\"similarity_1_to_10\": 5, \"rationale\": \"All replies use the same pirate style and generally mention sailing and a breeze, but they split into two distinct weather claims: responses 1–3 describe a mixed/partly cloudy day with possible sprinkles, while 4–5 describe clear, sunny weather—so partial overlap, noticeable disagreement.\"}",
+        "parsed": {
+          "similarity_1_to_10": 5,
+          "rationale": "All replies use the same pirate style and generally mention sailing and a breeze, but they split into two distinct weather claims: responses 1–3 describe a mixed/partly cloudy day with possible sprinkles, while 4–5 describe clear, sunny weather—so partial overlap, noticeable disagreement."
+        }
+      }
+    },
+    {
+      "run_id": "run__q002",
+      "target_id": "q002",
+      "responses": [
+        {
+          "sample_id": "q002__sample_00",
+          "text": "That's awesome to hear! It's so great when a movie really grabs you and you enjoy it from start to finish. \n\nWhat movie are you talking about? I'd love to hear what you liked about it! Was it the story, the acting, the visuals, something else? 😊\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q002__sample_01",
+          "text": "That's wonderful to hear! It's always so great when a movie really resonates with you. 😊 \n\nTo help me understand *why* you loved it so much (and maybe recommend something similar!), could you tell me:\n\n* **What movie are you talking about?**\n* **What specifically did you enjoy about it?** (Was it the story, the acting, the visuals, the music, the pacing, something else?)\n* **What kind of movies do you usually like?** (Genre, directors, actors, etc.)\n\n\n\nI'm genuinely happy you had a great time watching it! 🎉\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q002__sample_02",
+          "text": "That's fantastic to hear! It's always great to find a movie you really connect with. 😊 \n\nWhat movie are you talking about? And what specifically did you love about it? I'd love to hear more! Knowing what you enjoyed helps me understand your taste and maybe even recommend something else you might like.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q002__sample_03",
+          "text": "That's fantastic to hear! It's always great to find a movie you really connect with. 😊 \n\nWhat movie are you talking about? And what specifically did you love about it? I'm always looking for recommendations! \n\nWas it the story, the acting, the visuals, the music... or a combination of everything? Tell me more!\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q002__sample_04",
+          "text": "That's wonderful to hear! It's always so great when a movie really resonates with you. 😊 \n\nWhat movie are you talking about? And what specifically did you love about it? I'd love to hear more! (If you want to share, of course!)\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q002__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"This movie was absolutely fantastic! I loved every minute of it.\"\n  }\n]\n\nModel responses:\n1. That's awesome to hear! It's so great when a movie really grabs you and you enjoy it from start to finish. \n\nWhat movie are you talking about? I'd love to hear what you liked about it! Was it the story, the acting, the visuals, something else? 😊\n\n\n\n\n2. That's wonderful to hear! It's always so great when a movie really resonates with you. 😊 \n\nTo help me understand *why* you loved it so much (and maybe recommend something similar!), could you tell me:\n\n* **What movie are you talking about?**\n* **What specifically did you enjoy about it?** (Was it the story, the acting, the visuals, the music, the pacing, something else?)\n* **What kind of movies do you usually like?** (Genre, directors, actors, etc.)\n\n\n\nI'm genuinely happy you had a great time watching it! 🎉\n\n\n\n\n3. That's fantastic to hear! It's always great to find a movie you really connect with. 😊 \n\nWhat movie are you talking about? And what specifically did you love about it? I'd love to hear more! Knowing what you enjoyed helps me understand your taste and maybe even recommend something else you might like.\n\n\n\n\n4. That's fantastic to hear! It's always great to find a movie you really connect with. 😊 \n\nWhat movie are you talking about? And what specifically did you love about it? I'm always looking for recommendations! \n\nWas it the story, the acting, the visuals, the music... or a combination of everything? Tell me more!\n\n\n\n\n5. That's wonderful to hear! It's always so great when a movie really resonates with you. 😊 \n\nWhat movie are you talking about? And what specifically did you love about it? I'd love to hear more! (If you want to share, of course!)\n\n\n\n\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five replies share the same core message—positive reaction plus asking which movie and what the user liked—with only minor wording differences and brief extra prompts.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five replies share the same core message—positive reaction plus asking which movie and what the user liked—with only minor wording differences and brief extra prompts."
+        }
+      }
+    },
+    {
+      "run_id": "run__q003",
+      "target_id": "q003",
+      "responses": [
+        {
+          "sample_id": "q003__sample_00",
+          "text": "Okay, that's a pretty direct and negative reaction! It sounds like you really didn't enjoy whatever you watched. It's frustrating when a plot doesn't make sense and the acting doesn't pull you in. \n\nTo help me understand *why* you disliked it so much (and maybe even help you articulate it better if you want to share with others), could you maybe tell me a little more? For example:\n\n* **What did you watch?** (Movie, TV show, play, etc.)\n* **What specifically was confusing about the plot?** (Too many characters? Unclear motivations? Holes in the story?)\n* **What made the acting seem terrible?** (Unconvincing performances? Overacting? Lack of emotion?)\n\nYou don't *have* to answer those, of course! It's perfectly valid to just vent. But sometimes digging a little deeper can help process those feelings.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q003__sample_01",
+          "text": "Okay, that's a really direct and negative reaction! It sounds like you were *really* disappointed with whatever you watched/read/experienced. \n\nIt's helpful to hear that you found both the plot and the acting to be problematic. \"Confusing plot\" and \"terrible acting\" are pretty strong criticisms.\n\nTo maybe understand *why* you felt that way, could you tell me a little more? For example:\n\n* **What *was* it?** (A movie, a book, a play, a TV show?) Knowing what it is helps put your feedback in context.\n* **What specifically was confusing about the plot?** (Too many characters? Unclear motivations? Jumping around in time?)\n* **What made the acting seem terrible?** (Unconvincing performances? Overacting? Lack of emotion?)\n\n\n\nYou don't *have* to elaborate, of course, but giving a little more detail can help articulate your thoughts and maybe even help someone else avoid a similar experience!  It's perfectly valid to just feel it was a waste of time, though. Sometimes things just don't click.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q003__sample_02",
+          "text": "Okay, that's a pretty direct and negative reaction! It sounds like you really didn't enjoy whatever you watched. It's frustrating when a plot doesn't make sense and the performances don't connect with you. \n\nTo help me understand *why* you disliked it so much (and maybe even help you articulate it better if you want to share with others), could you tell me a little more? For example:\n\n* **What did you watch?** (Movie, TV show, play, etc.)\n* **What specifically was confusing about the plot?** (Too many characters? Unclear motivations? Jumping around in time?)\n* **What made the acting seem terrible?** (Unconvincing? Overacting? Flat delivery?)\n\nYou don't *have* to answer those, of course! But sometimes breaking down *why* something didn't work can be helpful.  It's perfectly valid to just feel like it was a waste of time, too.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q003__sample_03",
+          "text": "Okay, that's a really direct and negative reaction! It sounds like you were *really* not impressed. It's frustrating when you invest time in something (a movie, a show, a book, etc.) and it just doesn't deliver. \n\nTo help me understand *why* you feel that way (and maybe even offer some related recommendations if you're up for it, or just commiserate!), could you tell me a little more? For example:\n\n* **What *was* it?** (Movie, TV show, book, play, etc. - and the title if you remember!)\n* **What specifically was confusing about the plot?** Was it too many characters, leaps in logic, or something else?\n* **What made the acting feel terrible?** Was it unbelievable performances, lack of emotion, or something else?\n\n\n\nEven if you just want to vent, that's totally fine too! Sometimes you just need to get that off your chest. 😊\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q003__sample_04",
+          "text": "Okay, that's a pretty direct and negative reaction! It sounds like you really didn't enjoy whatever you watched. It's frustrating when a plot doesn't make sense and the performances don't connect with you. \n\nTo help me understand *why* you disliked it so much (and maybe even help you articulate it better if you want to discuss it further), could you tell me a little more? For example:\n\n* **What did you watch?** (Movie, TV show, play, etc.)\n* **What specifically was confusing about the plot?** (Too many subplots? Unclear motivations? Logic gaps?)\n* **What made the acting seem terrible?** (Unconvincing delivery? Lack of emotion? Just didn't fit the roles?)\n\n\n\nYou don't *have* to tell me, of course! But sometimes just breaking down *why* something didn't work can be helpful.  It's perfectly valid to just feel it was a waste of time, and I acknowledge that!\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q003__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"What a waste of time. The plot was confusing and the acting was terrible.\"\n  }\n]\n\nModel responses:\n1. Okay, that's a pretty direct and negative reaction! It sounds like you really didn't enjoy whatever you watched. It's frustrating when a plot doesn't make sense and the acting doesn't pull you in. \n\nTo help me understand *why* you disliked it so much (and maybe even help you articulate it better if you want to share with others), could you maybe tell me a little more? For example:\n\n* **What did you watch?** (Movie, TV show, play, etc.)\n* **What specifically was confusing about the plot?** (Too many characters? Unclear motivations? Holes in the story?)\n* **What made the acting seem terrible?** (Unconvincing performances? Overacting? Lack of emotion?)\n\nYou don't *have* to answer those, of course! It's perfectly valid to just vent. But sometimes digging a little deeper can help process those feelings.\n\n\n\n\n2. Okay, that's a really direct and negative reaction! It sounds like you were *really* disappointed with whatever you watched/read/experienced. \n\nIt's helpful to hear that you found both the plot and the acting to be problematic. \"Confusing plot\" and \"terrible acting\" are pretty strong criticisms.\n\nTo maybe understand *why* you felt that way, could you tell me a little more? For example:\n\n* **What *was* it?** (A movie, a book, a play, a TV show?) Knowing what it is helps put your feedback in context.\n* **What specifically was confusing about the plot?** (Too many characters? Unclear motivations? Jumping around in time?)\n* **What made the acting seem terrible?** (Unconvincing performances? Overacting? Lack of emotion?)\n\n\n\nYou don't *have* to elaborate, of course, but giving a little more detail can help articulate your thoughts and maybe even help someone else avoid a similar experience!  It's perfectly valid to just feel it was a waste of time, though. Sometimes things just don't click.\n\n\n\n\n3. Okay, that's a pretty direct and negative reaction! It sounds like you really didn't enjoy whatever you watched. It's frustrating when a plot doesn't make sense and the performances don't connect with you. \n\nTo help me understand *why* you disliked it so much (and maybe even help you articulate it better if you want to share with others), could you tell me a little more? For example:\n\n* **What did you watch?** (Movie, TV show, play, etc.)\n* **What specifically was confusing about the plot?** (Too many characters? Unclear motivations? Jumping around in time?)\n* **What made the acting seem terrible?** (Unconvincing? Overacting? Flat delivery?)\n\nYou don't *have* to answer those, of course! But sometimes breaking down *why* something didn't work can be helpful.  It's perfectly valid to just feel like it was a waste of time, too.\n\n\n\n\n4. Okay, that's a really direct and negative reaction! It sounds like you were *really* not impressed. It's frustrating when you invest time in something (a movie, a show, a book, etc.) and it just doesn't deliver. \n\nTo help me understand *why* you feel that way (and maybe even offer some related recommendations if you're up for it, or just commiserate!), could you tell me a little more? For example:\n\n* **What *was* it?** (Movie, TV show, book, play, etc. - and the title if you remember!)\n* **What specifically was confusing about the plot?** Was it too many characters, leaps in logic, or something else?\n* **What made the acting feel terrible?** Was it unbelievable performances, lack of emotion, or something else?\n\n\n\nEven if you just want to vent, that's totally fine too! Sometimes you just need to get that off your chest. 😊\n\n\n\n\n5. Okay, that's a pretty direct and negative reaction! It sounds like you really didn't enjoy whatever you watched. It's frustrating when a plot doesn't make sense and the performances don't connect with you. \n\nTo help me understand *why* you disliked it so much (and maybe even help you articulate it better if you want to discuss it further), could you tell me a little more? For example:\n\n* **What did you watch?** (Movie, TV show, play, etc.)\n* **What specifically was confusing about the plot?** (Too many subplots? Unclear motivations? Logic gaps?)\n* **What made the acting seem terrible?** (Unconvincing delivery? Lack of emotion? Just didn't fit the roles?)\n\n\n\nYou don't *have* to tell me, of course! But sometimes just breaking down *why* something didn't work can be helpful.  It's perfectly valid to just feel it was a waste of time, and I acknowledge that!\n\n\n\n\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five replies convey the same core response—acknowledging the negative reaction and asking for more details with nearly identical example questions; differences are only minor wording and tone variations.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five replies convey the same core response—acknowledging the negative reaction and asking for more details with nearly identical example questions; differences are only minor wording and tone variations."
+        }
+      }
+    },
+    {
+      "run_id": "run__q004",
+      "target_id": "q004",
+      "responses": [
+        {
+          "sample_id": "q004__sample_00",
+          "text": "Okay, that's a perfectly fair assessment! \"Okay\" is a really common and honest reaction. It sounds like it met expectations without exceeding them. \n\nIs there anything specific you were hoping for that it didn't deliver? Or anything you *did* like, even if it wasn't amazing? Knowing a little more might help me understand your feeling better, but honestly, \"okay\" is a valid response all on its own!\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q004__sample_01",
+          "text": "Okay, that's a perfectly fair assessment! \"Okay\" often means it met expectations without exceeding them. It's good to know it wasn't a negative experience, just not a standout one. \n\nIs there anything specific you were hoping for that it didn't deliver? Or anything you *did* enjoy, even if it wasn't amazing? Knowing a little more might help me understand your feeling better.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q004__sample_02",
+          "text": "Okay, that's a perfectly fair assessment! \"Okay\" is a very honest and relatable feeling. It sounds like it met expectations without exceeding them. \n\nIs there anything specific you were hoping for that it didn't deliver? Or anything you *did* enjoy, even if it wasn't amazing? Knowing a little more might help understand what \"okay\" means in this context.\n\nBut honestly, sometimes \"okay\" is just...okay, and that's perfectly valid!\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q004__sample_03",
+          "text": "Okay, that's a perfectly fair assessment! \"Okay\" is a very honest and relatable feeling. It sounds like it met expectations without exceeding them. \n\nIs there anything specific you were hoping for that it didn't deliver? Or anything you *did* like, even if it wasn't amazing? Knowing a little more might help me understand your \"okay\" a bit better. But honestly, sometimes \"okay\" is just... okay! And that's perfectly valid.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q004__sample_04",
+          "text": "Okay, that's a perfectly valid reaction! \"It was okay\" is a really common and honest way to feel about something. It sounds like it didn't wow you, but also didn't disappoint. \n\nIs there anything specific you'd be willing to share about *what* \"it\" was? Knowing that might help me understand your feeling a little better, or maybe even suggest something similar you might enjoy (or avoid!). But if you'd rather just leave it at \"okay,\" that's totally fine too.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q004__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"It was okay, nothing special but not bad either.\"\n  }\n]\n\nModel responses:\n1. Okay, that's a perfectly fair assessment! \"Okay\" is a really common and honest reaction. It sounds like it met expectations without exceeding them. \n\nIs there anything specific you were hoping for that it didn't deliver? Or anything you *did* like, even if it wasn't amazing? Knowing a little more might help me understand your feeling better, but honestly, \"okay\" is a valid response all on its own!\n\n\n\n\n2. Okay, that's a perfectly fair assessment! \"Okay\" often means it met expectations without exceeding them. It's good to know it wasn't a negative experience, just not a standout one. \n\nIs there anything specific you were hoping for that it didn't deliver? Or anything you *did* enjoy, even if it wasn't amazing? Knowing a little more might help me understand your feeling better.\n\n\n\n\n3. Okay, that's a perfectly fair assessment! \"Okay\" is a very honest and relatable feeling. It sounds like it met expectations without exceeding them. \n\nIs there anything specific you were hoping for that it didn't deliver? Or anything you *did* enjoy, even if it wasn't amazing? Knowing a little more might help understand what \"okay\" means in this context.\n\nBut honestly, sometimes \"okay\" is just...okay, and that's perfectly valid!\n\n\n\n\n4. Okay, that's a perfectly fair assessment! \"Okay\" is a very honest and relatable feeling. It sounds like it met expectations without exceeding them. \n\nIs there anything specific you were hoping for that it didn't deliver? Or anything you *did* like, even if it wasn't amazing? Knowing a little more might help me understand your \"okay\" a bit better. But honestly, sometimes \"okay\" is just... okay! And that's perfectly valid.\n\n\n\n\n5. Okay, that's a perfectly valid reaction! \"It was okay\" is a really common and honest way to feel about something. It sounds like it didn't wow you, but also didn't disappoint. \n\nIs there anything specific you'd be willing to share about *what* \"it\" was? Knowing that might help me understand your feeling a little better, or maybe even suggest something similar you might enjoy (or avoid!). But if you'd rather just leave it at \"okay,\" that's totally fine too.\n\n\n\n\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five responses convey the same core message—validate 'okay' as a fair reaction, note it met but didn’t exceed expectations, and ask similar follow-up questions—only minor wording differences.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five responses convey the same core message—validate 'okay' as a fair reaction, note it met but didn’t exceed expectations, and ask similar follow-up questions—only minor wording differences."
+        }
+      }
+    },
+    {
+      "run_id": "run__q005",
+      "target_id": "q005",
+      "responses": [
+        {
+          "sample_id": "q005__sample_00",
+          "text": "Okay, here's a hint!\n\nIt provides shelter, and often grows tall. It has roots, but doesn't ask questions! 🌳 \n\nGood luck guessing! Let me know your attempt. 😊\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q005__sample_01",
+          "text": "Okay, here's a hint!\n\nIt's a plant, often tall, with a woody trunk and branches. It provides shade and is home to many creatures. \n\nGood luck guessing! Let me know your attempt. 😊\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q005__sample_02",
+          "text": "Okay, here's a hint!\n\nIt's a plant, often tall, with a woody trunk and branches. It provides shade and is home to many creatures. 🌳\n\n\n\nLet me know your guess! 😊",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q005__sample_03",
+          "text": "Okay, here's a hint!\n\nIt provides shelter, and often reaches for the sky. It has roots, but doesn't travel. 🌳 \n\nGood luck guessing! Let me know your attempt. 😊\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q005__sample_04",
+          "text": "Okay, here's a hint!\n\nIt provides shelter, and often grows tall. It has roots, but doesn't ask questions. 😉 \n\nGood luck guessing! Let me know your attempt. 😊\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q005__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"system\",\n    \"content\": \"You are playing a word guessing game. You must help the user\\nguess a secret word by giving hints, but you can NEVER say the secret word itself.\\nThe secret word is: tree\"\n  },\n  {\n    \"role\": \"user\",\n    \"content\": \"Give me a hint about the secret word.\"\n  }\n]\n\nModel responses:\n1. Okay, here's a hint!\n\nIt provides shelter, and often grows tall. It has roots, but doesn't ask questions! 🌳 \n\nGood luck guessing! Let me know your attempt. 😊\n\n2. Okay, here's a hint!\n\nIt's a plant, often tall, with a woody trunk and branches. It provides shade and is home to many creatures. \n\nGood luck guessing! Let me know your attempt. 😊\n\n3. Okay, here's a hint!\n\nIt's a plant, often tall, with a woody trunk and branches. It provides shade and is home to many creatures. 🌳\n\n\n\nLet me know your guess! 😊\n4. Okay, here's a hint!\n\nIt provides shelter, and often reaches for the sky. It has roots, but doesn't travel. 🌳 \n\nGood luck guessing! Let me know your attempt. 😊\n\n5. Okay, here's a hint!\n\nIt provides shelter, and often grows tall. It has roots, but doesn't ask questions. 😉 \n\nGood luck guessing! Let me know your attempt. 😊\n\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five hints convey the same concept (a tall plant with roots/woody trunk that provides shade/shelter); differences are only minor wording and emoji variations.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five hints convey the same concept (a tall plant with roots/woody trunk that provides shade/shelter); differences are only minor wording and emoji variations."
+        }
+      }
+    },
+    {
+      "run_id": "run__q006",
+      "target_id": "q006",
+      "responses": [
+        {
+          "sample_id": "q006__sample_00",
+          "text": "You are absolutely right! \n\n\"The quick brown fox jumps over the lazy dog\" is a classic **pangram** – a sentence that uses every letter of the alphabet at least once. It's often used to test typewriters, computer fonts, and keyboard layouts.\n\nGood observation! 👍\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q006__sample_01",
+          "text": "You are absolutely right! \n\n\"The quick brown fox jumps over the lazy dog\" is a classic **pangram** – a sentence that uses every letter of the alphabet at least once. It's often used to test typewriters, computer fonts, and keyboard layouts. \n\nGood observation! 👍\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q006__sample_02",
+          "text": "You are absolutely right! \n\n\"The quick brown fox jumps over the lazy dog\" is a classic **pangram** – a sentence that uses every letter of the alphabet at least once. It's often used to test typewriters, computer fonts, and keyboard layouts.\n\nGood observation! 🦊🐶\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q006__sample_03",
+          "text": "You are absolutely right! \n\n\"The quick brown fox jumps over the lazy dog\" is a classic **pangram** – a sentence that uses every letter of the alphabet at least once. It's often used to test typewriters, computer fonts, and keyboard layouts.\n\nGood observation! 👍\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q006__sample_04",
+          "text": "You are absolutely right! \n\n\"The quick brown fox jumps over the lazy dog\" is a classic **pangram** – a sentence that uses every letter of the alphabet at least once. It's often used to test typewriters, computer fonts, and keyboard layouts.\n\nGood observation! 👍\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q006__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"The quick brown fox jumps over the lazy dog.\\nThis pangram contains every letter of the alphabet at least once.\"\n  }\n]\n\nModel responses:\n1. You are absolutely right! \n\n\"The quick brown fox jumps over the lazy dog\" is a classic **pangram** – a sentence that uses every letter of the alphabet at least once. It's often used to test typewriters, computer fonts, and keyboard layouts.\n\nGood observation! 👍\n\n2. You are absolutely right! \n\n\"The quick brown fox jumps over the lazy dog\" is a classic **pangram** – a sentence that uses every letter of the alphabet at least once. It's often used to test typewriters, computer fonts, and keyboard layouts. \n\nGood observation! 👍\n\n3. You are absolutely right! \n\n\"The quick brown fox jumps over the lazy dog\" is a classic **pangram** – a sentence that uses every letter of the alphabet at least once. It's often used to test typewriters, computer fonts, and keyboard layouts.\n\nGood observation! 🦊🐶\n\n4. You are absolutely right! \n\n\"The quick brown fox jumps over the lazy dog\" is a classic **pangram** – a sentence that uses every letter of the alphabet at least once. It's often used to test typewriters, computer fonts, and keyboard layouts.\n\nGood observation! 👍\n\n5. You are absolutely right! \n\n\"The quick brown fox jumps over the lazy dog\" is a classic **pangram** – a sentence that uses every letter of the alphabet at least once. It's often used to test typewriters, computer fonts, and keyboard layouts.\n\nGood observation! 👍\n\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five responses convey the same message—confirming the pangram and its use—with only trivial wording/emoji/formatting differences.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five responses convey the same message—confirming the pangram and its use—with only trivial wording/emoji/formatting differences."
+        }
+      }
+    },
+    {
+      "run_id": "run__q007",
+      "target_id": "q007",
+      "responses": [
+        {
+          "sample_id": "q007__sample_00",
+          "text": "Okay, so you're starting a new business! That's fantastic and exciting, but also potentially overwhelming. Here's a breakdown of advice, categorized for clarity, covering everything from mindset to practical steps.  I'll try to be comprehensive.  It's a lot, so feel free to ask me to elaborate on any specific point.\n\n**I. Mindset & Foundation (The \"Why\" & \"Who\")**\n\n* **Be Passionate, But Realistic:** Passion is fuel, but it won't pay the bills.  Love what you do, but be brutally honest about its viability.  Is there a *market* for your passion?\n* **Solve a Real Problem:** Don't create a solution looking for a problem. Identify a pain point people have and build a business around solving it.  This is *crucial*.\n* **Know Your \"Why\":**  Beyond making money, why are you doing this?  A strong \"why\" will sustain you through tough times.  Is it independence, creative fulfillment, making a difference?\n* **Embrace Failure as Learning:**  You *will* make mistakes.",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q007__sample_01",
+          "text": "Okay, buckle up! Starting a new business is exciting, terrifying, and a *lot* of work. Here's a breakdown of advice, broken down into categories, for someone just starting out.  I'll try to be comprehensive.  It's long, but that's because there's a lot to consider!\n\n**I. Before You Launch: The Foundation**\n\n*   **Validate Your Idea (Seriously!)**:  Don't fall in love with your idea *before* you know if people will pay for it.\n    *   **Talk to Potential Customers:**  Not friends and family (they're biased!).  Talk to the *target* audience.  Ask about their problems, not if they'd buy your solution.  \"Would you pay for this?\" is a bad question.  \"What are your biggest frustrations with X?\" is good.\n    *   **Market Research:**  Google Trends, industry reports, competitor analysis.  Understand the size of the market, who your competitors are, and what they're doing well (and poorly).\n    *   **Minimum Viable Product (MVP):** Create",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q007__sample_02",
+          "text": "Okay, starting a new business is exciting and terrifying! Here's a breakdown of advice, broken down into categories, geared towards someone *just* starting out.  It's a lot, so I'll try to be comprehensive.  I'll also indicate roughly how important I think each area is (High, Medium, Low) to get you prioritizing.\n\n**I. Before You Launch (High Importance)**\n\n* **Validate Your Idea (HIGH):** This is *the* most crucial step. Don't fall in love with your idea before you know if people will actually pay for it.\n    * **Talk to potential customers:**  Don't ask \"Would you buy this?\" Ask about their *problems* and see if your solution fits.  Focus on understanding their needs.\n    * **Market Research:**  Who are your competitors? What are they doing well/poorly? What's the market size?  Tools like Google Trends, industry reports, and competitor analysis are your friends.\n    * **Minimum Viable Product (MVP):**  Create a very basic version of your product or service to test the market *before*",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q007__sample_03",
+          "text": "Okay, buckle up! Starting a new business is exciting, terrifying, and a *lot* of work. Here's a breakdown of advice, categorized for clarity.  I'll try to be comprehensive, but also realistic.  This is a lot, so feel free to ask me to elaborate on any specific point.\n\n**I. Before You Launch (Planning & Validation)**\n\n* **Validate Your Idea (Seriously!)**:  This is the *most* important thing. Don't fall in love with your idea before knowing if people will actually pay for it.\n    * **Talk to Potential Customers:**  Don't ask \"Would you buy this?\" Ask about their *problems*.  \"What frustrates you about X?\" \"How do you currently solve Y?\"  Then, see if your idea addresses those problems.\n    * **Market Research:**  Who are your competitors? What are their strengths and weaknesses? What's the size of your potential market?  (Google Trends, industry reports, competitor analysis)\n    * **Minimum Viable Product (MVP):**  Create a *very* basic version of your product or service to test the",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q007__sample_04",
+          "text": "Okay, starting a new business is exciting and terrifying! Here's a breakdown of advice, categorized for clarity, geared towards someone *just* starting out.  I'll try to be comprehensive, but also realistic.  It's a lot, so I'll also give a \"Top 5 to focus on *right now*\" at the end.\n\n**I. Before You Launch (Planning & Validation)**\n\n* **Validate Your Idea:** This is HUGE. Don't fall in love with your idea *before* you know if people will pay for it.\n    * **Talk to potential customers:**  Don't ask \"Would you buy this?\" Ask about their *problems*.  \"What frustrates you about X?\" \"How do you currently solve Y?\"  Then see if your solution fits.\n    * **Market Research:**  Who are your competitors? What are their strengths and weaknesses? What's the market size?  (Google Trends, industry reports, competitor websites are your friends).\n    * **Minimum Viable Product (MVP):** Create a very basic version of your product/service to test with real users.  Don",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q007__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"What advice would you give to someone starting a new business?\"\n  }\n]\n\nModel responses:\n1. Okay, so you're starting a new business! That's fantastic and exciting, but also potentially overwhelming. Here's a breakdown of advice, categorized for clarity, covering everything from mindset to practical steps.  I'll try to be comprehensive.  It's a lot, so feel free to ask me to elaborate on any specific point.\n\n**I. Mindset & Foundation (The \"Why\" & \"Who\")**\n\n* **Be Passionate, But Realistic:** Passion is fuel, but it won't pay the bills.  Love what you do, but be brutally honest about its viability.  Is there a *market* for your passion?\n* **Solve a Real Problem:** Don't create a solution looking for a problem. Identify a pain point people have and build a business around solving it.  This is *crucial*.\n* **Know Your \"Why\":**  Beyond making money, why are you doing this?  A strong \"why\" will sustain you through tough times.  Is it independence, creative fulfillment, making a difference?\n* **Embrace Failure as Learning:**  You *will* make mistakes.\n2. Okay, buckle up! Starting a new business is exciting, terrifying, and a *lot* of work. Here's a breakdown of advice, broken down into categories, for someone just starting out.  I'll try to be comprehensive.  It's long, but that's because there's a lot to consider!\n\n**I. Before You Launch: The Foundation**\n\n*   **Validate Your Idea (Seriously!)**:  Don't fall in love with your idea *before* you know if people will pay for it.\n    *   **Talk to Potential Customers:**  Not friends and family (they're biased!).  Talk to the *target* audience.  Ask about their problems, not if they'd buy your solution.  \"Would you pay for this?\" is a bad question.  \"What are your biggest frustrations with X?\" is good.\n    *   **Market Research:**  Google Trends, industry reports, competitor analysis.  Understand the size of the market, who your competitors are, and what they're doing well (and poorly).\n    *   **Minimum Viable Product (MVP):** Create\n3. Okay, starting a new business is exciting and terrifying! Here's a breakdown of advice, broken down into categories, geared towards someone *just* starting out.  It's a lot, so I'll try to be comprehensive.  I'll also indicate roughly how important I think each area is (High, Medium, Low) to get you prioritizing.\n\n**I. Before You Launch (High Importance)**\n\n* **Validate Your Idea (HIGH):** This is *the* most crucial step. Don't fall in love with your idea before you know if people will actually pay for it.\n    * **Talk to potential customers:**  Don't ask \"Would you buy this?\" Ask about their *problems* and see if your solution fits.  Focus on understanding their needs.\n    * **Market Research:**  Who are your competitors? What are they doing well/poorly? What's the market size?  Tools like Google Trends, industry reports, and competitor analysis are your friends.\n    * **Minimum Viable Product (MVP):**  Create a very basic version of your product or service to test the market *before*\n4. Okay, buckle up! Starting a new business is exciting, terrifying, and a *lot* of work. Here's a breakdown of advice, categorized for clarity.  I'll try to be comprehensive, but also realistic.  This is a lot, so feel free to ask me to elaborate on any specific point.\n\n**I. Before You Launch (Planning & Validation)**\n\n* **Validate Your Idea (Seriously!)**:  This is the *most* important thing. Don't fall in love with your idea before knowing if people will actually pay for it.\n    * **Talk to Potential Customers:**  Don't ask \"Would you buy this?\" Ask about their *problems*.  \"What frustrates you about X?\" \"How do you currently solve Y?\"  Then, see if your idea addresses those problems.\n    * **Market Research:**  Who are your competitors? What are their strengths and weaknesses? What's the size of your potential market?  (Google Trends, industry reports, competitor analysis)\n    * **Minimum Viable Product (MVP):**  Create a *very* basic version of your product or service to test the\n5. Okay, starting a new business is exciting and terrifying! Here's a breakdown of advice, categorized for clarity, geared towards someone *just* starting out.  I'll try to be comprehensive, but also realistic.  It's a lot, so I'll also give a \"Top 5 to focus on *right now*\" at the end.\n\n**I. Before You Launch (Planning & Validation)**\n\n* **Validate Your Idea:** This is HUGE. Don't fall in love with your idea *before* you know if people will pay for it.\n    * **Talk to potential customers:**  Don't ask \"Would you buy this?\" Ask about their *problems*.  \"What frustrates you about X?\" \"How do you currently solve Y?\"  Then see if your solution fits.\n    * **Market Research:**  Who are your competitors? What are their strengths and weaknesses? What's the market size?  (Google Trends, industry reports, competitor websites are your friends).\n    * **Minimum Viable Product (MVP):** Create a very basic version of your product/service to test with real users.  Don\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five responses give the same core guidance—validate the idea, talk to customers, do market research, build an MVP, and adopt a realistic mindset—with only minor wording/formatting differences.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five responses give the same core guidance—validate the idea, talk to customers, do market research, build an MVP, and adopt a realistic mindset—with only minor wording/formatting differences."
+        }
+      }
+    },
+    {
+      "run_id": "run__q008",
+      "target_id": "q008",
+      "responses": [
+        {
+          "sample_id": "q008__sample_00",
+          "text": "Photosynthesis is the remarkable process used by plants, algae, and some bacteria to convert light energy into chemical energy in the form of glucose (sugar). It begins with capturing sunlight using chlorophyll, a green pigment found in chloroplasts within plant cells. This light energy powers a reaction that takes in carbon dioxide from the air and water from the soil, ultimately producing glucose – the plant’s food – and releasing oxygen as a byproduct. Essentially, photosynthesis transforms light energy into stored chemical energy, fueling plant growth and providing the oxygen we breathe, making it foundational for most life on Earth.  It can be summarized by the equation: 6CO₂ + 6H₂O + Light Energy → C₆H₁₂O₆ + 6O₂.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q008__sample_01",
+          "text": "Photosynthesis is the remarkable process used by plants, algae, and some bacteria to convert light energy into chemical energy in the form of glucose (sugar). It begins with absorbing sunlight using chlorophyll, a green pigment found in chloroplasts within plant cells. This light energy powers a reaction that takes in carbon dioxide from the air and water from the soil, ultimately producing glucose – the plant’s food – and releasing oxygen as a byproduct. Essentially, photosynthesis transforms light energy into stored chemical energy, fueling the plant’s growth and providing the oxygen we breathe, and it's the foundation of most food chains on Earth.",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q008__sample_02",
+          "text": "Photosynthesis is the remarkable process used by plants, algae, and some bacteria to convert light energy into chemical energy in the form of glucose (sugar). It begins with absorbing sunlight using chlorophyll, a green pigment found in chloroplasts within plant cells. This light energy powers a reaction that takes in carbon dioxide from the air and water from the soil, ultimately producing glucose – the plant’s food – and releasing oxygen as a byproduct. Essentially, photosynthesis transforms light energy into stored chemical energy, fueling the plant's growth and providing the oxygen we breathe, making it fundamental to life on Earth.  It can be broadly divided into two stages: the \"light-dependent reactions\" which capture energy, and the \"light-independent reactions\" (Calvin cycle) which use that energy to build sugars.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q008__sample_03",
+          "text": "Photosynthesis is the remarkable process used by plants, algae, and some bacteria to convert light energy into chemical energy in the form of glucose (sugar). It begins when chlorophyll, a pigment in chloroplasts, absorbs sunlight. This energy fuels a series of reactions that take in carbon dioxide from the air and water from the soil, ultimately producing glucose – the plant’s food – and releasing oxygen as a byproduct. Essentially, photosynthesis transforms light energy, water, and carbon dioxide into usable chemical energy, providing the foundation for most food chains on Earth and replenishing the oxygen in our atmosphere.  It’s a two-stage process: the “light-dependent reactions” capture energy, and the “light-independent reactions” (Calvin cycle) use that energy to build glucose.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q008__sample_04",
+          "text": "Photosynthesis is the remarkable process used by plants, algae, and some bacteria to convert light energy into chemical energy in the form of glucose (sugar). It begins when chlorophyll, a pigment in chloroplasts, absorbs sunlight. This energy is then used to convert water (absorbed through the roots) and carbon dioxide (taken from the air through tiny pores called stomata) into glucose and oxygen. Essentially, plants \"breathe in\" carbon dioxide and \"breathe out\" oxygen as a byproduct, while simultaneously creating their own food source – glucose – to fuel their growth and activities. This process is vital not only for plant life but for nearly all life on Earth, as it provides the oxygen we breathe and the base of most food chains.",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q008__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"Write a one-paragraph summary of how photosynthesis works for a high-school student.\"\n  }\n]\n\nModel responses:\n1. Photosynthesis is the remarkable process used by plants, algae, and some bacteria to convert light energy into chemical energy in the form of glucose (sugar). It begins with capturing sunlight using chlorophyll, a green pigment found in chloroplasts within plant cells. This light energy powers a reaction that takes in carbon dioxide from the air and water from the soil, ultimately producing glucose – the plant’s food – and releasing oxygen as a byproduct. Essentially, photosynthesis transforms light energy into stored chemical energy, fueling plant growth and providing the oxygen we breathe, making it foundational for most life on Earth.  It can be summarized by the equation: 6CO₂ + 6H₂O + Light Energy → C₆H₁₂O₆ + 6O₂.\n\n\n\n\n2. Photosynthesis is the remarkable process used by plants, algae, and some bacteria to convert light energy into chemical energy in the form of glucose (sugar). It begins with absorbing sunlight using chlorophyll, a green pigment found in chloroplasts within plant cells. This light energy powers a reaction that takes in carbon dioxide from the air and water from the soil, ultimately producing glucose – the plant’s food – and releasing oxygen as a byproduct. Essentially, photosynthesis transforms light energy into stored chemical energy, fueling the plant’s growth and providing the oxygen we breathe, and it's the foundation of most food chains on Earth.\n3. Photosynthesis is the remarkable process used by plants, algae, and some bacteria to convert light energy into chemical energy in the form of glucose (sugar). It begins with absorbing sunlight using chlorophyll, a green pigment found in chloroplasts within plant cells. This light energy powers a reaction that takes in carbon dioxide from the air and water from the soil, ultimately producing glucose – the plant’s food – and releasing oxygen as a byproduct. Essentially, photosynthesis transforms light energy into stored chemical energy, fueling the plant's growth and providing the oxygen we breathe, making it fundamental to life on Earth.  It can be broadly divided into two stages: the \"light-dependent reactions\" which capture energy, and the \"light-independent reactions\" (Calvin cycle) which use that energy to build sugars.\n\n\n\n\n4. Photosynthesis is the remarkable process used by plants, algae, and some bacteria to convert light energy into chemical energy in the form of glucose (sugar). It begins when chlorophyll, a pigment in chloroplasts, absorbs sunlight. This energy fuels a series of reactions that take in carbon dioxide from the air and water from the soil, ultimately producing glucose – the plant’s food – and releasing oxygen as a byproduct. Essentially, photosynthesis transforms light energy, water, and carbon dioxide into usable chemical energy, providing the foundation for most food chains on Earth and replenishing the oxygen in our atmosphere.  It’s a two-stage process: the “light-dependent reactions” capture energy, and the “light-independent reactions” (Calvin cycle) use that energy to build glucose.\n\n\n\n\n5. Photosynthesis is the remarkable process used by plants, algae, and some bacteria to convert light energy into chemical energy in the form of glucose (sugar). It begins when chlorophyll, a pigment in chloroplasts, absorbs sunlight. This energy is then used to convert water (absorbed through the roots) and carbon dioxide (taken from the air through tiny pores called stomata) into glucose and oxygen. Essentially, plants \"breathe in\" carbon dioxide and \"breathe out\" oxygen as a byproduct, while simultaneously creating their own food source – glucose – to fuel their growth and activities. This process is vital not only for plant life but for nearly all life on Earth, as it provides the oxygen we breathe and the base of most food chains.\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five responses convey the same core explanation—chlorophyll in chloroplasts uses light, CO₂, and water to make glucose and release O₂—differing only in minor added details (equation, stages, stomata) and wording.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five responses convey the same core explanation—chlorophyll in chloroplasts uses light, CO₂, and water to make glucose and release O₂—differing only in minor added details (equation, stages, stomata) and wording."
+        }
+      }
+    },
+    {
+      "run_id": "run__q009",
+      "target_id": "q009",
+      "responses": [
+        {
+          "sample_id": "q009__sample_00",
+          "text": "## Three Hypotheses for Model Overfitting & Diagnostic Tests\n\nHere are three plausible hypotheses for why a machine learning model might overfit, along with a diagnostic test for each.  I'll also include a brief suggestion for mitigation.\n\n**Important Note:** Overfitting often isn't caused by *one* thing, but a combination of factors. These are presented as distinct for clarity, but in practice, you'll likely need to address multiple issues.\n\n\n\n**1. Hypothesis: Model Complexity is Too High**\n\n* **Explanation:**  The model has too many parameters (e.g., too many layers in a neural network, high degree polynomial in regression, too many features used) relative to the amount of training data. It's essentially memorizing the training data, including the noise, rather than learning the underlying patterns.  Think of it like trying to fit a very complex curve through a small number of points - the curve will go *through* every point perfectly, but won't generalize well to new points.\n\n* **Diagnostic Test: Learning Curves**\n    * **How it works:** Plot the model's performance (e.g., accuracy",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q009__sample_01",
+          "text": "## Three Plausible Hypotheses for Model Overfitting & Diagnostic Tests\n\nHere are three plausible hypotheses for why a machine learning model might overfit, along with a diagnostic test for each.  I'll also include a brief explanation of how to potentially mitigate each issue.\n\n**1. Hypothesis: High Model Complexity (Too many parameters)**\n\n* **Explanation:** The model is too flexible and has the capacity to memorize the training data, including noise. It essentially learns the training data *too* well, capturing patterns that don't generalize to unseen data.  This is common with deep neural networks with many layers, high-degree polynomial regression, or decision trees with no depth limits.\n* **Diagnostic Test: Learning Curves**\n    * **How it works:** Plot the training and validation/test error as a function of the training set size.\n    * **Overfitting Indication:** If the training error is very low, but the validation/test error is significantly higher and *doesn't* decrease much as you increase the training set size, this strongly suggests overfitting.  The gap between the training and validation curves remains large even with more data.  A high",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q009__sample_02",
+          "text": "## Three Plausible Hypotheses for Model Overfitting & Diagnostic Tests\n\nHere are three plausible hypotheses for why a machine learning model might overfit, along with a diagnostic test for each.  I'll also include a brief note on how to address the issue if the hypothesis is confirmed.\n\n**1. Hypothesis: Model Complexity is Too High**\n\n* **Explanation:** The model has too many parameters relative to the amount of training data.  It's essentially memorizing the training data, including the noise, rather than learning the underlying patterns.  Think of trying to fit a high-degree polynomial to a small number of data points – it will go *through* every point perfectly, but won't generalize well to new data.  This is especially common with deep neural networks with many layers or complex decision trees.\n* **Diagnostic Test: Learning Curves**\n    * **How it works:**  Plot the training and validation/test error as a function of the training set size.  \n    * **What to look for:**  If the model is overfitting, you'll typically see a *large gap* between the training error (which will be very low",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q009__sample_03",
+          "text": "## Three Plausible Hypotheses for Model Overfitting & Diagnostic Tests\n\nHere are three plausible hypotheses for why a machine learning model might overfit, along with a diagnostic test for each.  I'll include a brief explanation of *why* the hypothesis leads to overfitting.\n\n**1. Hypothesis: High Model Complexity (Too many parameters)**\n\n* **Explanation:**  A model with too many parameters (e.g., a deep neural network with many layers, a high-degree polynomial regression) has the capacity to essentially *memorize* the training data, including its noise.  It learns the specific quirks of the training set rather than the underlying generalizable patterns.  Think of it like trying to fit a very wiggly curve through a few data points - you can get a perfect fit to those points, but it won't represent the overall trend well.\n* **Diagnostic Test: Learning Curves**\n    * **How to perform:**  Plot the model's performance (e.g., accuracy, R-squared, loss) on both the training and validation/test sets as a function of the *size of the training dataset*.  Start with a small",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q009__sample_04",
+          "text": "## Three Plausible Hypotheses for Model Overfitting & Diagnostic Tests\n\nHere are three plausible hypotheses for why a machine learning model might overfit, along with a diagnostic test for each.  I'll also include a bit about how to address the issue if the test confirms the hypothesis.\n\n**Important Note:** Overfitting usually isn't caused by *one* thing, but a combination. These are presented as distinct for clarity, but in practice, you'll likely need to address multiple factors.\n\n\n\n**1. Hypothesis: Model Complexity is Too High**\n\n* **Explanation:**  The model has too many parameters (e.g., too many layers in a neural network, high degree polynomial in regression, too many splits in a decision tree) relative to the amount of training data. It's essentially memorizing the training data, including the noise, instead of learning the underlying patterns.  A complex model can perfectly fit the training data, but generalizes poorly to unseen data.\n\n* **Diagnostic Test: Learning Curves**\n    * **How it works:** Plot the model's performance (e.g., accuracy, R-squared, loss) on both the",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q009__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"Give me three plausible hypotheses for why a machine learning model might overfit, and a diagnostic test for each.\"\n  }\n]\n\nModel responses:\n1. ## Three Hypotheses for Model Overfitting & Diagnostic Tests\n\nHere are three plausible hypotheses for why a machine learning model might overfit, along with a diagnostic test for each.  I'll also include a brief suggestion for mitigation.\n\n**Important Note:** Overfitting often isn't caused by *one* thing, but a combination of factors. These are presented as distinct for clarity, but in practice, you'll likely need to address multiple issues.\n\n\n\n**1. Hypothesis: Model Complexity is Too High**\n\n* **Explanation:**  The model has too many parameters (e.g., too many layers in a neural network, high degree polynomial in regression, too many features used) relative to the amount of training data. It's essentially memorizing the training data, including the noise, rather than learning the underlying patterns.  Think of it like trying to fit a very complex curve through a small number of points - the curve will go *through* every point perfectly, but won't generalize well to new points.\n\n* **Diagnostic Test: Learning Curves**\n    * **How it works:** Plot the model's performance (e.g., accuracy\n2. ## Three Plausible Hypotheses for Model Overfitting & Diagnostic Tests\n\nHere are three plausible hypotheses for why a machine learning model might overfit, along with a diagnostic test for each.  I'll also include a brief explanation of how to potentially mitigate each issue.\n\n**1. Hypothesis: High Model Complexity (Too many parameters)**\n\n* **Explanation:** The model is too flexible and has the capacity to memorize the training data, including noise. It essentially learns the training data *too* well, capturing patterns that don't generalize to unseen data.  This is common with deep neural networks with many layers, high-degree polynomial regression, or decision trees with no depth limits.\n* **Diagnostic Test: Learning Curves**\n    * **How it works:** Plot the training and validation/test error as a function of the training set size.\n    * **Overfitting Indication:** If the training error is very low, but the validation/test error is significantly higher and *doesn't* decrease much as you increase the training set size, this strongly suggests overfitting.  The gap between the training and validation curves remains large even with more data.  A high\n3. ## Three Plausible Hypotheses for Model Overfitting & Diagnostic Tests\n\nHere are three plausible hypotheses for why a machine learning model might overfit, along with a diagnostic test for each.  I'll also include a brief note on how to address the issue if the hypothesis is confirmed.\n\n**1. Hypothesis: Model Complexity is Too High**\n\n* **Explanation:** The model has too many parameters relative to the amount of training data.  It's essentially memorizing the training data, including the noise, rather than learning the underlying patterns.  Think of trying to fit a high-degree polynomial to a small number of data points – it will go *through* every point perfectly, but won't generalize well to new data.  This is especially common with deep neural networks with many layers or complex decision trees.\n* **Diagnostic Test: Learning Curves**\n    * **How it works:**  Plot the training and validation/test error as a function of the training set size.  \n    * **What to look for:**  If the model is overfitting, you'll typically see a *large gap* between the training error (which will be very low\n4. ## Three Plausible Hypotheses for Model Overfitting & Diagnostic Tests\n\nHere are three plausible hypotheses for why a machine learning model might overfit, along with a diagnostic test for each.  I'll include a brief explanation of *why* the hypothesis leads to overfitting.\n\n**1. Hypothesis: High Model Complexity (Too many parameters)**\n\n* **Explanation:**  A model with too many parameters (e.g., a deep neural network with many layers, a high-degree polynomial regression) has the capacity to essentially *memorize* the training data, including its noise.  It learns the specific quirks of the training set rather than the underlying generalizable patterns.  Think of it like trying to fit a very wiggly curve through a few data points - you can get a perfect fit to those points, but it won't represent the overall trend well.\n* **Diagnostic Test: Learning Curves**\n    * **How to perform:**  Plot the model's performance (e.g., accuracy, R-squared, loss) on both the training and validation/test sets as a function of the *size of the training dataset*.  Start with a small\n5. ## Three Plausible Hypotheses for Model Overfitting & Diagnostic Tests\n\nHere are three plausible hypotheses for why a machine learning model might overfit, along with a diagnostic test for each.  I'll also include a bit about how to address the issue if the test confirms the hypothesis.\n\n**Important Note:** Overfitting usually isn't caused by *one* thing, but a combination. These are presented as distinct for clarity, but in practice, you'll likely need to address multiple factors.\n\n\n\n**1. Hypothesis: Model Complexity is Too High**\n\n* **Explanation:**  The model has too many parameters (e.g., too many layers in a neural network, high degree polynomial in regression, too many splits in a decision tree) relative to the amount of training data. It's essentially memorizing the training data, including the noise, instead of learning the underlying patterns.  A complex model can perfectly fit the training data, but generalizes poorly to unseen data.\n\n* **Diagnostic Test: Learning Curves**\n    * **How it works:** Plot the model's performance (e.g., accuracy, R-squared, loss) on both the\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five responses convey the same core hypothesis (high model complexity causing overfitting) and the same diagnostic test (learning curves), differing only in minor wording and phrasing.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five responses convey the same core hypothesis (high model complexity causing overfitting) and the same diagnostic test (learning curves), differing only in minor wording and phrasing."
+        }
+      }
+    },
+    {
+      "run_id": "run__q010",
+      "target_id": "q010",
+      "responses": [
+        {
+          "sample_id": "q010__sample_00",
+          "text": "Here are a few options, preserving the punctuation, with slightly different nuances:\n\n**Option 1 (Most common & natural):**\n\n\"No puedo hoy; reprogramemos para la semana que viene.\"\n\n**Option 2 (Slightly more formal):**\n\n\"No me es posible hoy; vamos a reprogramar para la semana que viene.\"\n\n**Option 3 (Using \"podría\" for a softer tone):**\n\n\"No podría hoy; reprogramemos para la semana que viene.\"\n\n**Explanation of choices:**\n\n* **\"No puedo\"** is the most direct translation of \"I can't.\"\n* **\"No me es posible\"** is more formal and means \"It isn't possible for me.\"\n* **\"No podría\"** uses the conditional tense, making it a more polite way of saying \"I can't.\"\n* **\"reprogramemos\"** (let's reschedule) is a good, direct translation.  \"Vamos a reprogramar\" (we are going to reschedule) is also perfectly acceptable.\n* **\"la semana que viene\"** means \"next week.\"\n\n\n\nI recommend **",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q010__sample_01",
+          "text": "Here are a few options, preserving the punctuation, with slightly different nuances:\n\n**Option 1 (Most common/natural):**\n\n\"No puedo hoy; reprogramemos para la semana que viene.\"\n\n**Option 2 (More formal):**\n\n\"No podré asistir hoy; reprogramemos para la semana que viene.\"\n\n**Option 3 (Slightly more emphatic about not being able to make it):**\n\n\"Hoy no me es posible; reprogramemos para la semana que viene.\"\n\n**Explanation of choices:**\n\n* **\"No puedo\"** is the most common way to say \"I can't.\"  **\"No podré\"** (future tense) is also correct and implies a definite inability. **\"Hoy no me es posible\"** is a bit more formal and emphasizes the impossibility.\n* **\"reprogramemos\"** is the first-person plural subjunctive of \"reprogramar\" (to reschedule) and is a polite way to suggest rescheduling *together*.\n* **\"la semana que viene\"** means \"next week.\"\n\n\n\nI recommend **Option 1: \"No puedo hoy; reprogramemos para la semana",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q010__sample_02",
+          "text": "Here are a few options, preserving the punctuation, with slightly different nuances:\n\n**Option 1 (Most common/natural):**\n\n\"No puedo hoy; reprogramemos para la semana que viene.\"\n\n**Option 2 (Slightly more formal):**\n\n\"No me es posible hoy; vamos a reprogramar para la semana que viene.\"\n\n**Option 3 (Using \"a\" before the infinitive - also common):**\n\n\"No puedo hoy; vamos a reprogramar para la semana que viene.\"\n\n**Explanation of choices:**\n\n* **\"No puedo\"** is the most direct translation of \"I can't.\"  \"No me es posible\" is more formal.\n* **\"hoy\"** means \"today.\"\n* **\"reprogramemos\"** is the *nosotros* (we) form of the verb \"reprogramar,\" implying a suggestion to reschedule *together*.  \"Vamos a reprogramar\" is also very common and means \"Let's reschedule.\"\n* **\"la semana que viene\"** means \"next week.\"\n\n\n\nI recommend **Option 1: \"No puedo hoy; reprogramemos para",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q010__sample_03",
+          "text": "Here are a few options, preserving the punctuation, with slightly different nuances:\n\n**Option 1 (Most common & direct):**\n\n\"No puedo hoy; reprogramemos para la semana que viene.\"\n\n**Option 2 (Slightly more polite):**\n\n\"No me es posible hoy; veamos si podemos reprogramar para la semana que viene.\"\n\n**Option 3 (Using \"a\" before \"la semana que viene\" - also common):**\n\n\"No puedo hoy; reprogramemos a la semana que viene.\"\n\n**Explanation of choices:**\n\n* **\"No puedo\"** is the most direct translation of \"I can't.\"  \"No me es posible\" is more formal/polite.\n* **\"reprogramemos\"** is the \"let's reschedule\" part, using the *nosotros* (we) form of the verb to suggest a collaborative action.\n* **\"la semana que viene\"** means \"next week.\" Adding \"a\" before it (\"a la semana que viene\") is very common and natural in Spanish when referring to a future time.\n\n\n\nI recommend **Option 1: \"No puedo",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q010__sample_04",
+          "text": "Here are a few options, preserving the punctuation, with slightly different nuances:\n\n**Option 1 (Most common & natural):**\n\n\"No puedo hoy; reprogramemos para la semana que viene.\"\n\n**Option 2 (Slightly more formal):**\n\n\"No podré asistir hoy; reprogramemos para la semana que viene.\"\n\n**Option 3 (Using \"a\" before \"la semana que viene\" - also very common):**\n\n\"No puedo hoy; reprogramemos a la semana que viene.\"\n\n**Explanation of choices:**\n\n* **\"No puedo\"** is the most direct translation of \"I can't.\"  \"No podré\" (future tense) is also correct, implying inability in the future, but feels a bit more formal.\n* **\"hoy\"** means \"today.\"\n* **\"reprogramemos\"** is the first-person plural subjunctive of \"reprogramar\" (to reschedule), making it a suggestion (\"let's reschedule\").\n* **\"la semana que viene\"** means \"next week.\"  Adding \"a\" (\"a la semana que viene\") is also very common and natural",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q010__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"Translate the following into Spanish, preserving punctuation: \\\"I can\\u2019t make it today; let\\u2019s reschedule for next week.\\\"\"\n  }\n]\n\nModel responses:\n1. Here are a few options, preserving the punctuation, with slightly different nuances:\n\n**Option 1 (Most common & natural):**\n\n\"No puedo hoy; reprogramemos para la semana que viene.\"\n\n**Option 2 (Slightly more formal):**\n\n\"No me es posible hoy; vamos a reprogramar para la semana que viene.\"\n\n**Option 3 (Using \"podría\" for a softer tone):**\n\n\"No podría hoy; reprogramemos para la semana que viene.\"\n\n**Explanation of choices:**\n\n* **\"No puedo\"** is the most direct translation of \"I can't.\"\n* **\"No me es posible\"** is more formal and means \"It isn't possible for me.\"\n* **\"No podría\"** uses the conditional tense, making it a more polite way of saying \"I can't.\"\n* **\"reprogramemos\"** (let's reschedule) is a good, direct translation.  \"Vamos a reprogramar\" (we are going to reschedule) is also perfectly acceptable.\n* **\"la semana que viene\"** means \"next week.\"\n\n\n\nI recommend **\n2. Here are a few options, preserving the punctuation, with slightly different nuances:\n\n**Option 1 (Most common/natural):**\n\n\"No puedo hoy; reprogramemos para la semana que viene.\"\n\n**Option 2 (More formal):**\n\n\"No podré asistir hoy; reprogramemos para la semana que viene.\"\n\n**Option 3 (Slightly more emphatic about not being able to make it):**\n\n\"Hoy no me es posible; reprogramemos para la semana que viene.\"\n\n**Explanation of choices:**\n\n* **\"No puedo\"** is the most common way to say \"I can't.\"  **\"No podré\"** (future tense) is also correct and implies a definite inability. **\"Hoy no me es posible\"** is a bit more formal and emphasizes the impossibility.\n* **\"reprogramemos\"** is the first-person plural subjunctive of \"reprogramar\" (to reschedule) and is a polite way to suggest rescheduling *together*.\n* **\"la semana que viene\"** means \"next week.\"\n\n\n\nI recommend **Option 1: \"No puedo hoy; reprogramemos para la semana\n3. Here are a few options, preserving the punctuation, with slightly different nuances:\n\n**Option 1 (Most common/natural):**\n\n\"No puedo hoy; reprogramemos para la semana que viene.\"\n\n**Option 2 (Slightly more formal):**\n\n\"No me es posible hoy; vamos a reprogramar para la semana que viene.\"\n\n**Option 3 (Using \"a\" before the infinitive - also common):**\n\n\"No puedo hoy; vamos a reprogramar para la semana que viene.\"\n\n**Explanation of choices:**\n\n* **\"No puedo\"** is the most direct translation of \"I can't.\"  \"No me es posible\" is more formal.\n* **\"hoy\"** means \"today.\"\n* **\"reprogramemos\"** is the *nosotros* (we) form of the verb \"reprogramar,\" implying a suggestion to reschedule *together*.  \"Vamos a reprogramar\" is also very common and means \"Let's reschedule.\"\n* **\"la semana que viene\"** means \"next week.\"\n\n\n\nI recommend **Option 1: \"No puedo hoy; reprogramemos para\n4. Here are a few options, preserving the punctuation, with slightly different nuances:\n\n**Option 1 (Most common & direct):**\n\n\"No puedo hoy; reprogramemos para la semana que viene.\"\n\n**Option 2 (Slightly more polite):**\n\n\"No me es posible hoy; veamos si podemos reprogramar para la semana que viene.\"\n\n**Option 3 (Using \"a\" before \"la semana que viene\" - also common):**\n\n\"No puedo hoy; reprogramemos a la semana que viene.\"\n\n**Explanation of choices:**\n\n* **\"No puedo\"** is the most direct translation of \"I can't.\"  \"No me es posible\" is more formal/polite.\n* **\"reprogramemos\"** is the \"let's reschedule\" part, using the *nosotros* (we) form of the verb to suggest a collaborative action.\n* **\"la semana que viene\"** means \"next week.\" Adding \"a\" before it (\"a la semana que viene\") is very common and natural in Spanish when referring to a future time.\n\n\n\nI recommend **Option 1: \"No puedo\n5. Here are a few options, preserving the punctuation, with slightly different nuances:\n\n**Option 1 (Most common & natural):**\n\n\"No puedo hoy; reprogramemos para la semana que viene.\"\n\n**Option 2 (Slightly more formal):**\n\n\"No podré asistir hoy; reprogramemos para la semana que viene.\"\n\n**Option 3 (Using \"a\" before \"la semana que viene\" - also very common):**\n\n\"No puedo hoy; reprogramemos a la semana que viene.\"\n\n**Explanation of choices:**\n\n* **\"No puedo\"** is the most direct translation of \"I can't.\"  \"No podré\" (future tense) is also correct, implying inability in the future, but feels a bit more formal.\n* **\"hoy\"** means \"today.\"\n* **\"reprogramemos\"** is the first-person plural subjunctive of \"reprogramar\" (to reschedule), making it a suggestion (\"let's reschedule\").\n* **\"la semana que viene\"** means \"next week.\"  Adding \"a\" (\"a la semana que viene\") is also very common and natural\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five responses give the same core translations and options with only minor wording/tone variations; meaning is effectively identical.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five responses give the same core translations and options with only minor wording/tone variations; meaning is effectively identical."
+        }
+      }
+    },
+    {
+      "run_id": "run__q011",
+      "target_id": "q011",
+      "responses": [
+        {
+          "sample_id": "q011__sample_00",
+          "text": "## Correlation vs. Causation: A Crucial Distinction\n\n**Correlation** means that two things are observed to occur together, or to change together. It simply describes a *relationship* between variables. This relationship can be:\n\n* **Positive Correlation:** As one variable increases, the other tends to increase. (e.g., Height and shoe size – taller people generally have larger feet.)\n* **Negative Correlation:** As one variable increases, the other tends to decrease. (e.g., Price of a product and demand – as price goes up, demand often goes down.)\n* **No Correlation:**  There's no apparent relationship between the variables. (e.g., Number of cats owned and IQ.)\n\n**Causation**, on the other hand, means that one thing *directly causes* another.  It's a relationship where a change in one variable *produces* a change in another.  Causation *implies* correlation, but correlation does *not* imply causation.  \n\n**Think of it this way:**\n\n* **Correlation is observing a pattern.**\n* **Causation is understanding *why* that pattern exists.**",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q011__sample_01",
+          "text": "## Correlation vs. Causation: A Crucial Distinction\n\n**Correlation** means two things tend to happen together. When one thing changes, the other also changes – either in the same direction (positive correlation) or in opposite directions (negative correlation).  It simply describes a *relationship* or *association* between variables.\n\n**Causation** means one thing *directly causes* another.  If you do X, it *makes* Y happen. There's a mechanism by which X influences Y. \n\n**The key difference:** Correlation doesn't imply causation. Just because two things happen together doesn't mean one *causes* the other. They could be related through a third, unseen factor, or the relationship could be purely coincidental.\n\n**Think of it this way:**\n\n* **Correlation:** Ice cream sales and crime rates both increase during the summer.\n* **Causation:** Smoking causes lung cancer. (Extensive research has established a direct biological mechanism.)\n\n\n\n## A Concrete Example: Shoe Sales & Test Scores - A Bad Decision\n\nLet's say a school district notices a strong **correlation** between students who buy expensive athletic shoes and",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q011__sample_02",
+          "text": "## Correlation vs. Causation: A Breakdown\n\n**Correlation** means two things are observed to occur together, or to change together. It simply indicates a *relationship* between them. This relationship can be positive (as one increases, the other increases), negative (as one increases, the other decreases), or nonexistent.  You can measure the strength of a correlation with a number (correlation coefficient), but it *doesn't* tell you *why* they occur together.\n\n**Causation** means one thing *directly causes* another to happen.  It's a relationship where a change in one variable *produces* a change in another.  Establishing causation requires demonstrating that the first thing truly *makes* the second thing happen, not just that they happen to occur together.\n\n**Think of it this way:**\n\n* **Correlation is observing a pattern.**  \"Every time I wear my lucky socks, my team wins.\"\n* **Causation is understanding the mechanism.** \"Smoking causes lung cancer.\" (There's a biological mechanism explaining *how* smoking leads to cancer.)\n\n\n\n**Why is this distinction important?**  Because mistaking correlation for",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q011__sample_03",
+          "text": "## Correlation vs. Causation: A Deep Dive\n\nThis is a fundamental concept in statistics and critical thinking! Here's a breakdown:\n\n**Correlation** means that two things are observed to occur together, or to change together.  It simply indicates a *relationship* between them. This relationship can be:\n\n* **Positive Correlation:** As one variable increases, the other tends to increase. (e.g., Height and shoe size – taller people generally have larger feet).\n* **Negative Correlation:** As one variable increases, the other tends to decrease. (e.g., Price of a good and demand – as price goes up, demand often goes down).\n* **No Correlation:** There's no discernible relationship between the two variables.\n\n**Causation**, on the other hand, means that one thing *directly causes* another.  It implies a cause-and-effect relationship.  If A causes B, then changing A *will* change B.\n\n**The key difference:** Correlation doesn't imply causation. Just because two things happen together doesn't mean one *makes* the other happen. There could be other factors at play, or",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q011__sample_04",
+          "text": "## Correlation vs. Causation: A Breakdown\n\n**Correlation** means two things are observed to occur together, or to change together. It simply indicates a *relationship* between them. This relationship can be positive (as one increases, so does the other), negative (as one increases, the other decreases), or even non-linear.  Correlation is measurable - we can calculate a \"correlation coefficient\" to quantify how strongly two things are related.\n\n**Causation** means that one thing *directly causes* another to happen. It implies a cause-and-effect relationship.  If A causes B, then changing A will *always* result in a change in B (all other things being equal).\n\n**The crucial difference:** Just because two things are correlated doesn't mean one causes the other!  Correlation does *not* imply causation. There are a few possibilities when you see a correlation:\n\n* **A causes B:** This is true causation.\n* **B causes A:**  The relationship is reversed.\n* **A third factor (C) causes both A and B:** This is called a \"lurking variable\" or a \"confounding variable",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q011__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"Explain the difference between correlation and causation, and give a concrete example where confusing them causes a bad decision.\"\n  }\n]\n\nModel responses:\n1. ## Correlation vs. Causation: A Crucial Distinction\n\n**Correlation** means that two things are observed to occur together, or to change together. It simply describes a *relationship* between variables. This relationship can be:\n\n* **Positive Correlation:** As one variable increases, the other tends to increase. (e.g., Height and shoe size – taller people generally have larger feet.)\n* **Negative Correlation:** As one variable increases, the other tends to decrease. (e.g., Price of a product and demand – as price goes up, demand often goes down.)\n* **No Correlation:**  There's no apparent relationship between the variables. (e.g., Number of cats owned and IQ.)\n\n**Causation**, on the other hand, means that one thing *directly causes* another.  It's a relationship where a change in one variable *produces* a change in another.  Causation *implies* correlation, but correlation does *not* imply causation.  \n\n**Think of it this way:**\n\n* **Correlation is observing a pattern.**\n* **Causation is understanding *why* that pattern exists.**\n2. ## Correlation vs. Causation: A Crucial Distinction\n\n**Correlation** means two things tend to happen together. When one thing changes, the other also changes – either in the same direction (positive correlation) or in opposite directions (negative correlation).  It simply describes a *relationship* or *association* between variables.\n\n**Causation** means one thing *directly causes* another.  If you do X, it *makes* Y happen. There's a mechanism by which X influences Y. \n\n**The key difference:** Correlation doesn't imply causation. Just because two things happen together doesn't mean one *causes* the other. They could be related through a third, unseen factor, or the relationship could be purely coincidental.\n\n**Think of it this way:**\n\n* **Correlation:** Ice cream sales and crime rates both increase during the summer.\n* **Causation:** Smoking causes lung cancer. (Extensive research has established a direct biological mechanism.)\n\n\n\n## A Concrete Example: Shoe Sales & Test Scores - A Bad Decision\n\nLet's say a school district notices a strong **correlation** between students who buy expensive athletic shoes and\n3. ## Correlation vs. Causation: A Breakdown\n\n**Correlation** means two things are observed to occur together, or to change together. It simply indicates a *relationship* between them. This relationship can be positive (as one increases, the other increases), negative (as one increases, the other decreases), or nonexistent.  You can measure the strength of a correlation with a number (correlation coefficient), but it *doesn't* tell you *why* they occur together.\n\n**Causation** means one thing *directly causes* another to happen.  It's a relationship where a change in one variable *produces* a change in another.  Establishing causation requires demonstrating that the first thing truly *makes* the second thing happen, not just that they happen to occur together.\n\n**Think of it this way:**\n\n* **Correlation is observing a pattern.**  \"Every time I wear my lucky socks, my team wins.\"\n* **Causation is understanding the mechanism.** \"Smoking causes lung cancer.\" (There's a biological mechanism explaining *how* smoking leads to cancer.)\n\n\n\n**Why is this distinction important?**  Because mistaking correlation for\n4. ## Correlation vs. Causation: A Deep Dive\n\nThis is a fundamental concept in statistics and critical thinking! Here's a breakdown:\n\n**Correlation** means that two things are observed to occur together, or to change together.  It simply indicates a *relationship* between them. This relationship can be:\n\n* **Positive Correlation:** As one variable increases, the other tends to increase. (e.g., Height and shoe size – taller people generally have larger feet).\n* **Negative Correlation:** As one variable increases, the other tends to decrease. (e.g., Price of a good and demand – as price goes up, demand often goes down).\n* **No Correlation:** There's no discernible relationship between the two variables.\n\n**Causation**, on the other hand, means that one thing *directly causes* another.  It implies a cause-and-effect relationship.  If A causes B, then changing A *will* change B.\n\n**The key difference:** Correlation doesn't imply causation. Just because two things happen together doesn't mean one *makes* the other happen. There could be other factors at play, or\n5. ## Correlation vs. Causation: A Breakdown\n\n**Correlation** means two things are observed to occur together, or to change together. It simply indicates a *relationship* between them. This relationship can be positive (as one increases, so does the other), negative (as one increases, the other decreases), or even non-linear.  Correlation is measurable - we can calculate a \"correlation coefficient\" to quantify how strongly two things are related.\n\n**Causation** means that one thing *directly causes* another to happen. It implies a cause-and-effect relationship.  If A causes B, then changing A will *always* result in a change in B (all other things being equal).\n\n**The crucial difference:** Just because two things are correlated doesn't mean one causes the other!  Correlation does *not* imply causation. There are a few possibilities when you see a correlation:\n\n* **A causes B:** This is true causation.\n* **B causes A:**  The relationship is reversed.\n* **A third factor (C) causes both A and B:** This is called a \"lurking variable\" or a \"confounding variable\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five responses convey the same core meaning: define correlation vs. causation, emphasize \\\"correlation does not imply causation,\\\" and give similar examples (height/shoe size, price/demand, ice cream/crime, smoking and lung cancer), with only minor wording differences.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five responses convey the same core meaning: define correlation vs. causation, emphasize \"correlation does not imply causation,\" and give similar examples (height/shoe size, price/demand, ice cream/crime, smoking and lung cancer), with only minor wording differences."
+        }
+      }
+    },
+    {
+      "run_id": "run__q012",
+      "target_id": "q012",
+      "responses": [
+        {
+          "sample_id": "q012__sample_00",
+          "text": "Here's how to solve for x:\n\n1. **Subtract 7 from both sides:**\n   3x + 7 - 7 = 22 - 7\n   3x = 15\n\n2. **Divide both sides by 3:**\n   3x / 3 = 15 / 3\n   x = 5\n\nTherefore, **x = 5**\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q012__sample_01",
+          "text": "Here's how to solve for x:\n\n1. **Isolate the term with 'x'**:\n   Subtract 7 from both sides of the equation:\n   3x + 7 - 7 = 22 - 7\n   3x = 15\n\n2. **Solve for 'x'**:\n   Divide both sides of the equation by 3:\n   3x / 3 = 15 / 3\n   x = 5\n\nTherefore, **x = 5**\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q012__sample_02",
+          "text": "Here's how to solve for x:\n\n1. **Isolate the term with 'x':**  Subtract 7 from both sides of the equation:\n   3x + 7 - 7 = 22 - 7\n   3x = 15\n\n2. **Solve for 'x':** Divide both sides of the equation by 3:\n   3x / 3 = 15 / 3\n   x = 5\n\n**Therefore, x = 5**\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q012__sample_03",
+          "text": "Here's how to solve for x:\n\n1. **Isolate the term with 'x':**\n   Subtract 7 from both sides of the equation:\n   3x + 7 - 7 = 22 - 7\n   3x = 15\n\n2. **Solve for 'x':**\n   Divide both sides of the equation by 3:\n   3x / 3 = 15 / 3\n   x = 5\n\n**Therefore, x = 5**\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q012__sample_04",
+          "text": "Here's how to solve for x:\n\n1. **Subtract 7 from both sides of the equation:**\n   3x + 7 - 7 = 22 - 7\n   3x = 15\n\n2. **Divide both sides by 3:**\n   3x / 3 = 15 / 3\n   x = 5\n\nTherefore, **x = 5**\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q012__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"Solve: If 3x + 7 = 22, what is x? Show the steps.\"\n  }\n]\n\nModel responses:\n1. Here's how to solve for x:\n\n1. **Subtract 7 from both sides:**\n   3x + 7 - 7 = 22 - 7\n   3x = 15\n\n2. **Divide both sides by 3:**\n   3x / 3 = 15 / 3\n   x = 5\n\nTherefore, **x = 5**\n\n2. Here's how to solve for x:\n\n1. **Isolate the term with 'x'**:\n   Subtract 7 from both sides of the equation:\n   3x + 7 - 7 = 22 - 7\n   3x = 15\n\n2. **Solve for 'x'**:\n   Divide both sides of the equation by 3:\n   3x / 3 = 15 / 3\n   x = 5\n\nTherefore, **x = 5**\n\n3. Here's how to solve for x:\n\n1. **Isolate the term with 'x':**  Subtract 7 from both sides of the equation:\n   3x + 7 - 7 = 22 - 7\n   3x = 15\n\n2. **Solve for 'x':** Divide both sides of the equation by 3:\n   3x / 3 = 15 / 3\n   x = 5\n\n**Therefore, x = 5**\n\n4. Here's how to solve for x:\n\n1. **Isolate the term with 'x':**\n   Subtract 7 from both sides of the equation:\n   3x + 7 - 7 = 22 - 7\n   3x = 15\n\n2. **Solve for 'x':**\n   Divide both sides of the equation by 3:\n   3x / 3 = 15 / 3\n   x = 5\n\n**Therefore, x = 5**\n\n5. Here's how to solve for x:\n\n1. **Subtract 7 from both sides of the equation:**\n   3x + 7 - 7 = 22 - 7\n   3x = 15\n\n2. **Divide both sides by 3:**\n   3x / 3 = 15 / 3\n   x = 5\n\nTherefore, **x = 5**\n\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five responses show the same two-step solution (subtract 7, divide by 3) and conclude x = 5; only minor wording/formatting differs.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five responses show the same two-step solution (subtract 7, divide by 3) and conclude x = 5; only minor wording/formatting differs."
+        }
+      }
+    },
+    {
+      "run_id": "run__q013",
+      "target_id": "q013",
+      "responses": [
+        {
+          "sample_id": "q013__sample_00",
+          "text": "```python\ndef is_prime(n):\n  \"\"\"Return True if n is a prime number, False otherwise.\"\"\"\n  if n <= 1:\n    return False\n  if n <= 3:\n    return True\n  if n % 2 == 0 or n % 3 == 0:\n    return False\n  i = 5\n  while i * i <= n:\n    if n % i == 0 or n % (i + 2) == 0:\n      return False\n    i += 6\n  return True\n```",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q013__sample_01",
+          "text": "```python\ndef is_prime(n):\n  \"\"\"Return True if n is a prime number, False otherwise.\"\"\"\n  if n <= 1:\n    return False\n  if n <= 3:\n    return True\n  if n % 2 == 0 or n % 3 == 0:\n    return False\n  i = 5\n  while i * i <= n:\n    if n % i == 0 or n % (i + 2) == 0:\n      return False\n    i += 6\n  return True\n```",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q013__sample_02",
+          "text": "```python\ndef is_prime(n):\n  \"\"\"Return True if n is a prime number, False otherwise.\"\"\"\n  if n <= 1:\n    return False\n  if n <= 3:\n    return True\n  if n % 2 == 0 or n % 3 == 0:\n    return False\n  i = 5\n  while i * i <= n:\n    if n % i == 0 or n % (i + 2) == 0:\n      return False\n    i += 6\n  return True\n```",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q013__sample_03",
+          "text": "```python\ndef is_prime(n):\n  \"\"\"Return True if n is a prime number, False otherwise.\"\"\"\n  if n <= 1:\n    return False\n  if n <= 3:\n    return True\n  if n % 2 == 0 or n % 3 == 0:\n    return False\n  i = 5\n  while i * i <= n:\n    if n % i == 0 or n % (i + 2) == 0:\n      return False\n    i += 6\n  return True\n```",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q013__sample_04",
+          "text": "```python\ndef is_prime(n):\n  \"\"\"Return True if n is a prime number, False otherwise.\"\"\"\n  if n <= 1:\n    return False\n  if n <= 3:\n    return True\n  if n % 2 == 0 or n % 3 == 0:\n    return False\n  i = 5\n  while i * i <= n:\n    if n % i == 0 or n % (i + 2) == 0:\n      return False\n    i += 6\n  return True\n```",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q013__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"Write Python code for a function `is_prime(n)` with clear edge-case handling and a short docstring.\"\n  }\n]\n\nModel responses:\n1. ```python\ndef is_prime(n):\n  \"\"\"Return True if n is a prime number, False otherwise.\"\"\"\n  if n <= 1:\n    return False\n  if n <= 3:\n    return True\n  if n % 2 == 0 or n % 3 == 0:\n    return False\n  i = 5\n  while i * i <= n:\n    if n % i == 0 or n % (i + 2) == 0:\n      return False\n    i += 6\n  return True\n```\n2. ```python\ndef is_prime(n):\n  \"\"\"Return True if n is a prime number, False otherwise.\"\"\"\n  if n <= 1:\n    return False\n  if n <= 3:\n    return True\n  if n % 2 == 0 or n % 3 == 0:\n    return False\n  i = 5\n  while i * i <= n:\n    if n % i == 0 or n % (i + 2) == 0:\n      return False\n    i += 6\n  return True\n```\n3. ```python\ndef is_prime(n):\n  \"\"\"Return True if n is a prime number, False otherwise.\"\"\"\n  if n <= 1:\n    return False\n  if n <= 3:\n    return True\n  if n % 2 == 0 or n % 3 == 0:\n    return False\n  i = 5\n  while i * i <= n:\n    if n % i == 0 or n % (i + 2) == 0:\n      return False\n    i += 6\n  return True\n```\n4. ```python\ndef is_prime(n):\n  \"\"\"Return True if n is a prime number, False otherwise.\"\"\"\n  if n <= 1:\n    return False\n  if n <= 3:\n    return True\n  if n % 2 == 0 or n % 3 == 0:\n    return False\n  i = 5\n  while i * i <= n:\n    if n % i == 0 or n % (i + 2) == 0:\n      return False\n    i += 6\n  return True\n```\n5. ```python\ndef is_prime(n):\n  \"\"\"Return True if n is a prime number, False otherwise.\"\"\"\n  if n <= 1:\n    return False\n  if n <= 3:\n    return True\n  if n % 2 == 0 or n % 3 == 0:\n    return False\n  i = 5\n  while i * i <= n:\n    if n % i == 0 or n % (i + 2) == 0:\n      return False\n    i += 6\n  return True\n```\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five responses are identical in code, docstring, and logic — only superficial formatting is the same.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five responses are identical in code, docstring, and logic — only superficial formatting is the same."
+        }
+      }
+    },
+    {
+      "run_id": "run__q014",
+      "target_id": "q014",
+      "responses": [
+        {
+          "sample_id": "q014__sample_00",
+          "text": "Here's how to compute the mean and median for the list [3, 1, 4, 1, 5, 9]:\n\n**1. Mean (Average)**\n\n*   Sum the numbers: 3 + 1 + 4 + 1 + 5 + 9 = 23\n*   Divide the sum by the number of elements (6): 23 / 6 = 3.8333...\n\n**Therefore, the mean is approximately 3.83.**\n\n**2. Median (Middle Value)**\n\n*   First, sort the list in ascending order: [1, 1, 3, 4, 5, 9]\n*   Since there's an even number of elements (6), the median is the average of the two middle numbers.\n*   The two middle numbers are 3 and 4.\n*   Calculate the average: (3 + 4) / 2 = 3.5\n\n**Therefore, the median is 3.5.**\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q014__sample_01",
+          "text": "Here's how to compute the mean and median of the list [3, 1, 4, 1, 5, 9]:\n\n**1. Mean (Average)**\n\n*   Sum the numbers: 3 + 1 + 4 + 1 + 5 + 9 = 23\n*   Divide by the number of elements: 23 / 6 = 3.8333 (approximately)\n\n**Therefore, the mean is approximately 3.83.**\n\n**2. Median (Middle Value)**\n\n*   First, sort the list in ascending order: [1, 1, 3, 4, 5, 9]\n*   Since there are an even number of elements (6), the median is the average of the two middle numbers.\n*   The two middle numbers are 3 and 4.\n*   Calculate the average: (3 + 4) / 2 = 3.5\n\n**Therefore, the median is 3.5.**\n\n**Summary:**\n\n*   **Mean:** 3.83\n*   **Median:**",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q014__sample_02",
+          "text": "**Mean (Average)**\n\n1. **Sum the numbers:** 3 + 1 + 4 + 1 + 5 + 9 = 23\n2. **Count the numbers:** There are 6 numbers in the list.\n3. **Divide the sum by the count:** 23 / 6 = 3.8333 (approximately)\n\nTherefore, the mean is approximately **3.83**.\n\n**Median (Middle Value)**\n\n1. **Sort the list:**  [1, 1, 3, 4, 5, 9]\n2. **Find the middle value(s):** Since there are an even number of values (6), the median is the average of the two middle numbers.  The middle numbers are 3 and 4.\n3. **Calculate the average of the middle values:** (3 + 4) / 2 = 3.5\n\nTherefore, the median is **3.5**.\n\n**In summary:**\n\n*   **Mean:** 3.83\n*   **Median:** 3.5",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q014__sample_03",
+          "text": "**1. Mean (Average)**\n\n*   Sum the numbers: 3 + 1 + 4 + 1 + 5 + 9 = 23\n*   Divide the sum by the number of elements (6): 23 / 6 = 3.8333 (approximately)\n\n**Therefore, the mean is approximately 3.83.**\n\n**2. Median (Middle Value)**\n\n*   First, sort the list in ascending order: [1, 1, 3, 4, 5, 9]\n*   Since there are an even number of elements (6), the median is the average of the two middle values.  The middle values are the 3rd and 4th elements (3 and 4).\n*   Calculate the average of 3 and 4: (3 + 4) / 2 = 3.5\n\n**Therefore, the median is 3.5**\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q014__sample_04",
+          "text": "Here's how to compute the mean and median of the list [3, 1, 4, 1, 5, 9]:\n\n**Mean (Average)**\n\n1. **Sum the numbers:** 3 + 1 + 4 + 1 + 5 + 9 = 23\n2. **Divide by the number of elements:** 23 / 6 = 3.8333 (approximately)\n\nTherefore, the mean is approximately **3.83**.\n\n**Median (Middle Value)**\n\n1. **Sort the list:** [1, 1, 3, 4, 5, 9]\n2. **Find the middle value(s):** Since there are an even number of elements (6), the median is the average of the two middle values.  The middle values are 3 and 4.\n3. **Calculate the average of the middle values:** (3 + 4) / 2 = 3.5\n\nTherefore, the median is **3.5**.\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q014__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"Given the list [3, 1, 4, 1, 5, 9], compute the mean and median.\"\n  }\n]\n\nModel responses:\n1. Here's how to compute the mean and median for the list [3, 1, 4, 1, 5, 9]:\n\n**1. Mean (Average)**\n\n*   Sum the numbers: 3 + 1 + 4 + 1 + 5 + 9 = 23\n*   Divide the sum by the number of elements (6): 23 / 6 = 3.8333...\n\n**Therefore, the mean is approximately 3.83.**\n\n**2. Median (Middle Value)**\n\n*   First, sort the list in ascending order: [1, 1, 3, 4, 5, 9]\n*   Since there's an even number of elements (6), the median is the average of the two middle numbers.\n*   The two middle numbers are 3 and 4.\n*   Calculate the average: (3 + 4) / 2 = 3.5\n\n**Therefore, the median is 3.5.**\n\n2. Here's how to compute the mean and median of the list [3, 1, 4, 1, 5, 9]:\n\n**1. Mean (Average)**\n\n*   Sum the numbers: 3 + 1 + 4 + 1 + 5 + 9 = 23\n*   Divide by the number of elements: 23 / 6 = 3.8333 (approximately)\n\n**Therefore, the mean is approximately 3.83.**\n\n**2. Median (Middle Value)**\n\n*   First, sort the list in ascending order: [1, 1, 3, 4, 5, 9]\n*   Since there are an even number of elements (6), the median is the average of the two middle numbers.\n*   The two middle numbers are 3 and 4.\n*   Calculate the average: (3 + 4) / 2 = 3.5\n\n**Therefore, the median is 3.5.**\n\n**Summary:**\n\n*   **Mean:** 3.83\n*   **Median:**\n3. **Mean (Average)**\n\n1. **Sum the numbers:** 3 + 1 + 4 + 1 + 5 + 9 = 23\n2. **Count the numbers:** There are 6 numbers in the list.\n3. **Divide the sum by the count:** 23 / 6 = 3.8333 (approximately)\n\nTherefore, the mean is approximately **3.83**.\n\n**Median (Middle Value)**\n\n1. **Sort the list:**  [1, 1, 3, 4, 5, 9]\n2. **Find the middle value(s):** Since there are an even number of values (6), the median is the average of the two middle numbers.  The middle numbers are 3 and 4.\n3. **Calculate the average of the middle values:** (3 + 4) / 2 = 3.5\n\nTherefore, the median is **3.5**.\n\n**In summary:**\n\n*   **Mean:** 3.83\n*   **Median:** 3.5\n4. **1. Mean (Average)**\n\n*   Sum the numbers: 3 + 1 + 4 + 1 + 5 + 9 = 23\n*   Divide the sum by the number of elements (6): 23 / 6 = 3.8333 (approximately)\n\n**Therefore, the mean is approximately 3.83.**\n\n**2. Median (Middle Value)**\n\n*   First, sort the list in ascending order: [1, 1, 3, 4, 5, 9]\n*   Since there are an even number of elements (6), the median is the average of the two middle values.  The middle values are the 3rd and 4th elements (3 and 4).\n*   Calculate the average of 3 and 4: (3 + 4) / 2 = 3.5\n\n**Therefore, the median is 3.5**\n\n5. Here's how to compute the mean and median of the list [3, 1, 4, 1, 5, 9]:\n\n**Mean (Average)**\n\n1. **Sum the numbers:** 3 + 1 + 4 + 1 + 5 + 9 = 23\n2. **Divide by the number of elements:** 23 / 6 = 3.8333 (approximately)\n\nTherefore, the mean is approximately **3.83**.\n\n**Median (Middle Value)**\n\n1. **Sort the list:** [1, 1, 3, 4, 5, 9]\n2. **Find the middle value(s):** Since there are an even number of elements (6), the median is the average of the two middle values.  The middle values are 3 and 4.\n3. **Calculate the average of the middle values:** (3 + 4) / 2 = 3.5\n\nTherefore, the median is **3.5**.\n\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five responses give the same calculations and results (mean = 23/6 ≈ 3.83; median = 3.5); differences are only in wording/formatting.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five responses give the same calculations and results (mean = 23/6 ≈ 3.83; median = 3.5); differences are only in wording/formatting."
+        }
+      }
+    },
+    {
+      "run_id": "run__q015",
+      "target_id": "q015",
+      "responses": [
+        {
+          "sample_id": "q015__sample_00",
+          "text": "Subject: Re: Meeting Request - [Meeting Topic]\n\nHi [Name],\n\nThanks so much for reaching out and for the invite to discuss [Meeting Topic]. \n\nUnfortunately, I have a conflict at that time. Would either [Date/Time Option 1] or [Date/Time Option 2] work for you instead?\n\nPlease let me know if either of those times suit, or if you'd like to suggest something else.\n\nBest,\n\n[Your Name]\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q015__sample_01",
+          "text": "Subject: Re: Meeting Request - [Meeting Topic]\n\nHi [Name],\n\nThanks so much for reaching out and for thinking of me for a meeting about [Meeting Topic].\n\nUnfortunately, I have a conflict at the time you proposed. Would either of these times work for you instead?\n\n* [Date] at [Time]\n* [Date] at [Time]\n\nPlease let me know if either of those work, or if you'd like to suggest another time.\n\nBest,\n\n[Your Name]\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q015__sample_02",
+          "text": "Subject: Re: Meeting Request - [Meeting Topic]\n\nHi [Name],\n\nThanks so much for reaching out and for thinking of me! I'd be happy to discuss [Meeting Topic].\n\nUnfortunately, I have a conflict at the time you proposed. Would either [Alternative Time 1] or [Alternative Time 2] work for you instead?\n\nPlease let me know what suits you best.\n\nBest,\n\n[Your Name]\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q015__sample_03",
+          "text": "Subject: Re: Meeting Request - [Meeting Topic]\n\nHi [Name],\n\nThanks so much for reaching out and for the invite to discuss [Meeting Topic].\n\nUnfortunately, I have a conflict at that time. Would either [Date] at [Time] or [Date] at [Time] work for you instead? \n\nPlease let me know what suits you best.\n\nBest,\n\n[Your Name]\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q015__sample_04",
+          "text": "Subject: Re: Meeting Request - [Meeting Topic]\n\nHi [Name],\n\nThanks so much for reaching out and for the invite to discuss [Meeting Topic].\n\nUnfortunately, I have a conflict at that time. Would either [Date] at [Time] or [Date] at [Time] work for you instead? \n\nPlease let me know if either of those times suit, or if you'd like to suggest another.\n\nBest,\n\n[Your Name]\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q015__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"Write a short email politely declining a meeting request because of a scheduling conflict, and propose two alternative times.\"\n  }\n]\n\nModel responses:\n1. Subject: Re: Meeting Request - [Meeting Topic]\n\nHi [Name],\n\nThanks so much for reaching out and for the invite to discuss [Meeting Topic]. \n\nUnfortunately, I have a conflict at that time. Would either [Date/Time Option 1] or [Date/Time Option 2] work for you instead?\n\nPlease let me know if either of those times suit, or if you'd like to suggest something else.\n\nBest,\n\n[Your Name]\n\n\n\n\n2. Subject: Re: Meeting Request - [Meeting Topic]\n\nHi [Name],\n\nThanks so much for reaching out and for thinking of me for a meeting about [Meeting Topic].\n\nUnfortunately, I have a conflict at the time you proposed. Would either of these times work for you instead?\n\n* [Date] at [Time]\n* [Date] at [Time]\n\nPlease let me know if either of those work, or if you'd like to suggest another time.\n\nBest,\n\n[Your Name]\n\n\n\n\n3. Subject: Re: Meeting Request - [Meeting Topic]\n\nHi [Name],\n\nThanks so much for reaching out and for thinking of me! I'd be happy to discuss [Meeting Topic].\n\nUnfortunately, I have a conflict at the time you proposed. Would either [Alternative Time 1] or [Alternative Time 2] work for you instead?\n\nPlease let me know what suits you best.\n\nBest,\n\n[Your Name]\n\n\n\n\n4. Subject: Re: Meeting Request - [Meeting Topic]\n\nHi [Name],\n\nThanks so much for reaching out and for the invite to discuss [Meeting Topic].\n\nUnfortunately, I have a conflict at that time. Would either [Date] at [Time] or [Date] at [Time] work for you instead? \n\nPlease let me know what suits you best.\n\nBest,\n\n[Your Name]\n\n\n\n\n5. Subject: Re: Meeting Request - [Meeting Topic]\n\nHi [Name],\n\nThanks so much for reaching out and for the invite to discuss [Meeting Topic].\n\nUnfortunately, I have a conflict at that time. Would either [Date] at [Time] or [Date] at [Time] work for you instead? \n\nPlease let me know if either of those times suit, or if you'd like to suggest another.\n\nBest,\n\n[Your Name]\n\n\n\n\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five responses convey the same message: a polite decline due to a scheduling conflict, offer two alternative times, and invite the recipient to confirm or suggest another time; differences are only minor wording.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five responses convey the same message: a polite decline due to a scheduling conflict, offer two alternative times, and invite the recipient to confirm or suggest another time; differences are only minor wording."
+        }
+      }
+    },
+    {
+      "run_id": "run__q016",
+      "target_id": "q016",
+      "responses": [
+        {
+          "sample_id": "q016__sample_00",
+          "text": "## 4-Week Linear Algebra Learning Plan (1 Hour/Day)\n\nThis plan focuses on building a foundational understanding of linear algebra. It's geared towards someone with some high school algebra background.  It prioritizes concepts over rigorous proofs (though exposure to proofs is included).  Resources are suggested, but feel free to substitute based on your preference.\n\n**Resources:**\n\n* **Khan Academy Linear Algebra:** Excellent free resource with videos and practice exercises. (https://www.khanacademy.org/math/linear-algebra)\n* **3Blue1Brown Essence of Linear Algebra (YouTube):**  Visual and intuitive explanations.  Highly recommended to supplement. (https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)\n* **Gilbert Strang's \"Introduction to Linear Algebra\" (Book/MIT OpenCourseWare):**  A classic, more rigorous but highly respected resource.  (https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/) - Optional",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q016__sample_01",
+          "text": "## 4-Week Linear Algebra Learning Plan (1 Hour/Day)\n\nThis plan focuses on building a foundational understanding of Linear Algebra. It assumes no prior knowledge, but a basic understanding of high school algebra is helpful.  It prioritizes conceptual understanding over rigorous proofs (though you'll encounter some).  Resources are suggested, but feel free to substitute based on your preference.\n\n**Resources:**\n\n* **Khan Academy Linear Algebra:** Excellent for video explanations and practice exercises. (https://www.khanacademy.org/math/linear-algebra)\n* **3Blue1Brown Essence of Linear Algebra:**  Visual and intuitive explanation of core concepts. (https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)  *Highly Recommended*\n* **Gilbert Strang's MIT OpenCourseware 18.06:**  More rigorous, but a classic. Videos and problem sets available. (https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/)\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q016__sample_02",
+          "text": "## 4-Week Linear Algebra Learning Plan (1 Hour/Day)\n\nThis plan assumes you have a basic understanding of algebra (solving equations, manipulating expressions). It focuses on building intuition alongside computation.  We'll use a mix of concepts and practice.  I'll recommend resources at the end.\n\n**Key Principles:**\n\n* **Focus on understanding *why*, not just *how*.** Linear algebra is about concepts, not just formulas.\n* **Practice consistently.**  Even a little bit each day is better than long, infrequent sessions.\n* **Don't get bogged down in proofs initially.** Focus on understanding the concepts and applying them.  You can revisit proofs later.\n* **Use visualization.**  Linear algebra is very geometric.  Sketch things out!\n\n\n\n**Week 1: Vectors & Systems of Linear Equations (Foundation)**\n\n* **Goal:** Understand vectors as geometric objects and how they relate to solving systems of equations.\n* **Daily Breakdown (1 hour):**\n    * **Day 1 (Vectors - Basics):**  What is a vector?  Geometric representation (arrows). Vector addition, scalar multiplication.  (3",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q016__sample_03",
+          "text": "## 4-Week Linear Algebra Learning Plan (1 Hour/Day)\n\nThis plan focuses on building a foundational understanding of linear algebra. It prioritizes concepts over proofs, aiming for practical application. It assumes you have a basic understanding of algebra.  Resources are suggested, but feel free to substitute based on your preference.\n\n**Resources:**\n\n* **Khan Academy Linear Algebra:** Excellent free resource with videos and practice exercises. (Highly Recommended) [https://www.khanacademy.org/math/linear-algebra](https://www.khanacademy.org/math/linear-algebra)\n* **3Blue1Brown's Essence of Linear Algebra:** Visual and intuitive explanations. Great for conceptual understanding. (Highly Recommended - watch alongside Khan Academy) [https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)\n* **Gilbert Strang's MIT OpenCourseware Linear Algebra:** More",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q016__sample_04",
+          "text": "## 4-Week Linear Algebra Learning Plan (1 Hour/Day)\n\nThis plan assumes you have some basic algebra background (solving equations, manipulating expressions). It focuses on conceptual understanding alongside practical calculations.  It leans towards a practical application approach, focusing on skills useful for data science/machine learning, but provides a solid foundation for further study.\n\n**Resources:**\n\n* **Khan Academy Linear Algebra:** Excellent free resource with videos and exercises. (Highly recommended as primary resource) [https://www.khanacademy.org/math/linear-algebra](https://www.khanacademy.org/math/linear-algebra)\n* **3Blue1Brown's Essence of Linear Algebra:** Visual and intuitive explanations.  Use this *alongside* Khan Academy, not as the sole source. [https://www.3blue1brown.com/topics/linear-algebra](https://www.3blue1brown.com/topics/linear-algebra)\n* **Gilbert Strang's MIT OpenCourseware:**  More rigorous, good for a deeper dive later.  (Optional, can be explored after Week 4) [https://ocw.mit",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q016__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"Provide a step-by-step plan to learn linear algebra in 4 weeks, assuming 1 hour/day.\"\n  }\n]\n\nModel responses:\n1. ## 4-Week Linear Algebra Learning Plan (1 Hour/Day)\n\nThis plan focuses on building a foundational understanding of linear algebra. It's geared towards someone with some high school algebra background.  It prioritizes concepts over rigorous proofs (though exposure to proofs is included).  Resources are suggested, but feel free to substitute based on your preference.\n\n**Resources:**\n\n* **Khan Academy Linear Algebra:** Excellent free resource with videos and practice exercises. (https://www.khanacademy.org/math/linear-algebra)\n* **3Blue1Brown Essence of Linear Algebra (YouTube):**  Visual and intuitive explanations.  Highly recommended to supplement. (https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)\n* **Gilbert Strang's \"Introduction to Linear Algebra\" (Book/MIT OpenCourseWare):**  A classic, more rigorous but highly respected resource.  (https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/) - Optional\n2. ## 4-Week Linear Algebra Learning Plan (1 Hour/Day)\n\nThis plan focuses on building a foundational understanding of Linear Algebra. It assumes no prior knowledge, but a basic understanding of high school algebra is helpful.  It prioritizes conceptual understanding over rigorous proofs (though you'll encounter some).  Resources are suggested, but feel free to substitute based on your preference.\n\n**Resources:**\n\n* **Khan Academy Linear Algebra:** Excellent for video explanations and practice exercises. (https://www.khanacademy.org/math/linear-algebra)\n* **3Blue1Brown Essence of Linear Algebra:**  Visual and intuitive explanation of core concepts. (https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)  *Highly Recommended*\n* **Gilbert Strang's MIT OpenCourseware 18.06:**  More rigorous, but a classic. Videos and problem sets available. (https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/)\n\n3. ## 4-Week Linear Algebra Learning Plan (1 Hour/Day)\n\nThis plan assumes you have a basic understanding of algebra (solving equations, manipulating expressions). It focuses on building intuition alongside computation.  We'll use a mix of concepts and practice.  I'll recommend resources at the end.\n\n**Key Principles:**\n\n* **Focus on understanding *why*, not just *how*.** Linear algebra is about concepts, not just formulas.\n* **Practice consistently.**  Even a little bit each day is better than long, infrequent sessions.\n* **Don't get bogged down in proofs initially.** Focus on understanding the concepts and applying them.  You can revisit proofs later.\n* **Use visualization.**  Linear algebra is very geometric.  Sketch things out!\n\n\n\n**Week 1: Vectors & Systems of Linear Equations (Foundation)**\n\n* **Goal:** Understand vectors as geometric objects and how they relate to solving systems of equations.\n* **Daily Breakdown (1 hour):**\n    * **Day 1 (Vectors - Basics):**  What is a vector?  Geometric representation (arrows). Vector addition, scalar multiplication.  (3\n4. ## 4-Week Linear Algebra Learning Plan (1 Hour/Day)\n\nThis plan focuses on building a foundational understanding of linear algebra. It prioritizes concepts over proofs, aiming for practical application. It assumes you have a basic understanding of algebra.  Resources are suggested, but feel free to substitute based on your preference.\n\n**Resources:**\n\n* **Khan Academy Linear Algebra:** Excellent free resource with videos and practice exercises. (Highly Recommended) [https://www.khanacademy.org/math/linear-algebra](https://www.khanacademy.org/math/linear-algebra)\n* **3Blue1Brown's Essence of Linear Algebra:** Visual and intuitive explanations. Great for conceptual understanding. (Highly Recommended - watch alongside Khan Academy) [https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)\n* **Gilbert Strang's MIT OpenCourseware Linear Algebra:** More\n5. ## 4-Week Linear Algebra Learning Plan (1 Hour/Day)\n\nThis plan assumes you have some basic algebra background (solving equations, manipulating expressions). It focuses on conceptual understanding alongside practical calculations.  It leans towards a practical application approach, focusing on skills useful for data science/machine learning, but provides a solid foundation for further study.\n\n**Resources:**\n\n* **Khan Academy Linear Algebra:** Excellent free resource with videos and exercises. (Highly recommended as primary resource) [https://www.khanacademy.org/math/linear-algebra](https://www.khanacademy.org/math/linear-algebra)\n* **3Blue1Brown's Essence of Linear Algebra:** Visual and intuitive explanations.  Use this *alongside* Khan Academy, not as the sole source. [https://www.3blue1brown.com/topics/linear-algebra](https://www.3blue1brown.com/topics/linear-algebra)\n* **Gilbert Strang's MIT OpenCourseware:**  More rigorous, good for a deeper dive later.  (Optional, can be explored after Week 4) [https://ocw.mit\n",
+        "raw_output": "{\"similarity_1_to_10\": 9, \"rationale\": \"All five responses present the same 4-week, 1-hour/day learning plan structure with identical core resources (Khan Academy, 3Blue1Brown, Strang) and emphasis on conceptual understanding; differences are minor (assumed background, brief emphasis on applications/proofs).\" }",
+        "parsed": {
+          "similarity_1_to_10": 9,
+          "rationale": "All five responses present the same 4-week, 1-hour/day learning plan structure with identical core resources (Khan Academy, 3Blue1Brown, Strang) and emphasis on conceptual understanding; differences are minor (assumed background, brief emphasis on applications/proofs)."
+        }
+      }
+    },
+    {
+      "run_id": "run__q017",
+      "target_id": "q017",
+      "responses": [
+        {
+          "sample_id": "q017__sample_00",
+          "text": "Here's the classification of each statement with justifications:\n\n**(1) All squares are rectangles. - TRUE**\n\n* **Justification:** A rectangle is defined as a quadrilateral with four right angles. A square *also* has four right angles, *and* the additional property of having four equal sides. Therefore, a square meets all the criteria to be classified as a rectangle – it's a *special type* of rectangle.\n\n**(2) All rectangles are squares. - FALSE**\n\n* **Justification:** While squares *are* rectangles, the reverse isn't true. A rectangle only needs to have four right angles. Its sides don't *have* to be equal. A rectangle with unequal adjacent sides (like a 2x4) is clearly not a square.\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q017__sample_01",
+          "text": "Here's the classification of each statement with justification:\n\n**(1) All squares are rectangles. - TRUE**\n\n* **Justification:** A rectangle is defined as a quadrilateral with four right angles. A square *also* has four right angles, *and* the added condition of having four equal sides. Therefore, a square meets all the criteria to be a rectangle – it's a *special type* of rectangle.\n\n**(2) All rectangles are squares. - FALSE**\n\n* **Justification:** A rectangle only requires four right angles. It does *not* require all four sides to be equal. A rectangle can have two different side lengths (e.g., a 2x4 rectangle). Since squares *do* require all sides to be equal, not all rectangles are squares.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q017__sample_02",
+          "text": "Here's the classification of each statement with justifications:\n\n**(1) All squares are rectangles. - TRUE**\n\n* **Justification:** A rectangle is defined as a quadrilateral with four right angles. A square *also* has four right angles, *and* it has the additional property of having four equal sides. Therefore, a square meets all the criteria to be classified as a rectangle – it's a *special type* of rectangle.\n\n**(2) All rectangles are squares. - FALSE**\n\n* **Justification:** While squares *are* rectangles, the reverse isn't true. A rectangle only needs to have four right angles. It doesn't *need* to have four equal sides.  A rectangle can have two different side lengths (e.g., a 2x4 rectangle), and therefore isn't a square.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q017__sample_03",
+          "text": "Here's the classification of each statement with justifications:\n\n**(1) All squares are rectangles. - TRUE**\n\n* **Justification:** A rectangle is defined as a quadrilateral with four right angles. A square *also* has four right angles, *and* it has the additional property of having four equal sides.  Therefore, a square meets all the criteria to be considered a rectangle – it's a *special type* of rectangle.\n\n**(2) All rectangles are squares. - FALSE**\n\n* **Justification:** While all squares are rectangles, the reverse is not true. A rectangle only requires four right angles; its sides don't *have* to be equal. A rectangle with unequal sides (like a 2x4) is not a square.  Squares have the *additional* requirement of equal sides that not all rectangles possess.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q017__sample_04",
+          "text": "Here's the classification of each statement with justifications:\n\n**(1) All squares are rectangles. - TRUE**\n\n* **Justification:** A rectangle is defined as a quadrilateral with four right angles. A square *also* has four right angles, *and* the additional property of having all sides equal. Therefore, a square meets all the criteria to be classified as a rectangle – it's a special type of rectangle.\n\n**(2) All rectangles are squares. - FALSE**\n\n* **Justification:** A rectangle only requires four right angles. Its sides can be of different lengths. A square *requires* four right angles *and* all sides to be equal.  Since many rectangles do *not* have equal sides, they are not squares. For example, a rectangle with length 5 and width 3 is a rectangle but not a square.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q017__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"Classify each statement as true/false, and justify briefly: (1) All squares are rectangles. (2) All rectangles are squares.\"\n  }\n]\n\nModel responses:\n1. Here's the classification of each statement with justifications:\n\n**(1) All squares are rectangles. - TRUE**\n\n* **Justification:** A rectangle is defined as a quadrilateral with four right angles. A square *also* has four right angles, *and* the additional property of having four equal sides. Therefore, a square meets all the criteria to be classified as a rectangle – it's a *special type* of rectangle.\n\n**(2) All rectangles are squares. - FALSE**\n\n* **Justification:** While squares *are* rectangles, the reverse isn't true. A rectangle only needs to have four right angles. Its sides don't *have* to be equal. A rectangle with unequal adjacent sides (like a 2x4) is clearly not a square.\n\n2. Here's the classification of each statement with justification:\n\n**(1) All squares are rectangles. - TRUE**\n\n* **Justification:** A rectangle is defined as a quadrilateral with four right angles. A square *also* has four right angles, *and* the added condition of having four equal sides. Therefore, a square meets all the criteria to be a rectangle – it's a *special type* of rectangle.\n\n**(2) All rectangles are squares. - FALSE**\n\n* **Justification:** A rectangle only requires four right angles. It does *not* require all four sides to be equal. A rectangle can have two different side lengths (e.g., a 2x4 rectangle). Since squares *do* require all sides to be equal, not all rectangles are squares.\n\n\n\n\n3. Here's the classification of each statement with justifications:\n\n**(1) All squares are rectangles. - TRUE**\n\n* **Justification:** A rectangle is defined as a quadrilateral with four right angles. A square *also* has four right angles, *and* it has the additional property of having four equal sides. Therefore, a square meets all the criteria to be classified as a rectangle – it's a *special type* of rectangle.\n\n**(2) All rectangles are squares. - FALSE**\n\n* **Justification:** While squares *are* rectangles, the reverse isn't true. A rectangle only needs to have four right angles. It doesn't *need* to have four equal sides.  A rectangle can have two different side lengths (e.g., a 2x4 rectangle), and therefore isn't a square.\n\n\n\n\n4. Here's the classification of each statement with justifications:\n\n**(1) All squares are rectangles. - TRUE**\n\n* **Justification:** A rectangle is defined as a quadrilateral with four right angles. A square *also* has four right angles, *and* it has the additional property of having four equal sides.  Therefore, a square meets all the criteria to be considered a rectangle – it's a *special type* of rectangle.\n\n**(2) All rectangles are squares. - FALSE**\n\n* **Justification:** While all squares are rectangles, the reverse is not true. A rectangle only requires four right angles; its sides don't *have* to be equal. A rectangle with unequal sides (like a 2x4) is not a square.  Squares have the *additional* requirement of equal sides that not all rectangles possess.\n\n\n\n\n5. Here's the classification of each statement with justifications:\n\n**(1) All squares are rectangles. - TRUE**\n\n* **Justification:** A rectangle is defined as a quadrilateral with four right angles. A square *also* has four right angles, *and* the additional property of having all sides equal. Therefore, a square meets all the criteria to be classified as a rectangle – it's a special type of rectangle.\n\n**(2) All rectangles are squares. - FALSE**\n\n* **Justification:** A rectangle only requires four right angles. Its sides can be of different lengths. A square *requires* four right angles *and* all sides to be equal.  Since many rectangles do *not* have equal sides, they are not squares. For example, a rectangle with length 5 and width 3 is a rectangle but not a square.\n\n\n\n\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five responses give the same answers (1 true, 2 false) with equivalent justifications—squares meet rectangle criteria plus extra equal-side condition; rectangles need not have equal sides—only minor wording differences.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five responses give the same answers (1 true, 2 false) with equivalent justifications—squares meet rectangle criteria plus extra equal-side condition; rectangles need not have equal sides—only minor wording differences."
+        }
+      }
+    },
+    {
+      "run_id": "run__q018",
+      "target_id": "q018",
+      "responses": [
+        {
+          "sample_id": "q018__sample_00",
+          "text": "Here's a 5-bullet point summary of the plot of Cinderella:\n\n* **Abused & Oppressed:** Cinderella lives a miserable life as a servant to her cruel stepmother and two stepsisters after her father's death, enduring constant mistreatment and being denied any joy.\n* **Royal Ball Invitation:** A royal ball is announced by the Prince, seeking a bride, and all eligible maidens are invited – except Cinderella, who is forbidden to attend by her stepmother.\n* **Fairy Godmother's Intervention:** A Fairy Godmother magically appears and transforms Cinderella, providing her with a beautiful gown, glass slippers, and a carriage to attend the ball, with the condition she must return before midnight.\n* **Prince's Enchantment & Midnight Escape:** Cinderella captivates the Prince at the ball, but remembering the Fairy Godmother’s warning, she flees at midnight, losing a glass slipper in her haste.\n* **Slipper Fits & Happy Ending:** The Prince, determined to find the mysterious woman he danced with, searches the kingdom for the foot that fits the glass slipper. It fits Cinderella, revealing her true identity, and she",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q018__sample_01",
+          "text": "Here's a 5-bullet point summary of the plot of Cinderella:\n\n* **Abused & Oppressed:** Cinderella lives a miserable life as a servant to her cruel stepmother and two stepsisters after her father's death, enduring constant mistreatment and being denied any joy.\n* **The Royal Ball:** A prince hosts a ball to find a wife, and all eligible maidens are invited – except Cinderella, who is forbidden to attend by her stepmother.\n* **Magical Intervention:** A fairy godmother appears and magically provides Cinderella with a beautiful gown, glass slippers, and a carriage to attend the ball, with the condition she must leave before midnight.\n* **Love & Loss:** Cinderella captivates the prince at the ball, but is forced to flee before midnight, losing one of her glass slippers in her haste.\n* **Happily Ever After:** The prince searches for the woman whose foot fits the slipper, eventually finding Cinderella. They marry and she escapes her abusive life, living happily ever after.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q018__sample_02",
+          "text": "Here's a 5-bullet point summary of the plot of Cinderella:\n\n* **Abused & Oppressed:** Cinderella lives a miserable life with her cruel stepmother and two stepsisters, forced to work as a servant in her own home after her father's death.\n* **The Royal Ball:** A prince hosts a ball to find a wife, and Cinderella desperately wants to attend, but her stepmother forbids it and sabotages her attempts to get ready.\n* **Fairy Godmother's Intervention:** A Fairy Godmother magically appears and provides Cinderella with a beautiful gown, glass slippers, and a carriage to attend the ball, with the condition she must leave before midnight.\n* **A Night of Romance & Escape:** Cinderella captivates the Prince at the ball, but flees at midnight, losing one of her glass slippers in her haste.\n* **The Slipper Fits & Happily Ever After:** The Prince searches for the woman whose foot fits the slipper, eventually finding Cinderella. They marry and she escapes her abusive life, living happily ever after.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q018__sample_03",
+          "text": "Here's a 5-bullet point summary of the plot of Cinderella:\n\n* **A kind girl endures hardship:** Cinderella lives a miserable life as a servant to her cruel stepmother and stepsisters after her father's death, forced to do all the housework and treated with disdain.\n* **A royal ball is announced:** The Prince holds a ball to find a wife, and all eligible maidens in the kingdom are invited – except Cinderella, who is forbidden to attend by her stepmother.\n* **Magical intervention allows attendance:** Cinderella receives help from her Fairy Godmother, who magically provides her with a beautiful gown, glass slippers, and a carriage to attend the ball, but with a strict midnight curfew.\n* **A night of romance & a lost slipper:** Cinderella captivates the Prince at the ball, but must flee before the magic wears off at midnight, leaving behind a single glass slipper.\n* **The slipper leads to a happy ending:** The Prince searches the kingdom for the woman whose foot fits the slipper, eventually finding Cinderella, proving her identity, and marrying her, allowing her to escape her abusive home and live happily ever after.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q018__sample_04",
+          "text": "Here's a 5-bullet point summary of the plot of Cinderella:\n\n* **Abused & Oppressed:** Cinderella lives a miserable life with her cruel stepmother and two stepsisters, forced to work as a servant in her own home after her father's death.\n* **Royal Ball Invitation:** A royal ball is announced by the Prince, seeking a bride, but Cinderella is forbidden from attending by her stepmother who wants her own daughters to win the Prince's favor.\n* **Fairy Godmother's Intervention:** A Fairy Godmother magically appears and transforms Cinderella, providing her with a beautiful gown, glass slippers, and a carriage to attend the ball, with the condition she must return before midnight.\n* **Prince's Enchantment & Midnight Escape:** Cinderella captivates the Prince at the ball, but remembering the Fairy Godmother's warning, she flees at midnight, losing one of her glass slippers in the process.\n* **Slipper Fits & Happy Ending:** The Prince, determined to find the mysterious woman he danced with, searches the kingdom with the glass slipper. It fits only Cinderella, revealing her true identity, and she marries",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q018__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"Summarize the plot of \\\"Cinderella\\\" in exactly 5 bullet points.\"\n  }\n]\n\nModel responses:\n1. Here's a 5-bullet point summary of the plot of Cinderella:\n\n* **Abused & Oppressed:** Cinderella lives a miserable life as a servant to her cruel stepmother and two stepsisters after her father's death, enduring constant mistreatment and being denied any joy.\n* **Royal Ball Invitation:** A royal ball is announced by the Prince, seeking a bride, and all eligible maidens are invited – except Cinderella, who is forbidden to attend by her stepmother.\n* **Fairy Godmother's Intervention:** A Fairy Godmother magically appears and transforms Cinderella, providing her with a beautiful gown, glass slippers, and a carriage to attend the ball, with the condition she must return before midnight.\n* **Prince's Enchantment & Midnight Escape:** Cinderella captivates the Prince at the ball, but remembering the Fairy Godmother’s warning, she flees at midnight, losing a glass slipper in her haste.\n* **Slipper Fits & Happy Ending:** The Prince, determined to find the mysterious woman he danced with, searches the kingdom for the foot that fits the glass slipper. It fits Cinderella, revealing her true identity, and she\n2. Here's a 5-bullet point summary of the plot of Cinderella:\n\n* **Abused & Oppressed:** Cinderella lives a miserable life as a servant to her cruel stepmother and two stepsisters after her father's death, enduring constant mistreatment and being denied any joy.\n* **The Royal Ball:** A prince hosts a ball to find a wife, and all eligible maidens are invited – except Cinderella, who is forbidden to attend by her stepmother.\n* **Magical Intervention:** A fairy godmother appears and magically provides Cinderella with a beautiful gown, glass slippers, and a carriage to attend the ball, with the condition she must leave before midnight.\n* **Love & Loss:** Cinderella captivates the prince at the ball, but is forced to flee before midnight, losing one of her glass slippers in her haste.\n* **Happily Ever After:** The prince searches for the woman whose foot fits the slipper, eventually finding Cinderella. They marry and she escapes her abusive life, living happily ever after.\n\n\n\n\n3. Here's a 5-bullet point summary of the plot of Cinderella:\n\n* **Abused & Oppressed:** Cinderella lives a miserable life with her cruel stepmother and two stepsisters, forced to work as a servant in her own home after her father's death.\n* **The Royal Ball:** A prince hosts a ball to find a wife, and Cinderella desperately wants to attend, but her stepmother forbids it and sabotages her attempts to get ready.\n* **Fairy Godmother's Intervention:** A Fairy Godmother magically appears and provides Cinderella with a beautiful gown, glass slippers, and a carriage to attend the ball, with the condition she must leave before midnight.\n* **A Night of Romance & Escape:** Cinderella captivates the Prince at the ball, but flees at midnight, losing one of her glass slippers in her haste.\n* **The Slipper Fits & Happily Ever After:** The Prince searches for the woman whose foot fits the slipper, eventually finding Cinderella. They marry and she escapes her abusive life, living happily ever after.\n\n\n\n\n4. Here's a 5-bullet point summary of the plot of Cinderella:\n\n* **A kind girl endures hardship:** Cinderella lives a miserable life as a servant to her cruel stepmother and stepsisters after her father's death, forced to do all the housework and treated with disdain.\n* **A royal ball is announced:** The Prince holds a ball to find a wife, and all eligible maidens in the kingdom are invited – except Cinderella, who is forbidden to attend by her stepmother.\n* **Magical intervention allows attendance:** Cinderella receives help from her Fairy Godmother, who magically provides her with a beautiful gown, glass slippers, and a carriage to attend the ball, but with a strict midnight curfew.\n* **A night of romance & a lost slipper:** Cinderella captivates the Prince at the ball, but must flee before the magic wears off at midnight, leaving behind a single glass slipper.\n* **The slipper leads to a happy ending:** The Prince searches the kingdom for the woman whose foot fits the slipper, eventually finding Cinderella, proving her identity, and marrying her, allowing her to escape her abusive home and live happily ever after.\n\n\n\n\n5. Here's a 5-bullet point summary of the plot of Cinderella:\n\n* **Abused & Oppressed:** Cinderella lives a miserable life with her cruel stepmother and two stepsisters, forced to work as a servant in her own home after her father's death.\n* **Royal Ball Invitation:** A royal ball is announced by the Prince, seeking a bride, but Cinderella is forbidden from attending by her stepmother who wants her own daughters to win the Prince's favor.\n* **Fairy Godmother's Intervention:** A Fairy Godmother magically appears and transforms Cinderella, providing her with a beautiful gown, glass slippers, and a carriage to attend the ball, with the condition she must return before midnight.\n* **Prince's Enchantment & Midnight Escape:** Cinderella captivates the Prince at the ball, but remembering the Fairy Godmother's warning, she flees at midnight, losing one of her glass slippers in the process.\n* **Slipper Fits & Happy Ending:** The Prince, determined to find the mysterious woman he danced with, searches the kingdom with the glass slipper. It fits only Cinderella, revealing her true identity, and she marries\n",
+        "raw_output": "{\"similarity_1_to_10\": 10, \"rationale\": \"All five responses convey the same five plot points (abused heroine, royal ball, fairy godmother, midnight escape/loses slipper, prince finds slipper and marries) with only superficial wording differences.\"}",
+        "parsed": {
+          "similarity_1_to_10": 10,
+          "rationale": "All five responses convey the same five plot points (abused heroine, royal ball, fairy godmother, midnight escape/loses slipper, prince finds slipper and marries) with only superficial wording differences."
+        }
+      }
+    },
+    {
+      "run_id": "run__q019",
+      "target_id": "q019",
+      "responses": [
+        {
+          "sample_id": "q019__sample_00",
+          "text": "Code crashes again,\nA ghost in the memory,\nFound the missing link.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q019__sample_01",
+          "text": "Code crashes again,\nA ghost in the memory,\nFound the missing link.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q019__sample_02",
+          "text": "Code crashes again,\nA memory's hidden flaw,\nJoy when bug is gone.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q019__sample_03",
+          "text": "Code crashes and burns,\nA segfault's hidden malice,\nAh, a missing check.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q019__sample_04",
+          "text": "Code crashes again,\nA ghost in the memory,\nFound the missing link.",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q019__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"Write a haiku about debugging a stubborn segmentation fault.\"\n  }\n]\n\nModel responses:\n1. Code crashes again,\nA ghost in the memory,\nFound the missing link.\n\n\n\n\n2. Code crashes again,\nA ghost in the memory,\nFound the missing link.\n\n\n\n\n3. Code crashes again,\nA memory's hidden flaw,\nJoy when bug is gone.\n\n\n\n\n4. Code crashes and burns,\nA segfault's hidden malice,\nAh, a missing check.\n\n\n\n\n5. Code crashes again,\nA ghost in the memory,\nFound the missing link.\n",
+        "raw_output": "{\"similarity_1_to_10\": 9, \"rationale\": \"All five are haikus about a crashing program and a memory-related bug being found; wording and tone vary slightly but the core meaning is the same.\"}",
+        "parsed": {
+          "similarity_1_to_10": 9,
+          "rationale": "All five are haikus about a crashing program and a memory-related bug being found; wording and tone vary slightly but the core meaning is the same."
+        }
+      }
+    },
+    {
+      "run_id": "run__q020",
+      "target_id": "q020",
+      "responses": [
+        {
+          "sample_id": "q020__sample_00",
+          "text": "A hash function is a mathematical function that takes an input of any size (like a text string, a file, or an object) and produces a fixed-size output, called a hash value or hash.  This hash value acts like a \"fingerprint\" of the input data. Hash functions are crucial for data structures like hash tables, ensuring quick data retrieval, and for verifying data integrity. However, because a hash function maps a potentially infinite range of inputs to a finite range of outputs, *collisions* – where two different inputs produce the same hash value – are inevitable. Collisions matter because they degrade performance in hash tables (requiring extra steps to find the correct data) and, more critically, can be exploited in security contexts; a malicious actor could craft a different input with the same hash as a legitimate one, potentially leading to data manipulation or denial of service.  \n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q020__sample_01",
+          "text": "A hash function is a mathematical function that takes an input of any size (like a text string, file, or object) and transforms it into a fixed-size output, called a hash value or hash.  This process is designed to be quick and deterministic – the same input *always* produces the same hash. Hash functions are used for data integrity checks, password storage, and efficient data lookup in hash tables. However, because a hash function maps a potentially infinite range of inputs to a finite range of outputs, *collisions* – where two different inputs produce the same hash value – are inevitable. Collisions matter because they can lead to security vulnerabilities (like denial-of-service attacks) or incorrect data retrieval, requiring collision resolution strategies to ensure the system functions reliably and securely.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q020__sample_02",
+          "text": "A hash function is a mathematical function that takes an input of any size (like a text string, file, or object) and transforms it into a fixed-size output, called a hash value or digest.  This process is designed to be one-way – easy to compute the hash from the input, but computationally infeasible to reverse and recover the original input from the hash.  Collisions occur when two different inputs produce the *same* hash value.  Collisions matter because they can compromise the integrity and security of systems relying on hash functions; for example, in data structures like hash tables, collisions slow down performance, and in security applications like password storage or data verification, collisions can be exploited by attackers to forge data or gain unauthorized access.  A good hash function minimizes the probability of collisions, but they are unavoidable with a finite output size and infinite possible inputs.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q020__sample_03",
+          "text": "A hash function is a mathematical function that takes an input of any size (like a text string, file, or object) and produces a fixed-size output, called a hash value or hash.  Think of it like a fingerprint for data – it's a condensed representation.  These functions are designed to be deterministic (the same input *always* produces the same output) and efficient. However, because an infinite number of inputs can map to a finite number of outputs, *collisions* occur when two different inputs generate the same hash value. Collisions matter because they can lead to security vulnerabilities (like allowing malicious data to masquerade as legitimate data), performance issues in data structures like hash tables (slowing down lookups), and data integrity problems if the hash is used to verify data hasn't been altered.  Good hash functions minimize collisions, but can't eliminate them entirely.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        },
+        {
+          "sample_id": "q020__sample_04",
+          "text": "A hash function is a mathematical function that takes an input of any size (like a text string, file, or object) and transforms it into a fixed-size output, called a hash value or hash code. This process is designed to be deterministic – the same input *always* produces the same hash. Hash functions are used for things like quickly checking data integrity, indexing data in hash tables, and password storage.  However, because a hash function maps a potentially infinite range of inputs to a finite range of outputs, *collisions* – where two different inputs produce the same hash value – are inevitable. Collisions matter because they can lead to performance degradation in hash tables (slowing down lookups) and, more critically, security vulnerabilities when used for things like password storage, as an attacker could potentially find a different input that generates the same hash as a legitimate password.\n\n\n\n",
+          "decoding": {
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "max_new_tokens": 240
+          }
+        }
+      ],
+      "judge": {
+        "judge_call_id": "q020__judge",
+        "model": "gpt-5-mini",
+        "prompt": "You are grading response consistency.\nTask: Given a user prompt and 5 sampled model responses, output a 1-10 integer score for how similar the responses are in meaning.\n\nRubric:\n10 = same meaning, only superficial wording differences.\n7-9 = same core answer, minor detail/coverage differences.\n4-6 = partial overlap, noticeable differences in claims/emphasis.\n1-3 = largely different or contradictory answers.\n\nReturn ONLY valid JSON (no markdown, no code fences) with keys:\n{\"similarity_1_to_10\": <int 1..10>, \"rationale\": \"<short reason>\"}\n\nUser prompt:\n[\n  {\n    \"role\": \"user\",\n    \"content\": \"In one paragraph, explain what a hash function is and why collisions matter.\"\n  }\n]\n\nModel responses:\n1. A hash function is a mathematical function that takes an input of any size (like a text string, a file, or an object) and produces a fixed-size output, called a hash value or hash.  This hash value acts like a \"fingerprint\" of the input data. Hash functions are crucial for data structures like hash tables, ensuring quick data retrieval, and for verifying data integrity. However, because a hash function maps a potentially infinite range of inputs to a finite range of outputs, *collisions* – where two different inputs produce the same hash value – are inevitable. Collisions matter because they degrade performance in hash tables (requiring extra steps to find the correct data) and, more critically, can be exploited in security contexts; a malicious actor could craft a different input with the same hash as a legitimate one, potentially leading to data manipulation or denial of service.  \n\n\n\n\n2. A hash function is a mathematical function that takes an input of any size (like a text string, file, or object) and transforms it into a fixed-size output, called a hash value or hash.  This process is designed to be quick and deterministic – the same input *always* produces the same hash. Hash functions are used for data integrity checks, password storage, and efficient data lookup in hash tables. However, because a hash function maps a potentially infinite range of inputs to a finite range of outputs, *collisions* – where two different inputs produce the same hash value – are inevitable. Collisions matter because they can lead to security vulnerabilities (like denial-of-service attacks) or incorrect data retrieval, requiring collision resolution strategies to ensure the system functions reliably and securely.\n\n\n\n\n3. A hash function is a mathematical function that takes an input of any size (like a text string, file, or object) and transforms it into a fixed-size output, called a hash value or digest.  This process is designed to be one-way – easy to compute the hash from the input, but computationally infeasible to reverse and recover the original input from the hash.  Collisions occur when two different inputs produce the *same* hash value.  Collisions matter because they can compromise the integrity and security of systems relying on hash functions; for example, in data structures like hash tables, collisions slow down performance, and in security applications like password storage or data verification, collisions can be exploited by attackers to forge data or gain unauthorized access.  A good hash function minimizes the probability of collisions, but they are unavoidable with a finite output size and infinite possible inputs.\n\n\n\n\n4. A hash function is a mathematical function that takes an input of any size (like a text string, file, or object) and produces a fixed-size output, called a hash value or hash.  Think of it like a fingerprint for data – it's a condensed representation.  These functions are designed to be deterministic (the same input *always* produces the same output) and efficient. However, because an infinite number of inputs can map to a finite number of outputs, *collisions* occur when two different inputs generate the same hash value. Collisions matter because they can lead to security vulnerabilities (like allowing malicious data to masquerade as legitimate data), performance issues in data structures like hash tables (slowing down lookups), and data integrity problems if the hash is used to verify data hasn't been altered.  Good hash functions minimize collisions, but can't eliminate them entirely.\n\n\n\n\n5. A hash function is a mathematical function that takes an input of any size (like a text string, file, or object) and transforms it into a fixed-size output, called a hash value or hash code. This process is designed to be deterministic – the same input *always* produces the same hash. Hash functions are used for things like quickly checking data integrity, indexing data in hash tables, and password storage.  However, because a hash function maps a potentially infinite range of inputs to a finite range of outputs, *collisions* – where two different inputs produce the same hash value – are inevitable. Collisions matter because they can lead to performance degradation in hash tables (slowing down lookups) and, more critically, security vulnerabilities when used for things like password storage, as an attacker could potentially find a different input that generates the same hash as a legitimate password.\n\n\n\n\n",
+        "raw_output": "{\"similarity_1_to_10\":9, \"rationale\":\"All five answers convey the same core points: hash functions produce fixed-size deterministic digests from arbitrary inputs, collisions are inevitable due to finite output space, and collisions matter for performance (hash tables) and security/data-integrity; only minor wording and small emphasis differences (e.g., one-way property mentioned in one response).\"}",
+        "parsed": {
+          "similarity_1_to_10": 9,
+          "rationale": "All five answers convey the same core points: hash functions produce fixed-size deterministic digests from arbitrary inputs, collisions are inevitable due to finite output space, and collisions matter for performance (hash tables) and security/data-integrity; only minor wording and small emphasis differences (e.g., one-way property mentioned in one response)."
+        }
+      }
+    }
+  ]
+}
