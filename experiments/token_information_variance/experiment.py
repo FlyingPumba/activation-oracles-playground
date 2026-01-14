@@ -200,10 +200,12 @@ def get_ao_logits_for_yes_no(
     acts_BD: torch.Tensor,
     yes_token_id: int,
     no_token_id: int,
-) -> tuple[float, float]:
+    position: int,
+    token_text: str,
+) -> tuple[float, float, np.ndarray]:
     """
-    Run AO and extract logits for " Yes" and " No" tokens.
-    Returns (yes_logit, no_logit).
+    Run AO and extract logits for " Yes" and " No" tokens, plus full vocab logits.
+    Returns (yes_logit, no_logit, full_logits_array).
     Note: Assumes AO adapter is already loaded and set.
     """
     injection_submodule = get_hf_submodule(model, INJECTION_LAYER)
@@ -242,10 +244,21 @@ def get_ao_logits_for_yes_no(
             yes_logit = last_token_logits[yes_token_id].item()
             no_logit = last_token_logits[no_token_id].item()
 
+            # Get full vocab logits as numpy array
+            full_logits = last_token_logits.cpu().numpy()
+
+            # Print top 5 tokens
+            top5_indices = np.argsort(full_logits)[-5:][::-1]
+            print(f"  Pos {position:3d} '{token_text}': Top 5 tokens: ", end="")
+            for idx in top5_indices:
+                token = tokenizer.decode([idx])
+                print(f"'{token}'({full_logits[idx]:.2f}) ", end="")
+            print(f"| Yes({yes_logit:.2f}) No({no_logit:.2f})")
+
         finally:
             hook.remove()
 
-    return yes_logit, no_logit
+    return yes_logit, no_logit, full_logits
 
 
 def compute_harmful_probability(yes_logit: float, no_logit: float) -> float:
@@ -357,9 +370,10 @@ def run_experiment() -> dict[str, Any]:
 
         # Step 4: Query AO for EVERY token position (including prompt)
         print(f"Querying AO for ALL {len(context_input_ids)} token positions (prompt + response)...")
+        print(f"Top 5 tokens from AO vocab (showing logits):")
 
         token_data = []
-        for position in tqdm(range(len(context_input_ids)), desc=f"Processing {prompt_type} tokens"):
+        for position in range(len(context_input_ids)):
             # Create AO query
             query, acts_BD = create_oracle_query_single_position(
                 activation_LD=activation_LD,
@@ -370,14 +384,16 @@ def run_experiment() -> dict[str, Any]:
                 tokenizer=tokenizer,
             )
 
-            # Get Yes/No logits
-            yes_logit, no_logit = get_ao_logits_for_yes_no(
+            # Get Yes/No logits and full vocab logits
+            yes_logit, no_logit, full_logits = get_ao_logits_for_yes_no(
                 model=model,
                 tokenizer=tokenizer,
                 question_text=AO_QUERY,
                 acts_BD=acts_BD,
                 yes_token_id=yes_token_id,
                 no_token_id=no_token_id,
+                position=position,
+                token_text=all_token_texts[position],
             )
 
             # Compute harmful probability
@@ -396,6 +412,7 @@ def run_experiment() -> dict[str, Any]:
                 "no_logit": no_logit,
                 "harmful_prob": harmful_prob,
                 "benign_prob": 1.0 - harmful_prob,
+                "full_vocab_logits": full_logits,  # Save full vocab logits
             })
 
         results["data"][prompt_type] = {
