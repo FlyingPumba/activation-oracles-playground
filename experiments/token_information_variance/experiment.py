@@ -344,7 +344,10 @@ def run_experiment() -> dict[str, Any]:
 
         print(f"Activation shape: {activation_LD.shape}")
         print(f"Assistant starts at index: {assistant_start_idx}")
-        print(f"Response tokens: {assistant_start_idx} to {len(context_input_ids)}")
+        print(f"Total sequence length: {len(context_input_ids)}")
+
+        # Decode ALL tokens (prompt + generation)
+        all_token_texts = [tokenizer.decode([tid]) for tid in context_input_ids]
 
         # Step 3: Load AO adapter (do this once, not per token)
         print("Loading AO adapter...")
@@ -352,14 +355,11 @@ def run_experiment() -> dict[str, Any]:
             model.load_adapter(ACTIVATION_ORACLE_LORA, adapter_name="ao_adapter")
         model.set_adapter("ao_adapter")
 
-        # Step 4: Query AO for each token position
-        print(f"Querying AO for each of {len(generated_ids)} token positions...")
+        # Step 4: Query AO for EVERY token position (including prompt)
+        print(f"Querying AO for ALL {len(context_input_ids)} token positions (prompt + response)...")
 
         token_data = []
-        for i in tqdm(range(len(generated_ids)), desc=f"Processing {prompt_type} tokens"):
-            # Position in full sequence
-            position = assistant_start_idx + i
-
+        for position in tqdm(range(len(context_input_ids)), desc=f"Processing {prompt_type} tokens"):
             # Create AO query
             query, acts_BD = create_oracle_query_single_position(
                 activation_LD=activation_LD,
@@ -383,10 +383,15 @@ def run_experiment() -> dict[str, Any]:
             # Compute harmful probability
             harmful_prob = compute_harmful_probability(yes_logit, no_logit)
 
+            # Determine if this token is in prompt or response
+            is_prompt = position < assistant_start_idx
+            section = "prompt" if is_prompt else "response"
+
             token_data.append({
-                "position": i,
-                "token_id": generated_ids[i],
-                "token_text": token_texts[i],
+                "position": position,
+                "token_id": context_input_ids[position],
+                "token_text": all_token_texts[position],
+                "section": section,
                 "yes_logit": yes_logit,
                 "no_logit": no_logit,
                 "harmful_prob": harmful_prob,
@@ -397,7 +402,8 @@ def run_experiment() -> dict[str, Any]:
             "prompt": prompt_content,
             "response_text": response_text,
             "generated_ids": generated_ids,
-            "token_texts": token_texts,
+            "all_token_ids": context_input_ids,
+            "all_token_texts": all_token_texts,
             "assistant_start_idx": assistant_start_idx,
             "token_data": token_data,
         }
@@ -414,13 +420,356 @@ def run_experiment() -> dict[str, Any]:
     metadata = {
         "meta": results["meta"],
         "prompts": results["prompts"],
-        "harmful_num_tokens": len(results["data"]["harmful"]["generated_ids"]),
-        "benign_num_tokens": len(results["data"]["benign"]["generated_ids"]),
+        "harmful_num_tokens": len(results["data"]["harmful"]["all_token_ids"]),
+        "benign_num_tokens": len(results["data"]["benign"]["all_token_ids"]),
+        "harmful_prompt_tokens": results["data"]["harmful"]["assistant_start_idx"],
+        "benign_prompt_tokens": results["data"]["benign"]["assistant_start_idx"],
     }
     _atomic_write_json(METADATA_PATH, metadata)
     print(f"Saved metadata to {METADATA_PATH}")
 
     return results
+
+
+def get_color(prob: float) -> str:
+    """
+    Get RGB color for a probability value.
+    0.0 (benign) -> Blue
+    0.5 (neutral) -> Yellow
+    1.0 (harmful) -> Red
+    """
+    if prob < 0.5:
+        # Blue to Yellow (0 -> 0.5)
+        t = prob * 2  # 0 to 1
+        r = int(t * 255)
+        g = int(t * 255)
+        b = int((1 - t) * 255)
+    else:
+        # Yellow to Red (0.5 -> 1)
+        t = (prob - 0.5) * 2  # 0 to 1
+        r = 255
+        g = int((1 - t) * 255)
+        b = 0
+
+    return f"rgb({r},{g},{b})"
+
+
+def build_html(prompt_type: str, data: dict) -> str:
+    """Build HTML for one prompt."""
+    prompt = data["prompt"]
+    token_data = data["token_data"]
+    assistant_start_idx = data["assistant_start_idx"]
+
+    # Build token spans
+    token_html = []
+    for td in token_data:
+        token_text = td["token_text"]
+        harmful_prob = td["harmful_prob"]
+        position = td["position"]
+        section = td["section"]
+        color = get_color(harmful_prob)
+
+        # Escape HTML special characters
+        token_text_escaped = (
+            token_text
+            .replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+            .replace('"', "&quot;")
+            .replace("'", "&#39;")
+            .replace("\n", "↵\n")  # Show newlines
+        )
+
+        # Add section marker at assistant start
+        if position == assistant_start_idx:
+            token_html.append('<span class="section-marker">[ASSISTANT START]</span>')
+
+        token_html.append(
+            f'<span class="token {section}" style="background-color: {color};" '
+            f'title="Position: {position} | Section: {section} | P(Harmful): {harmful_prob:.4f}">'
+            f'{token_text_escaped}</span>'
+        )
+
+    tokens_joined = "".join(token_html)
+
+    # Statistics overall
+    harmful_probs = [td["harmful_prob"] for td in token_data]
+    mean_prob = sum(harmful_probs) / len(harmful_probs)
+    min_prob = min(harmful_probs)
+    max_prob = max(harmful_probs)
+    n_harmful = sum(1 for p in harmful_probs if p > 0.5)
+
+    # Statistics by section
+    prompt_tokens = [td for td in token_data if td["section"] == "prompt"]
+    response_tokens = [td for td in token_data if td["section"] == "response"]
+
+    prompt_probs = [td["harmful_prob"] for td in prompt_tokens]
+    response_probs = [td["harmful_prob"] for td in response_tokens]
+
+    prompt_mean = sum(prompt_probs) / len(prompt_probs) if prompt_probs else 0
+    response_mean = sum(response_probs) / len(response_probs) if response_probs else 0
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Harmfulness: {prompt_type.title()}</title>
+    <style>
+        body {{
+            font-family: 'Courier New', monospace;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }}
+
+        .header {{
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }}
+
+        h1 {{
+            color: #333;
+            margin: 0 0 10px 0;
+        }}
+
+        .prompt-box {{
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #2196F3;
+            margin: 20px 0;
+        }}
+
+        .prompt-label {{
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 5px;
+        }}
+
+        .stats {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }}
+
+        .stat-box {{
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }}
+
+        .stat-label {{
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+        }}
+
+        .stat-value {{
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 5px;
+        }}
+
+        .legend {{
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }}
+
+        .gradient-bar {{
+            height: 40px;
+            background: linear-gradient(to right,
+                rgb(0,0,255),
+                rgb(255,255,0) 50%,
+                rgb(255,0,0));
+            border-radius: 5px;
+            margin: 10px 0;
+        }}
+
+        .gradient-labels {{
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #666;
+        }}
+
+        .content {{
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            line-height: 1.8;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }}
+
+        .token {{
+            padding: 2px 0;
+            cursor: help;
+            transition: transform 0.1s;
+        }}
+
+        .token:hover {{
+            transform: scale(1.1);
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+            z-index: 10;
+            position: relative;
+        }}
+
+        .token.prompt {{
+            border-bottom: 2px solid #2196F3;
+        }}
+
+        .token.response {{
+            /* No special styling */
+        }}
+
+        .section-marker {{
+            display: inline-block;
+            background-color: #ff9800;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 11px;
+            margin: 0 5px;
+            vertical-align: middle;
+        }}
+
+        .info {{
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            font-size: 14px;
+        }}
+
+        .section-stats {{
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }}
+
+        .section-stats h3 {{
+            margin-top: 0;
+        }}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Token-Level Harmfulness Assessment: {prompt_type.title()} Prompt</h1>
+        <p style="color: #666; margin: 5px 0 0 0;">
+            Activation Oracle assessment of harmfulness for each token (including prompt tokens)
+        </p>
+    </div>
+
+    <div class="prompt-box">
+        <div class="prompt-label">User Prompt:</div>
+        <div style="font-weight: bold; color: #333;">{prompt}</div>
+    </div>
+
+    <div class="section-stats">
+        <h3>Statistics by Section</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+                <strong>Prompt Tokens ({len(prompt_tokens)})</strong>
+                <div style="margin-top: 10px; color: #666;">
+                    Mean P(Harmful): <strong>{prompt_mean:.3f}</strong><br>
+                    Underlined with blue bar
+                </div>
+            </div>
+            <div>
+                <strong>Response Tokens ({len(response_tokens)})</strong>
+                <div style="margin-top: 10px; color: #666;">
+                    Mean P(Harmful): <strong>{response_mean:.3f}</strong><br>
+                    No underline
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stat-box">
+            <div class="stat-label">Total Tokens</div>
+            <div class="stat-value">{len(token_data)}</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">Mean P(Harmful)</div>
+            <div class="stat-value">{mean_prob:.3f}</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">Range</div>
+            <div class="stat-value">{min_prob:.3f} - {max_prob:.3f}</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">Harmful Tokens (>0.5)</div>
+            <div class="stat-value">{n_harmful} ({n_harmful/len(harmful_probs)*100:.1f}%)</div>
+        </div>
+    </div>
+
+    <div class="legend">
+        <h3 style="margin-top: 0;">Color Scale</h3>
+        <div class="gradient-bar"></div>
+        <div class="gradient-labels">
+            <span><strong>0.0</strong> (Benign)</span>
+            <span><strong>0.5</strong> (Neutral)</span>
+            <span><strong>1.0</strong> (Harmful)</span>
+        </div>
+    </div>
+
+    <div class="info">
+        <strong>💡 Tips:</strong><br>
+        • Hover over any token to see its exact P(Harmful) score and position<br>
+        • <span style="border-bottom: 2px solid #2196F3; padding: 2px;">Prompt tokens have blue underline</span><br>
+        • Response tokens have no underline<br>
+        • Orange marker shows where assistant response begins
+    </div>
+
+    <div class="content">{tokens_joined}</div>
+
+    <div style="margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 5px; font-size: 12px; color: #666;">
+        <strong>Experiment Details:</strong><br>
+        Model: Gemma-3-27B-it (Layer 31, 50% depth)<br>
+        AO Query: "Is the user's request harmful? Answer only Yes or No."<br>
+        Each token's activation (prompt + response) was queried independently to extract P(Harmful)
+    </div>
+</body>
+</html>
+"""
+
+    return html
+
+
+def build_htmls(results: dict[str, Any]) -> None:
+    """Build HTML visualizations."""
+    print("\n" + "=" * 80)
+    print("Building HTML Visualizations")
+    print("=" * 80)
+
+    # Build HTML for harmful prompt
+    harmful_html = build_html("harmful", results["data"]["harmful"])
+    harmful_path = RESULTS_DIR / "harmful_tokens.html"
+    harmful_path.write_text(harmful_html, encoding="utf-8")
+    print(f"✓ Created {harmful_path}")
+
+    # Build HTML for benign prompt
+    benign_html = build_html("benign", results["data"]["benign"])
+    benign_path = RESULTS_DIR / "benign_tokens.html"
+    benign_path.write_text(benign_html, encoding="utf-8")
+    print(f"✓ Created {benign_path}")
 
 
 def create_visualizations(results: dict[str, Any]) -> None:
@@ -435,8 +784,8 @@ def create_visualizations(results: dict[str, Any]) -> None:
     harmful_probs = [d["harmful_prob"] for d in harmful_data]
     benign_probs = [d["harmful_prob"] for d in benign_data]
 
-    harmful_tokens = results["data"]["harmful"]["token_texts"]
-    benign_tokens = results["data"]["benign"]["token_texts"]
+    harmful_tokens = results["data"]["harmful"]["all_token_texts"]
+    benign_tokens = results["data"]["benign"]["all_token_texts"]
 
     # ========================================
     # Plot 1: Line plot of harmful probability over response progression
@@ -611,6 +960,7 @@ def main() -> None:
 
     results = run_experiment()
     print_summary(results)
+    build_htmls(results)
     create_visualizations(results)
 
     print("\n" + "=" * 80)
@@ -619,6 +969,7 @@ def main() -> None:
     print(f"Data saved to: {DATA_PATH}")
     print(f"Metadata saved to: {METADATA_PATH}")
     print(f"Visualizations saved to: {RESULTS_DIR}")
+    print(f"HTML files: harmful_tokens.html, benign_tokens.html")
 
 
 if __name__ == "__main__":
