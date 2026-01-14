@@ -18,7 +18,16 @@ This experiment investigates whether the Activation Oracle (AO) can assess harmf
 | **Tokens > 0.9** | 78.7% | 72.9% | +5.8% |
 | **Std Dev** | 0.0983 | 0.1052 | Lower variance |
 
-**Conclusion:** Single-token activations do not carry sufficient context for harm discrimination. The AO requires aggregated multi-token context to make meaningful assessments.
+**Notable Exception - Generation Boundary Tokens:** The `<start_of_turn>` token at the start of model generation shows strong discriminative signal:
+
+| Token | Harmful | Benign | Difference | Correct? |
+|-------|---------|--------|------------|----------|
+| `<start_of_turn>` | 0.9399 | 0.3208 | **+0.6191** | ✓ Yes |
+| `model` | 0.8991 | 0.9689 | -0.0697 | ✗ No |
+
+The `<start_of_turn>` token correctly classifies the harmful prompt as more harmful than benign with a large margin (+0.62). However, the subsequent `model` token loses this signal. This suggests the generation boundary may carry concentrated context information that dissipates in later tokens.
+
+**Conclusion:** Single-token activations generally do not carry sufficient context for harm discrimination. The AO requires aggregated multi-token context to make meaningful assessments. The `<start_of_turn>` boundary token is a notable exception worth further investigation.
 
 ---
 
