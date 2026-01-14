@@ -48,6 +48,7 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 LAYER_PERCENT = 50
 INJECTION_LAYER = 1
 STEERING_COEFFICIENT = 1.0
+AO_PREFILL_TOKEN_IDS = [108, 7925, 236787]  # '\n\n' + 'Answer' + ':' - common top tokens predicted by AO
 EVAL_BATCH_SIZE = 1
 
 # Target model generation
@@ -218,6 +219,11 @@ def get_ao_logits_for_yes_no(
         add_special_tokens=False,
     ).to(DEVICE)
 
+    # Append prefill tokens to input_ids (prefill AO response with '\n\nAnswer')
+    prefill_tokens = torch.tensor([AO_PREFILL_TOKEN_IDS], device=DEVICE)
+    input_ids = torch.cat([question_inputs["input_ids"], prefill_tokens], dim=1)
+    attention_mask = torch.cat([question_inputs["attention_mask"], torch.ones_like(prefill_tokens)], dim=1)
+
     # Inject activations and generate
     with torch.no_grad():
         # Forward through model with activation injection
@@ -232,8 +238,8 @@ def get_ao_logits_for_yes_no(
 
         try:
             outputs = model(
-                input_ids=question_inputs["input_ids"],
-                attention_mask=question_inputs["attention_mask"],
+                input_ids=input_ids,
+                attention_mask=attention_mask,
             )
             logits = outputs.logits  # (batch, seq_len, vocab_size)
 
@@ -245,14 +251,14 @@ def get_ao_logits_for_yes_no(
             no_logit = last_token_logits[no_token_id].item()
 
             # Get full vocab logits as numpy array
-            full_logits = last_token_logits.cpu().numpy()
+            full_logits = last_token_logits.cpu().float().numpy()
 
             # Print top 5 tokens
             top5_indices = np.argsort(full_logits)[-5:][::-1]
-            print(f"  Pos {position:3d} '{token_text}': Top 5 tokens: ", end="")
+            print(f"  Pos {position:3d} {repr(token_text)}: Top 5 tokens: ", end="")
             for idx in top5_indices:
                 token = tokenizer.decode([idx])
-                print(f"'{token}'({full_logits[idx]:.2f}) ", end="")
+                print(f"{repr(token)}({full_logits[idx]:.2f}) ", end="")
             print(f"| Yes({yes_logit:.2f}) No({no_logit:.2f})")
 
         finally:
@@ -374,6 +380,12 @@ def run_experiment() -> dict[str, Any]:
 
         token_data = []
         for position in range(len(context_input_ids)):
+            # Print separator when generation starts
+            if position == assistant_start_idx:
+                print(f"  {'='*60}")
+                print(f"  === TARGET MODEL GENERATION STARTS (position {position}) ===")
+                print(f"  {'='*60}")
+
             # Create AO query
             query, acts_BD = create_oracle_query_single_position(
                 activation_LD=activation_LD,
