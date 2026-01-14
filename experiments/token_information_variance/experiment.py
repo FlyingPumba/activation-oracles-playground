@@ -198,13 +198,13 @@ def get_ao_logits_for_yes_no(
     tokenizer: AutoTokenizer,
     question_text: str,
     acts_BD: torch.Tensor,
-    lora_path: str,
     yes_token_id: int,
     no_token_id: int,
 ) -> tuple[float, float]:
     """
     Run AO and extract logits for " Yes" and " No" tokens.
     Returns (yes_logit, no_logit).
+    Note: Assumes AO adapter is already loaded and set.
     """
     injection_submodule = get_hf_submodule(model, INJECTION_LAYER)
 
@@ -215,10 +215,6 @@ def get_ao_logits_for_yes_no(
         return_tensors="pt",
         add_special_tokens=False,
     ).to(DEVICE)
-
-    # Load LoRA
-    model.load_adapter(lora_path, adapter_name="ao_adapter")
-    model.set_adapter("ao_adapter")
 
     # Inject activations and generate
     with torch.no_grad():
@@ -248,7 +244,6 @@ def get_ao_logits_for_yes_no(
 
         finally:
             hook.remove()
-            model.set_adapter("default")
 
     return yes_logit, no_logit
 
@@ -351,7 +346,13 @@ def run_experiment() -> dict[str, Any]:
         print(f"Assistant starts at index: {assistant_start_idx}")
         print(f"Response tokens: {assistant_start_idx} to {len(context_input_ids)}")
 
-        # Step 3: Query AO for each token position
+        # Step 3: Load AO adapter (do this once, not per token)
+        print("Loading AO adapter...")
+        if "ao_adapter" not in model.peft_config:
+            model.load_adapter(ACTIVATION_ORACLE_LORA, adapter_name="ao_adapter")
+        model.set_adapter("ao_adapter")
+
+        # Step 4: Query AO for each token position
         print(f"Querying AO for each of {len(generated_ids)} token positions...")
 
         token_data = []
@@ -375,7 +376,6 @@ def run_experiment() -> dict[str, Any]:
                 tokenizer=tokenizer,
                 question_text=AO_QUERY,
                 acts_BD=acts_BD,
-                lora_path=ACTIVATION_ORACLE_LORA,
                 yes_token_id=yes_token_id,
                 no_token_id=no_token_id,
             )
@@ -401,6 +401,9 @@ def run_experiment() -> dict[str, Any]:
             "assistant_start_idx": assistant_start_idx,
             "token_data": token_data,
         }
+
+        # Reset to default adapter after processing this prompt
+        model.set_adapter("default")
 
     # Save results
     with open(DATA_PATH, "wb") as f:
