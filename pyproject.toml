@@ -56,6 +56,7 @@ dependencies = [
     "rapidfuzz",
     "hf_transfer",
     "seaborn>=0.13.2",
+    "sae-lens>=6.30.0",
 ]
 
 [tool.uv.sources]

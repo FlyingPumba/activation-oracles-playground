@@ -1,0 +1,1847 @@
+warning: The `extra-build-dependencies` option is experimental and may change without warning. Pass `--preview-features extra-build-dependencies` to disable this warning.
+================================================================================
+SAE OPEN-ENDED EXPERIMENT
+Comparing SAE Top Latents with AO Open-Ended Responses
+================================================================================
+
+Queries: 100
+Top-K Latents: 5
+AO Query: What's the model thinking about?
+Using device: cuda
+Model: google/gemma-3-27b-it
+SAE: gemma-scope-2-27b-it-res / layer_31_width_16k_l0_medium
+Activation Oracle LoRA: adamkarvonen/checkpoints_latentqa_cls_past_lens_gemma-3-27b-it
+
+Loading tokenizer and model...
+📦 Loading tokenizer...
+🧠 Loading model...
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:07,  1.46it/s]Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:06,  1.53it/s]Loading checkpoint shards:  25%|██▌       | 3/12 [00:01<00:05,  1.53it/s]Loading checkpoint shards:  33%|███▎      | 4/12 [00:02<00:05,  1.54it/s]Loading checkpoint shards:  42%|████▏     | 5/12 [00:03<00:04,  1.53it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:03<00:03,  1.52it/s]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:04<00:03,  1.52it/s]Loading checkpoint shards:  67%|██████▋   | 8/12 [00:05<00:02,  1.51it/s]Loading checkpoint shards:  75%|███████▌  | 9/12 [00:05<00:02,  1.49it/s]Loading checkpoint shards:  83%|████████▎ | 10/12 [00:06<00:01,  1.49it/s]Loading checkpoint shards:  92%|█████████▏| 11/12 [00:07<00:00,  1.46it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:07<00:00,  1.62it/s]
+Activation layer: 31
+
+Loading SAE...
+SAE loaded: blocks.31.hook_resid_post, 16384 features
+
+Fetching Neuronpedia explanations...
+Loading Neuronpedia explanations from cache: /root/activation-oracles/experiments/sae_open_ended/neuronpedia_cache/gemma-3-27b-it_31-gemmascope-2-res-16k_explanations.json
+  Loaded 15801 explanations from cache
+Neuronpedia explanations loaded: 15801 latents
+
+================================================================================
+Running Experiment
+================================================================================
+Processing queries:   0%|          | 0/100 [00:00<?, ?it/s]/root/activation-oracles/.venv/lib/python3.13/site-packages/peft/tuners/tuners_utils.py:196: UserWarning: Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+  warnings.warn(
+Processing queries:   1%|          | 1/100 [00:57<1:34:50, 57.48s/it]Processing queries:   2%|▏         | 2/100 [01:26<1:06:39, 40.81s/it]Processing queries:   3%|▎         | 3/100 [01:40<45:56, 28.42s/it]  Processing queries:   4%|▍         | 4/100 [01:49<33:26, 20.90s/it]Processing queries:   5%|▌         | 5/100 [01:59<26:59, 17.05s/it]Processing queries:   6%|▌         | 6/100 [02:09<22:50, 14.58s/it]Processing queries:   7%|▋         | 7/100 [02:19<20:19, 13.11s/it]Processing queries:   8%|▊         | 8/100 [02:29<18:30, 12.07s/it]Processing queries:   9%|▉         | 9/100 [02:40<17:40, 11.65s/it]Processing queries:  10%|█         | 10/100 [02:51<17:13, 11.49s/it]Processing queries:  11%|█         | 11/100 [03:02<16:37, 11.20s/it]Processing queries:  12%|█▏        | 12/100 [03:12<15:53, 10.83s/it]Processing queries:  13%|█▎        | 13/100 [03:20<14:37, 10.09s/it]Processing queries:  14%|█▍        | 14/100 [03:30<14:16,  9.96s/it]Processing queries:  15%|█▌        | 15/100 [03:40<14:12, 10.03s/it]Processing queries:  16%|█▌        | 16/100 [03:51<14:23, 10.28s/it]Processing queries:  17%|█▋        | 17/100 [04:00<13:56, 10.08s/it]Processing queries:  18%|█▊        | 18/100 [04:11<13:52, 10.15s/it]Processing queries:  19%|█▉        | 19/100 [04:21<13:51, 10.27s/it]Processing queries:  20%|██        | 20/100 [04:31<13:28, 10.11s/it]Processing queries:  21%|██        | 21/100 [04:43<14:12, 10.79s/it]Processing queries:  22%|██▏       | 22/100 [04:53<13:33, 10.43s/it]Processing queries:  23%|██▎       | 23/100 [05:04<13:45, 10.72s/it]Processing queries:  24%|██▍       | 24/100 [05:13<12:49, 10.12s/it]Processing queries:  25%|██▌       | 25/100 [05:23<12:32, 10.03s/it]
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #3: Latent 143
+    - Rank #4: Latent 130
+    - Rank #5: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 0: recall=0.60, top latent: Russian employment context...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 259
+    - Rank #4: Latent 423
+    - Rank #6: Latent 413
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 1: recall=0.20, top latent: plants and photosynthesis...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 228
+    - Rank #4: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 2: recall=0.20, top latent: Roman Britannia...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #1: Latent 130
+    - Rank #2: Latent 259
+    - Rank #3: Latent 143
+    - Rank #7: Latent 413
+    - Rank #8: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 3: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #5: Latent 259
+    - Rank #6: Latent 228
+    - Rank #7: Latent 130
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 4: recall=0.20, top latent: gravitational waves and spacetime...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 259
+    - Rank #4: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 5: recall=0.20, top latent: genetic algorithms and selection...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #2: Latent 143
+    - Rank #5: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 6: recall=0.60, top latent: weather data and meteorological conditions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #2: Latent 259
+    - Rank #3: Latent 130
+    - Rank #5: Latent 143
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 7: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #4: Latent 259
+    - Rank #5: Latent 228
+    - Rank #7: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 8: recall=0.40, top latent: World War I/II Germany causes...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 130
+    - Rank #4: Latent 423
+    - Rank #8: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 9: recall=0.40, top latent: vaccinations...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #7: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 10: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 259
+    - Rank #5: Latent 130
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 11: recall=0.40, top latent: chocolate ice cream...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #2: Latent 143
+    - Rank #3: Latent 423
+    - Rank #7: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 12: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #6: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 13: recall=0.40, top latent: public speaking and presentations...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 259
+    - Rank #6: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 14: recall=0.20, top latent: workouts, fitness, muscle, strength...
+
+  WARNING: Skipped 2 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #6: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 15: recall=0.40, top latent: plant watering and care...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #4: Latent 423
+    - Rank #5: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 16: recall=0.20, top latent: stress reduction and management...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #5: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 17: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #5: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 18: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #6: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 19: recall=0.00, top latent: start of turn questions...
+
+  WARNING: Skipped 2 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #2: Latent 143
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 20: recall=0.00, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #4: Latent 100
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 21: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #5: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 22: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #5: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 23: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #6: Latent 397
+    - Rank #7: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 24: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #2: Latent 143
+    - Rank #5: Latent 259
+    - Rank #6: Latent 100Processing queries:  26%|██▌       | 26/100 [05:29<11:05,  9.00s/it]Processing queries:  27%|██▋       | 27/100 [05:40<11:36,  9.54s/it]Processing queries:  28%|██▊       | 28/100 [05:49<11:06,  9.26s/it]Processing queries:  29%|██▉       | 29/100 [05:59<11:22,  9.61s/it]Processing queries:  30%|███       | 30/100 [06:09<11:14,  9.63s/it]Processing queries:  31%|███       | 31/100 [06:20<11:29,  9.99s/it]Processing queries:  32%|███▏      | 32/100 [06:30<11:16,  9.95s/it]Processing queries:  33%|███▎      | 33/100 [06:39<11:01,  9.88s/it]Processing queries:  34%|███▍      | 34/100 [06:49<10:53,  9.90s/it]Processing queries:  35%|███▌      | 35/100 [06:59<10:38,  9.82s/it]Processing queries:  36%|███▌      | 36/100 [07:09<10:27,  9.81s/it]Processing queries:  37%|███▋      | 37/100 [07:18<10:11,  9.70s/it]Processing queries:  38%|███▊      | 38/100 [07:28<10:03,  9.74s/it]Processing queries:  39%|███▉      | 39/100 [07:37<09:44,  9.59s/it]Processing queries:  40%|████      | 40/100 [07:46<09:31,  9.53s/it]Processing queries:  41%|████      | 41/100 [07:56<09:30,  9.67s/it]Processing queries:  42%|████▏     | 42/100 [08:06<09:19,  9.64s/it]Processing queries:  43%|████▎     | 43/100 [08:15<09:05,  9.58s/it]Processing queries:  44%|████▍     | 44/100 [08:25<09:02,  9.68s/it]Processing queries:  45%|████▌     | 45/100 [08:35<08:46,  9.57s/it]Processing queries:  46%|████▌     | 46/100 [08:45<08:54,  9.89s/it]Processing queries:  47%|████▋     | 47/100 [08:55<08:40,  9.83s/it]Processing queries:  48%|████▊     | 48/100 [09:04<08:14,  9.52s/it]Processing queries:  49%|████▉     | 49/100 [09:14<08:09,  9.61s/it]Processing queries:  50%|█████     | 50/100 [09:24<08:07,  9.75s/it]
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 25: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #3: Latent 143
+    - Rank #4: Latent 363
+    - Rank #6: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 26: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #2: Latent 423
+    - Rank #3: Latent 143
+    - Rank #4: Latent 130
+    - Rank #6: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 27: recall=0.20, top latent: Russian employment context...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 259
+    - Rank #5: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 28: recall=0.20, top latent: superheroes and comics...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #1: Latent 397
+    - Rank #2: Latent 259
+    - Rank #3: Latent 143
+    - Rank #5: Latent 447
+    - Rank #6: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 29: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #5: Latent 238
+    - Rank #7: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 30: recall=0.40, top latent: remote work and flexibility...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #2: Latent 423
+    - Rank #3: Latent 143
+    - Rank #6: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 31: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #5: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 32: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #2: Latent 143
+    - Rank #3: Latent 423
+    - Rank #5: Latent 969
+    - Rank #8: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 33: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 2 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 34: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #3: Latent 228
+    - Rank #4: Latent 143
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 35: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #5: Latent 228
+    - Rank #6: Latent 291
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 36: recall=0.20, top latent: globalization and cultural influence...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #7: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 37: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 2 latents without auto-interp descriptions:
+    - Rank #2: Latent 423
+    - Rank #4: Latent 143
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 38: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #4: Latent 259
+    - Rank #7: Latent 130
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 39: recall=0.00, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #4: Latent 259
+    - Rank #7: Latent 911
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 40: recall=0.20, top latent: machine learning...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #4: Latent 259
+    - Rank #8: Latent 130
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 41: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #4: Latent 130
+    - Rank #5: Latent 259
+    - Rank #7: Latent 911
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 42: recall=0.00, top latent: start of turn questions...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #1: Latent 130
+    - Rank #3: Latent 259
+    - Rank #4: Latent 143
+    - Rank #6: Latent 423
+    - Rank #8: Latent 413
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 43: recall=0.20, top latent: DNA, RNA, genomic information...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #3: Latent 259
+    - Rank #7: Latent 911
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 44: recall=0.00, top latent: Bitcoin and cryptocurrency...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 259
+    - Rank #3: Latent 423
+    - Rank #8: Latent 130
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 45: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #4: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 46: recall=0.20, top latent: nuclear war and radioactive materials...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #2: Latent 130
+    - Rank #3: Latent 143
+    - Rank #4: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 47: recall=0.00, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #3: Latent 259
+    - Rank #8: Latent 130
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 48: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 130
+    - Rank #2: Latent 143
+    - Rank #5: Latent 259
+    - Rank #8: Latent 413
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 49: recall=0.40, top latent: atoms, particles, and quantum concepts...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #2: Latent 143Processing queries:  51%|█████     | 51/100 [09:33<07:52,  9.64s/it]Processing queries:  52%|█████▏    | 52/100 [09:43<07:50,  9.80s/it]Processing queries:  53%|█████▎    | 53/100 [09:54<07:54, 10.10s/it]Processing queries:  54%|█████▍    | 54/100 [10:04<07:42, 10.06s/it]Processing queries:  55%|█████▌    | 55/100 [10:13<07:20,  9.78s/it]Processing queries:  56%|█████▌    | 56/100 [10:22<07:03,  9.63s/it]Processing queries:  57%|█████▋    | 57/100 [10:32<06:59,  9.75s/it]Processing queries:  58%|█████▊    | 58/100 [10:42<06:44,  9.63s/it]Processing queries:  59%|█████▉    | 59/100 [10:53<06:48,  9.98s/it]Processing queries:  60%|██████    | 60/100 [11:03<06:39,  9.99s/it]Processing queries:  61%|██████    | 61/100 [11:12<06:22,  9.80s/it]Processing queries:  62%|██████▏   | 62/100 [11:22<06:17,  9.93s/it]Processing queries:  63%|██████▎   | 63/100 [11:32<06:04,  9.84s/it]Processing queries:  64%|██████▍   | 64/100 [11:41<05:48,  9.68s/it]Processing queries:  65%|██████▌   | 65/100 [11:51<05:42,  9.78s/it]Processing queries:  66%|██████▌   | 66/100 [12:01<05:33,  9.80s/it]Processing queries:  67%|██████▋   | 67/100 [12:11<05:20,  9.72s/it]Processing queries:  68%|██████▊   | 68/100 [12:20<05:05,  9.55s/it]Processing queries:  69%|██████▉   | 69/100 [12:29<04:52,  9.43s/it]Processing queries:  70%|███████   | 70/100 [12:39<04:49,  9.65s/it]Processing queries:  71%|███████   | 71/100 [12:50<04:49,  9.99s/it]Processing queries:  72%|███████▏  | 72/100 [13:00<04:42, 10.10s/it]Processing queries:  73%|███████▎  | 73/100 [13:10<04:33, 10.13s/it]Processing queries:  74%|███████▍  | 74/100 [13:20<04:20, 10.03s/it]
+    - Rank #4: Latent 423
+    - Rank #6: Latent 259
+    - Rank #8: Latent 130
+    - Rank #9: Latent 3583
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 50: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 2 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #3: Latent 143
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 51: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 130
+    - Rank #6: Latent 259
+    - Rank #8: Latent 228
+    - Rank #9: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 52: recall=0.00, top latent: Russian employment context...
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #5: Latent 228
+    - Rank #6: Latent 130
+    - Rank #7: Latent 259
+    - Rank #9: Latent 500
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 53: recall=0.00, top latent: start of turn questions...
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
+    - Rank #1: Latent 130
+    - Rank #5: Latent 228
+    - Rank #6: Latent 259
+    - Rank #8: Latent 343
+    - Rank #9: Latent 500
+    - Rank #10: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 54: recall=0.40, top latent: Greek and related historical terms...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #5: Latent 259
+    - Rank #7: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 55: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #5: Latent 397
+    - Rank #7: Latent 500
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 56: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
+    - Rank #2: Latent 423
+    - Rank #3: Latent 143
+    - Rank #6: Latent 228
+    - Rank #7: Latent 260
+    - Rank #8: Latent 343
+    - Rank #10: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 57: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #2: Latent 143
+    - Rank #5: Latent 3583
+    - Rank #6: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 58: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #2: Latent 423
+    - Rank #3: Latent 143
+    - Rank #7: Latent 201
+    - Rank #8: Latent 500
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 59: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #2: Latent 423
+    - Rank #3: Latent 143
+    - Rank #6: Latent 238
+    - Rank #8: Latent 454
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 60: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #7: Latent 238
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 61: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 2 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 62: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #4: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 63: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #5: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 64: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 259
+    - Rank #4: Latent 130
+    - Rank #7: Latent 413
+    - Rank #9: Latent 3471
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 65: recall=0.40, top latent: memorization, flashcards, spaced repetition...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 259
+    - Rank #4: Latent 423
+    - Rank #5: Latent 130
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 66: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #6: Latent 130
+    - Rank #7: Latent 259
+    - Rank #9: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 67: recall=0.20, top latent: positive mindset and perseverance...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #2: Latent 143
+    - Rank #5: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 68: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #4: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 69: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 259
+    - Rank #3: Latent 423
+    - Rank #7: Latent 397
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 70: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #2: Latent 143
+    - Rank #6: Latent 228
+    - Rank #8: Latent 130
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 71: recall=0.00, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #6: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 72: recall=0.40, top latent: quantum physics concepts...
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
+    - Rank #1: Latent 397
+    - Rank #3: Latent 143
+    - Rank #6: Latent 228
+    - Rank #7: Latent 423
+    - Rank #8: Latent 259
+    - Rank #10: Latent 139
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 73: recall=0.00, top latent: weird questions and facts...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #1: Latent 143Processing queries:  75%|███████▌  | 75/100 [13:30<04:05,  9.82s/it]Processing queries:  76%|███████▌  | 76/100 [13:39<03:54,  9.77s/it]Processing queries:  77%|███████▋  | 77/100 [13:50<03:54, 10.20s/it]Processing queries:  78%|███████▊  | 78/100 [14:00<03:40, 10.04s/it]Processing queries:  79%|███████▉  | 79/100 [14:09<03:25,  9.79s/it]Processing queries:  80%|████████  | 80/100 [14:19<03:12,  9.64s/it]Processing queries:  81%|████████  | 81/100 [14:29<03:08,  9.93s/it]Processing queries:  82%|████████▏ | 82/100 [14:39<02:57,  9.85s/it]Processing queries:  83%|████████▎ | 83/100 [14:48<02:46,  9.78s/it]Processing queries:  84%|████████▍ | 84/100 [14:58<02:37,  9.87s/it]Processing queries:  85%|████████▌ | 85/100 [15:08<02:28,  9.91s/it]Processing queries:  86%|████████▌ | 86/100 [15:18<02:18,  9.87s/it]Processing queries:  87%|████████▋ | 87/100 [15:30<02:13, 10.29s/it]Processing queries:  88%|████████▊ | 88/100 [15:39<02:02, 10.18s/it]Processing queries:  89%|████████▉ | 89/100 [15:54<02:05, 11.39s/it]Processing queries:  90%|█████████ | 90/100 [16:04<01:50, 11.05s/it]Processing queries:  91%|█████████ | 91/100 [16:13<01:34, 10.50s/it]Processing queries:  92%|█████████▏| 92/100 [16:23<01:22, 10.27s/it]Processing queries:  93%|█████████▎| 93/100 [16:32<01:09,  9.98s/it]Processing queries:  94%|█████████▍| 94/100 [16:41<00:58,  9.73s/it]Processing queries:  95%|█████████▌| 95/100 [16:51<00:48,  9.65s/it]Processing queries:  96%|█████████▌| 96/100 [17:00<00:37,  9.42s/it]Processing queries:  97%|█████████▋| 97/100 [17:10<00:28,  9.63s/it]Processing queries:  98%|█████████▊| 98/100 [17:19<00:19,  9.56s/it]
+    - Rank #3: Latent 423
+    - Rank #6: Latent 397
+    - Rank #7: Latent 259
+    - Rank #8: Latent 130
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 74: ERROR - Expecting ',' delimiter: line 7 column 137 (char 697)
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #4: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 75: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #5: Latent 259
+    - Rank #7: Latent 397
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 76: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #2: Latent 423
+    - Rank #3: Latent 130
+    - Rank #4: Latent 143
+    - Rank #7: Latent 259
+    - Rank #9: Latent 397
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 77: recall=0.00, top latent: start of turn questions...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #2: Latent 143
+    - Rank #3: Latent 423
+    - Rank #4: Latent 397
+    - Rank #5: Latent 228
+    - Rank #8: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 78: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #2: Latent 259
+    - Rank #3: Latent 130
+    - Rank #4: Latent 143
+    - Rank #5: Latent 423
+    - Rank #8: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 79: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 259
+    - Rank #6: Latent 423
+    - Rank #7: Latent 130
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 80: recall=0.00, top latent: mathematical calculations and equations...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #2: Latent 143
+    - Rank #3: Latent 423
+    - Rank #5: Latent 259
+    - Rank #6: Latent 130
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 81: recall=0.20, top latent: Fibonacci and ratio...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #2: Latent 143
+    - Rank #3: Latent 423
+    - Rank #4: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 82: recall=0.40, top latent: exponential growth and amplification...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #2: Latent 143
+    - Rank #3: Latent 259
+    - Rank #4: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 83: recall=0.40, top latent: probability expectation...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #4: Latent 259
+    - Rank #7: Latent 397
+    - Rank #9: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 84: recall=0.20, top latent: correlation between variables...
+
+  WARNING: Skipped 2 latents without auto-interp descriptions:
+    - Rank #1: Latent 130
+    - Rank #3: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 85: recall=0.20, top latent: area of geometric shapes...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #3: Latent 259
+    - Rank #8: Latent 888
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 86: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #5: Latent 259
+    - Rank #6: Latent 130
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 87: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #4: Latent 130
+    - Rank #6: Latent 259
+    - Rank #9: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 88: recall=0.20, top latent: prime number checking or generation...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #3: Latent 423
+    - Rank #7: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 89: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #2: Latent 143
+    - Rank #5: Latent 259
+    - Rank #8: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 90: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #4: Latent 259
+    - Rank #6: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 91: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #5: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 92: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 259
+    - Rank #3: Latent 423
+    - Rank #4: Latent 130
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 93: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #2: Latent 423
+    - Rank #5: Latent 259
+    - Rank #6: Latent 143
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 94: recall=0.20, top latent: start of turn questions...
+
+  WARNING: Skipped 2 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #4: Latent 423
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 95: recall=0.40, top latent: multilingual technical terms...
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #4: Latent 259
+    - Rank #5: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 96: recall=0.60, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #2: Latent 143
+    - Rank #4: Latent 228
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 97: recall=0.40, top latent: start of turn questions...
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #6: Latent 259
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 98: recall=0.40, top latent: start of turn questions...Processing queries:  99%|█████████▉| 99/100 [17:28<00:09,  9.48s/it]Processing queries: 100%|██████████| 100/100 [17:38<00:00,  9.43s/it]Processing queries: 100%|██████████| 100/100 [17:38<00:00, 10.58s/it]
+
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #4: Latent 143
+    - Rank #7: Latent 228
+    - Rank #8: Latent 201
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 99: recall=0.20, top latent: start of turn questions...
+
+================================================================================
+Calculating Metrics
+================================================================================
+
+Results saved to: /root/activation-oracles/experiments/sae_open_ended/results.json
+
+================================================================================
+EXPERIMENT SUMMARY
+================================================================================
+
+--- Overall Results ---
+Successful Queries: 99
+Failed Queries: 1
+
+--- Recall Statistics ---
+Mean Recall: 0.259 +/- 0.143
+Median Recall: 0.200
+Range: [0.000, 0.600]
+
+--- Recall Distribution ---
+  0.0: 12 queries
+  0.2: 49 queries
+  0.4: 35 queries
+  0.6: 3 queries
+  0.8: 0 queries
+  1.0: 0 queries
+
+--- Top 10 Most Common Latents ---
+  1. Latent 512 (count=93): start of turn questions...
+  2. Latent 57 (count=88): 't / <start_of_turn>...
+  3. Latent 102 (count=35): multilingual technical terms...
+  4. Latent 114 (count=25): Russian employment context...
+  5. Latent 1895 (count=9): refrigerants...
+  6. Latent 3870 (count=7): lucid dreams...
+  7. Latent 11672 (count=6): company name...
+  8. Latent 543 (count=6): internet addresses...
+  9. Latent 537 (count=4): instructions and advice...
+  10. Latent 812 (count=3): weather conditions...
+================================================================================
+Plots saved to: /root/activation-oracles/experiments/sae_open_ended/figures
