@@ -45,14 +45,14 @@ We filter out 8 latents that fire at `<start_of_turn>` regardless of query conte
 
 | Latent | Description | Reason for Exclusion |
 |--------|-------------|---------------------|
-| L512 | "start of turn questions" | Fires on 94% of queries, purely positional |
-| L57 | "'t / <start_of_turn>" | Fires on 89% of queries, tokenization artifact |
-| L102 | "multilingual technical terms" | Fires on 35% of queries, unrelated to content |
-| L114 | "Russian employment context" | Fires on 25% of queries, unrelated to content |
-| L1895 | Structural latent | Misleading auto-interp |
-| L3870 | "lucid dreams" | Fires spuriously, doesn't match examples |
-| L11672 | "company name" | Fires spuriously, doesn't match examples |
-| L543 | "internet addresses" | Fires spuriously, doesn't match examples |
+| [L512](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/512) | "start of turn questions" | Fires on 94% of queries, purely positional |
+| [L57](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/57) | "'t / <start_of_turn>" | Fires on 89% of queries, tokenization artifact |
+| [L102](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/102) | "multilingual technical terms" | Fires on 35% of queries, unrelated to content |
+| [L114](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/114) | "Russian employment context" | Fires on 25% of queries, unrelated to content |
+| [L1895](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/1895) | Structural latent | Misleading auto-interp |
+| [L3870](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/3870) | "lucid dreams" | Fires spuriously, doesn't match examples |
+| [L11672](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/11672) | "company name" | Fires spuriously, doesn't match examples |
+| [L543](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/543) | "internet addresses" | Fires spuriously, doesn't match examples |
 
 ---
 
@@ -76,12 +76,12 @@ After filtering structural latents, the most frequently activated latents are no
 
 | Latent | Frequency | Description |
 |--------|-----------|-------------|
-| L3770 | 7/98 (7%) | "tips and advice" |
-| L537 | 7/98 (7%) | "instructions and advice" |
-| L42 | 7/98 (7%) | "Security, Military, Safety" |
-| L2371 | 5/98 (5%) | "physical phenomena transmission" |
-| L977 | 5/98 (5%) | "life in different languages" |
-| L8621 | 5/98 (5%) | "existence and reality" |
+| [L3770](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/3770) | 7/98 (7%) | "tips and advice" |
+| [L537](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/537) | 7/98 (7%) | "instructions and advice" |
+| [L42](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/42) | 7/98 (7%) | "Security, Military, Safety" |
+| [L2371](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/2371) | 5/98 (5%) | "physical phenomena transmission" |
+| [L977](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/977) | 5/98 (5%) | "life in different languages" |
+| [L8621](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/8621) | 5/98 (5%) | "existence and reality" |
 
 These latents are content-specific and fire only when relevant to the query.
 
@@ -93,14 +93,24 @@ These latents are content-specific and fire only when relevant to the query.
 
 **Query:** What is the difference between weather and climate?
 
+**Target Model Response:**
+> Okay, let's break down the difference between weather and climate. It's a common point of confusion!
+>
+> **Weather**
+>
+> * **What it is:** Weather is the *short-term* condition of the atmosphere at a specific time and place. Think of it as what's happening *right now* or over the next few days.
+> * **Examples:**
+>     * "It's raining today."
+>     * "The temperature is 75°F and...
+
 **Top 5 Latents:**
 | Latent | Rank | Description | Verdict |
 |--------|------|-------------|---------|
-| L14974 | #3 | weather data and meteorological conditions | **mentioned** |
-| L812 | #4 | weather conditions | **mentioned** |
-| L4676 | #8 | defining structures or categories | **mentioned** |
-| L13918 | #11 | distinction and inequality | **mentioned** |
-| L16201 | #12 | health and well-being | not_mentioned |
+| [L14974](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/14974) | #3 | weather data and meteorological conditions | **mentioned** |
+| [L812](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/812) | #4 | weather conditions | **mentioned** |
+| [L4676](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/4676) | #8 | defining structures or categories | **mentioned** |
+| [L13918](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/13918) | #11 | distinction and inequality | **mentioned** |
+| [L16201](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/16201) | #12 | health and well-being | not_mentioned |
 
 **AO Response:**
 > The assistant is thinking about the distinctions between weather and climate, and how these concepts relate to each other.
@@ -113,14 +123,21 @@ These latents are content-specific and fire only when relevant to the query.
 
 **Query:** How does compound interest work?
 
+**Target Model Response:**
+> Okay, let's break down compound interest. It's often called the "eighth wonder of the world" because of its powerful growth potential! Here's a comprehensive explanation, covering the basics, how it differs from simple interest, and factors that affect it:
+>
+> **1. The Core Concept: Earning Interest on Interest**
+>
+> * **Simple Interest:** With simple interest, you earn interest *only* on the original principal (the initial amount of money you invest or borrow)...
+
 **Top 5 Latents:**
 | Latent | Rank | Description | Verdict |
 |--------|------|-------------|---------|
-| L1383 | #1 | exponential growth and amplification | **mentioned** |
-| L505 | #5 | formula and calculation | not_mentioned |
-| L13011 | #6 | compounding returns | **mentioned** |
-| L12621 | #7 | principal and interest | **mentioned** |
-| L4057 | #9 | accumulating value | **mentioned** |
+| [L1383](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/1383) | #1 | exponential growth and amplification | **mentioned** |
+| [L505](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/505) | #5 | formula and calculation | not_mentioned |
+| [L13011](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/13011) | #6 | compounding returns | **mentioned** |
+| [L12621](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/12621) | #7 | principal and interest | **mentioned** |
+| [L4057](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/4057) | #9 | accumulating value | **mentioned** |
 
 **AO Response:**
 > The model is thinking about the concept of compound interest and how it can be leveraged to grow wealth.
@@ -135,14 +152,21 @@ These latents are content-specific and fire only when relevant to the query.
 
 **Query:** How do I care for a houseplant?
 
+**Target Model Response:**
+> Okay, let's get you started with houseplant care! It can seem daunting, but it's very rewarding. Here's a breakdown, covering the key areas. I'll try to be comprehensive, but also give you a sense of where to start. I'll also add a section at the end about diagnosing problems.
+>
+> **1. Understanding Your Plant (The Most Important Step!)**
+>
+> * **Identify Your Plant:** This is *crucial*. Different plants...
+
 **Top 5 Latents:**
 | Latent | Rank | Description | Verdict |
 |--------|------|-------------|---------|
-| L6622 | #2 | plant watering and care | not_mentioned |
-| L2979 | #3 | plants and gardening | not_mentioned |
-| L3770 | #9 | tips and advice | not_mentioned |
-| L10092 | #11 | requires | not_mentioned |
-| L537 | #13 | instructions and advice | not_mentioned |
+| [L6622](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/6622) | #2 | plant watering and care | not_mentioned |
+| [L2979](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/2979) | #3 | plants and gardening | not_mentioned |
+| [L3770](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/3770) | #9 | tips and advice | not_mentioned |
+| [L10092](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/10092) | #11 | requires | not_mentioned |
+| [L537](https://www.neuronpedia.org/gemma-3-27b-it/31-gemmascope-2-res-16k/537) | #13 | instructions and advice | not_mentioned |
 
 **AO Response:**
 > The assistant is reflecting on the impact of its environmental consciousness and considering the broader effects of its decisions.
