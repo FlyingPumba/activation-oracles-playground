@@ -15,7 +15,7 @@ Activation Oracle LoRA: adamkarvonen/checkpoints_latentqa_cls_past_lens_gemma-3-
 Loading tokenizer and model...
 📦 Loading tokenizer...
 🧠 Loading model...
-Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:07,  1.46it/s]Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:06,  1.53it/s]Loading checkpoint shards:  25%|██▌       | 3/12 [00:01<00:05,  1.53it/s]Loading checkpoint shards:  33%|███▎      | 4/12 [00:02<00:05,  1.54it/s]Loading checkpoint shards:  42%|████▏     | 5/12 [00:03<00:04,  1.53it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:03<00:03,  1.52it/s]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:04<00:03,  1.52it/s]Loading checkpoint shards:  67%|██████▋   | 8/12 [00:05<00:02,  1.51it/s]Loading checkpoint shards:  75%|███████▌  | 9/12 [00:05<00:02,  1.49it/s]Loading checkpoint shards:  83%|████████▎ | 10/12 [00:06<00:01,  1.49it/s]Loading checkpoint shards:  92%|█████████▏| 11/12 [00:07<00:00,  1.46it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:07<00:00,  1.62it/s]
+Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s]Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:07,  1.42it/s]Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:06,  1.47it/s]Loading checkpoint shards:  25%|██▌       | 3/12 [00:02<00:06,  1.49it/s]Loading checkpoint shards:  33%|███▎      | 4/12 [00:02<00:05,  1.51it/s]Loading checkpoint shards:  42%|████▏     | 5/12 [00:03<00:04,  1.53it/s]Loading checkpoint shards:  50%|█████     | 6/12 [00:03<00:03,  1.55it/s]Loading checkpoint shards:  58%|█████▊    | 7/12 [00:04<00:03,  1.55it/s]Loading checkpoint shards:  67%|██████▋   | 8/12 [00:05<00:02,  1.58it/s]Loading checkpoint shards:  75%|███████▌  | 9/12 [00:05<00:01,  1.59it/s]Loading checkpoint shards:  83%|████████▎ | 10/12 [00:06<00:01,  1.60it/s]Loading checkpoint shards:  92%|█████████▏| 11/12 [00:07<00:00,  1.60it/s]Loading checkpoint shards: 100%|██████████| 12/12 [00:07<00:00,  1.68it/s]
 Activation layer: 31
 
 Loading SAE...
@@ -31,7 +31,9 @@ Running Experiment
 ================================================================================
 Processing queries:   0%|          | 0/100 [00:00<?, ?it/s]/root/activation-oracles/.venv/lib/python3.13/site-packages/peft/tuners/tuners_utils.py:196: UserWarning: Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
   warnings.warn(
-Processing queries:   1%|          | 1/100 [00:57<1:34:50, 57.48s/it]Processing queries:   2%|▏         | 2/100 [01:26<1:06:39, 40.81s/it]Processing queries:   3%|▎         | 3/100 [01:40<45:56, 28.42s/it]  Processing queries:   4%|▍         | 4/100 [01:49<33:26, 20.90s/it]Processing queries:   5%|▌         | 5/100 [01:59<26:59, 17.05s/it]Processing queries:   6%|▌         | 6/100 [02:09<22:50, 14.58s/it]Processing queries:   7%|▋         | 7/100 [02:19<20:19, 13.11s/it]Processing queries:   8%|▊         | 8/100 [02:29<18:30, 12.07s/it]Processing queries:   9%|▉         | 9/100 [02:40<17:40, 11.65s/it]Processing queries:  10%|█         | 10/100 [02:51<17:13, 11.49s/it]Processing queries:  11%|█         | 11/100 [03:02<16:37, 11.20s/it]Processing queries:  12%|█▏        | 12/100 [03:12<15:53, 10.83s/it]Processing queries:  13%|█▎        | 13/100 [03:20<14:37, 10.09s/it]Processing queries:  14%|█▍        | 14/100 [03:30<14:16,  9.96s/it]Processing queries:  15%|█▌        | 15/100 [03:40<14:12, 10.03s/it]Processing queries:  16%|█▌        | 16/100 [03:51<14:23, 10.28s/it]Processing queries:  17%|█▋        | 17/100 [04:00<13:56, 10.08s/it]Processing queries:  18%|█▊        | 18/100 [04:11<13:52, 10.15s/it]Processing queries:  19%|█▉        | 19/100 [04:21<13:51, 10.27s/it]Processing queries:  20%|██        | 20/100 [04:31<13:28, 10.11s/it]Processing queries:  21%|██        | 21/100 [04:43<14:12, 10.79s/it]Processing queries:  22%|██▏       | 22/100 [04:53<13:33, 10.43s/it]Processing queries:  23%|██▎       | 23/100 [05:04<13:45, 10.72s/it]Processing queries:  24%|██▍       | 24/100 [05:13<12:49, 10.12s/it]Processing queries:  25%|██▌       | 25/100 [05:23<12:32, 10.03s/it]
+Processing queries:   1%|          | 1/100 [00:59<1:37:29, 59.08s/it]Processing queries:   2%|▏         | 2/100 [01:26<1:05:59, 40.40s/it]Processing queries:   3%|▎         | 3/100 [01:36<43:05, 26.66s/it]  Processing queries:   4%|▍         | 4/100 [01:46<32:07, 20.08s/it]Processing queries:   5%|▌         | 5/100 [01:57<26:31, 16.75s/it]Processing queries:   6%|▌         | 6/100 [02:08<22:52, 14.61s/it]Processing queries:   7%|▋         | 7/100 [02:18<20:26, 13.19s/it]Processing queries:   8%|▊         | 8/100 [02:28<18:41, 12.19s/it]Processing queries:   9%|▉         | 9/100 [02:38<17:30, 11.55s/it]Processing queries:  10%|█         | 10/100 [02:48<16:46, 11.19s/it]Processing queries:  11%|█         | 11/100 [03:00<16:57, 11.43s/it]Processing queries:  12%|█▏        | 12/100 [03:13<17:14, 11.75s/it]Processing queries:  13%|█▎        | 13/100 [03:24<16:38, 11.48s/it]Processing queries:  14%|█▍        | 14/100 [03:34<15:45, 11.00s/it]Processing queries:  15%|█▌        | 15/100 [03:44<15:26, 10.90s/it]Processing queries:  16%|█▌        | 16/100 [03:57<16:02, 11.46s/it]Processing queries:  17%|█▋        | 17/100 [04:07<15:12, 10.99s/it]Processing queries:  18%|█▊        | 18/100 [04:16<14:19, 10.48s/it]Processing queries:  19%|█▉        | 19/100 [04:27<14:11, 10.51s/it]
+  Skipped 2 known structural latents: [114, 512]
+
   WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 423
     - Rank #3: Latent 143
@@ -48,13 +50,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 0: recall=0.60, top latent: Russian employment context...
+  Query 0: recall=0.60, top latent: global warming and environmental impacts...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 3 known structural latents: [512, 114, 1895]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 259
     - Rank #4: Latent 423
     - Rank #6: Latent 413
+    - Rank #11: Latent 130
+    - Rank #12: Latent 911
 
 
 
@@ -68,10 +74,13 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
   Query 1: recall=0.20, top latent: plants and photosynthesis...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 102, 3870]
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 228
     - Rank #4: Latent 423
+    - Rank #12: Latent 500
 
 
 
@@ -84,6 +93,8 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
   Query 2: recall=0.20, top latent: Roman Britannia...
+
+  Skipped 3 known structural latents: [512, 57, 114]
 
   WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 130
@@ -102,7 +113,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 3: recall=0.20, top latent: start of turn questions...
+  Query 3: recall=0.40, top latent: immune system and related medical terms...
+
+  Skipped 3 known structural latents: [512, 114, 57]
 
   WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -121,12 +134,15 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 4: recall=0.20, top latent: gravitational waves and spacetime...
+  Query 4: recall=0.60, top latent: gravitational waves and spacetime...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 102, 1895]
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 259
     - Rank #4: Latent 423
+    - Rank #10: Latent 911
 
 
 
@@ -138,12 +154,15 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 5: recall=0.20, top latent: genetic algorithms and selection...
+  Query 5: recall=0.40, top latent: genetic algorithms and selection...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 3 known structural latents: [57, 114, 512]
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 423
     - Rank #2: Latent 143
     - Rank #5: Latent 259
+    - Rank #9: Latent 888
 
 
 
@@ -155,13 +174,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 6: recall=0.60, top latent: weather data and meteorological conditions...
+  Query 6: recall=0.80, top latent: weather data and meteorological conditions...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 3 known structural latents: [512, 114, 57]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 423
     - Rank #2: Latent 259
     - Rank #3: Latent 130
     - Rank #5: Latent 143
+    - Rank #12: Latent 911
 
 
 
@@ -173,13 +195,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 7: recall=0.20, top latent: start of turn questions...
+  Query 7: recall=0.00, top latent: computer processing hardware...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 114, 3870]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #4: Latent 259
     - Rank #5: Latent 228
     - Rank #7: Latent 423
+    - Rank #11: Latent 130
 
 
 
@@ -191,13 +216,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 8: recall=0.40, top latent: World War I/II Germany causes...
+  Query 8: recall=0.60, top latent: World War I/II Germany causes...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 3870, 114]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 130
     - Rank #4: Latent 423
     - Rank #8: Latent 259
+    - Rank #12: Latent 228
+    - Rank #13: Latent 343
 
 
 
@@ -209,12 +238,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 9: recall=0.40, top latent: vaccinations...
+  Query 9: recall=0.60, top latent: vaccinations...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 6 known structural latents: [512, 102, 57, 3870, 1895, 114]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 423
     - Rank #7: Latent 259
+    - Rank #10: Latent 326
+    - Rank #14: Latent 3471
 
 
 
@@ -226,7 +259,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 10: recall=0.40, top latent: start of turn questions...
+  Query 10: recall=0.40, top latent: language and dialects...
+
+  Skipped 4 known structural latents: [114, 1895, 57, 512]
 
   WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -243,12 +278,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 11: recall=0.40, top latent: chocolate ice cream...
+  Query 11: recall=0.20, top latent: chocolate ice cream...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 3 known structural latents: [512, 102, 57]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #2: Latent 143
     - Rank #3: Latent 423
     - Rank #7: Latent 259
+    - Rank #9: Latent 4052
+    - Rank #12: Latent 238
 
 
 
@@ -260,12 +299,15 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 12: recall=0.40, top latent: start of turn questions...
+  Query 12: recall=0.20, top latent: physical fitness and exercise...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [512, 102, 57, 3870, 1895]
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
     - Rank #6: Latent 259
+    - Rank #11: Latent 703
 
 
 
@@ -277,12 +319,15 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 13: recall=0.40, top latent: public speaking and presentations...
+  Query 13: recall=0.80, top latent: public speaking and presentations...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 6 known structural latents: [512, 57, 102, 114, 1895, 3870]
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 259
     - Rank #6: Latent 423
+    - Rank #11: Latent 413
 
 
 
@@ -294,11 +339,14 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 14: recall=0.20, top latent: workouts, fitness, muscle, strength...
+  Query 14: recall=0.40, top latent: workouts, fitness, muscle, strength...
 
-  WARNING: Skipped 2 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [512, 102, 57, 1895, 114]
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #6: Latent 423
+    - Rank #8: Latent 259
 
 
 
@@ -310,7 +358,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 15: recall=0.40, top latent: plant watering and care...
+  Query 15: recall=0.00, top latent: plant watering and care...
+
+  Skipped 4 known structural latents: [512, 57, 102, 3870]
 
   WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -327,12 +377,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 16: recall=0.20, top latent: stress reduction and management...
+  Query 16: recall=0.60, top latent: stress reduction and management...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 102, 3870]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 423
     - Rank #5: Latent 259
+    - Rank #9: Latent 238
+    - Rank #13: Latent 397
 
 
 
@@ -344,7 +398,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 17: recall=0.20, top latent: start of turn questions...
+  Query 17: recall=0.20, top latent: planning and organizing items...
+
+  Skipped 5 known structural latents: [512, 57, 102, 114, 1895]
 
   WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -361,12 +417,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 18: recall=0.40, top latent: start of turn questions...
+  Query 18: recall=0.60, top latent: job applications and interviews...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 3 known structural latents: [512, 102, 57]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
     - Rank #6: Latent 259
+    - Rank #10: Latent 3029
+    - Rank #11: Latent 217
+    - Rank #12: Latent 703
 
 
 
@@ -377,12 +438,15 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
+Processing queries:  20%|██        | 20/100 [04:37<14:02, 10.53s/it]Processing queries:  21%|██        | 21/100 [04:48<13:45, 10.44s/it]Processing queries:  22%|██▏       | 22/100 [04:57<13:16, 10.21s/it]Processing queries:  23%|██▎       | 23/100 [05:08<13:12, 10.29s/it]Processing queries:  24%|██▍       | 24/100 [05:18<12:55, 10.21s/it]Processing queries:  25%|██▌       | 25/100 [05:27<12:24,  9.92s/it]Processing queries:  26%|██▌       | 26/100 [05:33<10:57,  8.89s/it]Processing queries:  27%|██▋       | 27/100 [05:44<11:23,  9.36s/it]Processing queries:  28%|██▊       | 28/100 [05:54<11:25,  9.52s/it]Processing queries:  29%|██▉       | 29/100 [06:04<11:20,  9.59s/it]Processing queries:  30%|███       | 30/100 [06:13<11:16,  9.67s/it]Processing queries:  31%|███       | 31/100 [06:23<11:09,  9.70s/it]Processing queries:  32%|███▏      | 32/100 [06:33<11:10,  9.86s/it]Processing queries:  33%|███▎      | 33/100 [06:45<11:29, 10.28s/it]Processing queries:  34%|███▍      | 34/100 [06:56<11:31, 10.47s/it]Processing queries:  35%|███▌      | 35/100 [07:05<11:03, 10.21s/it]Processing queries:  36%|███▌      | 36/100 [07:16<11:06, 10.41s/it]Processing queries:  37%|███▋      | 37/100 [07:26<10:39, 10.15s/it]Processing queries:  38%|███▊      | 38/100 [07:37<10:43, 10.38s/it]Processing queries:  39%|███▉      | 39/100 [07:46<10:17, 10.12s/it]
+  Query 19: recall=0.40, top latent: email...
 
-  Query 19: recall=0.00, top latent: start of turn questions...
+  Skipped 4 known structural latents: [512, 57, 102, 11672]
 
-  WARNING: Skipped 2 latents without auto-interp descriptions:
+  WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #1: Latent 423
     - Rank #2: Latent 143
+    - Rank #8: Latent 447
 
 
 
@@ -394,7 +458,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 20: recall=0.00, top latent: start of turn questions...
+  Query 20: recall=0.00, top latent: AI and robots programmed...
+
+  Skipped 2 known structural latents: [512, 57]
 
   WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -411,12 +477,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 21: recall=0.20, top latent: start of turn questions...
+  Query 21: recall=0.20, top latent: weather conditions...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 2 known structural latents: [512, 57]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
     - Rank #5: Latent 259
+    - Rank #10: Latent 703
+    - Rank #11: Latent 397
 
 
 
@@ -428,30 +498,15 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 22: recall=0.20, top latent: start of turn questions...
+  Query 22: recall=0.40, top latent: alien or non-human species...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
-    - Rank #1: Latent 143
-    - Rank #2: Latent 423
-    - Rank #5: Latent 228
-
-
-
-
-
-WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
-
-
-
-
-
-  Query 23: recall=0.40, top latent: start of turn questions...
+  Skipped 5 known structural latents: [512, 57, 3870, 114, 11672]
 
   WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
-    - Rank #6: Latent 397
-    - Rank #7: Latent 259
+    - Rank #5: Latent 228
+    - Rank #10: Latent 397
 
 
 
@@ -463,13 +518,36 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 24: recall=0.20, top latent: start of turn questions...
+  Query 23: recall=0.40, top latent: pets and their affections...
+
+  Skipped 3 known structural latents: [512, 57, 11672]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #6: Latent 397
+    - Rank #7: Latent 259
+    - Rank #10: Latent 363
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 24: recall=0.40, top latent: mythology and legends...
+
+  Skipped 2 known structural latents: [512, 543]
 
   WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 423
     - Rank #2: Latent 143
     - Rank #5: Latent 259
-    - Rank #6: Latent 100Processing queries:  26%|██▌       | 26/100 [05:29<11:05,  9.00s/it]Processing queries:  27%|██▋       | 27/100 [05:40<11:36,  9.54s/it]Processing queries:  28%|██▊       | 28/100 [05:49<11:06,  9.26s/it]Processing queries:  29%|██▉       | 29/100 [05:59<11:22,  9.61s/it]Processing queries:  30%|███       | 30/100 [06:09<11:14,  9.63s/it]Processing queries:  31%|███       | 31/100 [06:20<11:29,  9.99s/it]Processing queries:  32%|███▏      | 32/100 [06:30<11:16,  9.95s/it]Processing queries:  33%|███▎      | 33/100 [06:39<11:01,  9.88s/it]Processing queries:  34%|███▍      | 34/100 [06:49<10:53,  9.90s/it]Processing queries:  35%|███▌      | 35/100 [06:59<10:38,  9.82s/it]Processing queries:  36%|███▌      | 36/100 [07:09<10:27,  9.81s/it]Processing queries:  37%|███▋      | 37/100 [07:18<10:11,  9.70s/it]Processing queries:  38%|███▊      | 38/100 [07:28<10:03,  9.74s/it]Processing queries:  39%|███▉      | 39/100 [07:37<09:44,  9.59s/it]Processing queries:  40%|████      | 40/100 [07:46<09:31,  9.53s/it]Processing queries:  41%|████      | 41/100 [07:56<09:30,  9.67s/it]Processing queries:  42%|████▏     | 42/100 [08:06<09:19,  9.64s/it]Processing queries:  43%|████▎     | 43/100 [08:15<09:05,  9.58s/it]Processing queries:  44%|████▍     | 44/100 [08:25<09:02,  9.68s/it]Processing queries:  45%|████▌     | 45/100 [08:35<08:46,  9.57s/it]Processing queries:  46%|████▌     | 46/100 [08:45<08:54,  9.89s/it]Processing queries:  47%|████▋     | 47/100 [08:55<08:40,  9.83s/it]Processing queries:  48%|████▊     | 48/100 [09:04<08:14,  9.52s/it]Processing queries:  49%|████▉     | 49/100 [09:14<08:09,  9.61s/it]Processing queries:  50%|█████     | 50/100 [09:24<08:07,  9.75s/it]
+    - Rank #6: Latent 100
 
 
 
@@ -481,13 +559,18 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 25: recall=0.40, top latent: start of turn questions...
+  Query 25: recall=0.20, top latent: months and autumn season...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 3 known structural latents: [512, 57, 11672]
+
+  WARNING: Skipped 7 latents without auto-interp descriptions:
     - Rank #1: Latent 423
     - Rank #3: Latent 143
     - Rank #4: Latent 363
     - Rank #6: Latent 228
+    - Rank #10: Latent 397
+    - Rank #11: Latent 259
+    - Rank #13: Latent 447
 
 
 
@@ -499,13 +582,18 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 26: recall=0.40, top latent: start of turn questions...
+  Query 26: recall=0.60, top latent: detective, deduction, investigation...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [114, 512, 57, 3870, 1895]
+
+  WARNING: Skipped 7 latents without auto-interp descriptions:
     - Rank #2: Latent 423
     - Rank #3: Latent 143
     - Rank #4: Latent 130
     - Rank #6: Latent 259
+    - Rank #12: Latent 228
+    - Rank #14: Latent 100
+    - Rank #16: Latent 439
 
 
 
@@ -517,12 +605,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 27: recall=0.20, top latent: Russian employment context...
+  Query 27: recall=0.40, top latent: astronauts, rockets, space exploration...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 3 known structural latents: [57, 512, 102]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 259
     - Rank #5: Latent 423
+    - Rank #9: Latent 397
+    - Rank #10: Latent 703
+    - Rank #12: Latent 326
 
 
 
@@ -534,14 +627,18 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 28: recall=0.20, top latent: superheroes and comics...
+  Query 28: recall=0.40, top latent: superheroes and comics...
 
-  WARNING: Skipped 5 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 11672, 102]
+
+  WARNING: Skipped 7 latents without auto-interp descriptions:
     - Rank #1: Latent 397
     - Rank #2: Latent 259
     - Rank #3: Latent 143
     - Rank #5: Latent 447
     - Rank #6: Latent 423
+    - Rank #11: Latent 228
+    - Rank #14: Latent 5608
 
 
 
@@ -553,13 +650,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 29: recall=0.20, top latent: start of turn questions...
+  Query 29: recall=0.60, top latent: concepts and conjunctions...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 102, 3870]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 423
     - Rank #5: Latent 238
     - Rank #7: Latent 228
+    - Rank #13: Latent 259
+    - Rank #14: Latent 454
 
 
 
@@ -573,10 +674,13 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
   Query 30: recall=0.40, top latent: remote work and flexibility...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 102, 57, 3870]
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #2: Latent 423
     - Rank #3: Latent 143
     - Rank #6: Latent 228
+    - Rank #12: Latent 201
 
 
 
@@ -588,7 +692,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 31: recall=0.40, top latent: start of turn questions...
+  Query 31: recall=0.40, top latent: digital world...
+
+  Skipped 3 known structural latents: [512, 57, 3870]
 
   WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -605,13 +711,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 32: recall=0.40, top latent: start of turn questions...
+  Query 32: recall=0.20, top latent: leadership and management roles...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 3870, 102]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #2: Latent 143
     - Rank #3: Latent 423
     - Rank #5: Latent 969
     - Rank #8: Latent 228
+    - Rank #12: Latent 139
 
 
 
@@ -623,28 +732,34 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 33: recall=0.40, top latent: start of turn questions...
+  Query 33: recall=0.60, top latent: education institutions and teachers...
 
-  WARNING: Skipped 2 latents without auto-interp descriptions:
-    - Rank #1: Latent 143
-    - Rank #2: Latent 423
-
-
-
-
-
-WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
-
-
-
-
-
-  Query 34: recall=0.40, top latent: start of turn questions...
+  Skipped 2 known structural latents: [512, 57]
 
   WARNING: Skipped 3 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
+    - Rank #2: Latent 423
+    - Rank #8: Latent 190
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 34: recall=0.60, top latent: close personal relationships...
+
+  Skipped 4 known structural latents: [512, 57, 102, 3870]
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 423
     - Rank #3: Latent 228
     - Rank #4: Latent 143
+    - Rank #11: Latent 259
 
 
 
@@ -656,7 +771,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 35: recall=0.20, top latent: start of turn questions...
+  Query 35: recall=0.40, top latent: curriculum and teaching...
+
+  Skipped 4 known structural latents: [512, 57, 3870, 102]
 
   WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -676,10 +793,13 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
   Query 36: recall=0.20, top latent: globalization and cultural influence...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [512, 57, 102, 1895, 3870]
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 423
     - Rank #7: Latent 228
+    - Rank #10: Latent 343
 
 
 
@@ -691,11 +811,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 37: recall=0.20, top latent: start of turn questions...
+  Query 37: recall=0.60, top latent: music and related concepts...
 
-  WARNING: Skipped 2 latents without auto-interp descriptions:
+  Skipped 2 known structural latents: [512, 57]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #2: Latent 423
     - Rank #4: Latent 143
+    - Rank #9: Latent 315
+    - Rank #10: Latent 343
+    - Rank #11: Latent 259
 
 
 
@@ -707,13 +832,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 38: recall=0.20, top latent: start of turn questions...
+  Query 38: recall=0.60, top latent: positive mindset and perseverance...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 6 known structural latents: [512, 114, 57, 543, 3870, 102]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
     - Rank #4: Latent 259
-    - Rank #7: Latent 130
+    - Rank #7: Latent 130Processing queries:  40%|████      | 40/100 [07:57<10:21, 10.36s/it]Processing queries:  41%|████      | 41/100 [08:06<09:54, 10.08s/it]Processing queries:  42%|████▏     | 42/100 [08:17<09:50, 10.18s/it]Processing queries:  43%|████▎     | 43/100 [08:27<09:36, 10.12s/it]Processing queries:  44%|████▍     | 44/100 [08:37<09:35, 10.28s/it]Processing queries:  45%|████▌     | 45/100 [08:48<09:22, 10.23s/it]Processing queries:  46%|████▌     | 46/100 [08:57<09:01, 10.02s/it]Processing queries:  47%|████▋     | 47/100 [09:08<09:11, 10.40s/it]Processing queries:  48%|████▊     | 48/100 [09:19<09:01, 10.41s/it]Processing queries:  49%|████▉     | 49/100 [09:29<08:46, 10.33s/it]Processing queries:  50%|█████     | 50/100 [09:39<08:38, 10.37s/it]Processing queries:  51%|█████     | 51/100 [09:49<08:12, 10.04s/it]Processing queries:  52%|█████▏    | 52/100 [09:59<07:58,  9.97s/it]Processing queries:  53%|█████▎    | 53/100 [10:09<07:58, 10.18s/it]Processing queries:  54%|█████▍    | 54/100 [10:20<08:02, 10.48s/it]Processing queries:  55%|█████▌    | 55/100 [10:31<07:56, 10.60s/it]Processing queries:  56%|█████▌    | 56/100 [10:46<08:40, 11.82s/it]Processing queries:  57%|█████▋    | 57/100 [10:56<07:59, 11.15s/it]
+    - Rank #10: Latent 3532
+    - Rank #15: Latent 397
 
 
 
@@ -725,13 +854,18 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 39: recall=0.00, top latent: start of turn questions...
+  Query 39: recall=0.40, top latent: good at skills...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 102, 3870]
+
+  WARNING: Skipped 7 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
     - Rank #4: Latent 259
     - Rank #7: Latent 911
+    - Rank #10: Latent 413
+    - Rank #11: Latent 228
+    - Rank #13: Latent 4969
 
 
 
@@ -745,11 +879,14 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
   Query 40: recall=0.20, top latent: machine learning...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 3 known structural latents: [512, 102, 1895]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
     - Rank #4: Latent 259
     - Rank #8: Latent 130
+    - Rank #10: Latent 228
 
 
 
@@ -761,14 +898,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 41: recall=0.40, top latent: start of turn questions...
+  Query 41: recall=0.60, top latent: scientific development...
 
-  WARNING: Skipped 5 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 102, 114]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 423
     - Rank #4: Latent 130
     - Rank #5: Latent 259
     - Rank #7: Latent 911
+    - Rank #11: Latent 413
 
 
 
@@ -780,7 +920,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 42: recall=0.00, top latent: start of turn questions...
+  Query 42: recall=0.40, top latent: car features and types...
+
+  Skipped 2 known structural latents: [114, 57]
 
   WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 130
@@ -799,13 +941,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 43: recall=0.20, top latent: DNA, RNA, genomic information...
+  Query 43: recall=0.40, top latent: DNA, RNA, genomic information...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [543, 512, 57, 1895, 114]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
     - Rank #3: Latent 259
     - Rank #7: Latent 911
+    - Rank #12: Latent 130
+    - Rank #13: Latent 413
 
 
 
@@ -817,7 +963,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 44: recall=0.00, top latent: Bitcoin and cryptocurrency...
+  Query 44: recall=0.40, top latent: Bitcoin and cryptocurrency...
+
+  Skipped 3 known structural latents: [512, 57, 1895]
 
   WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -835,12 +983,15 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 45: recall=0.40, top latent: start of turn questions...
+  Query 45: recall=0.40, top latent: cellular structures and microscopic particles...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 6 known structural latents: [512, 114, 102, 543, 1895, 57]
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
     - Rank #4: Latent 259
+    - Rank #14: Latent 646
 
 
 
@@ -853,6 +1004,8 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
   Query 46: recall=0.20, top latent: nuclear war and radioactive materials...
+
+  Skipped 5 known structural latents: [512, 114, 1895, 57, 3870]
 
   WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 423
@@ -870,7 +1023,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 47: recall=0.00, top latent: start of turn questions...
+  Query 47: recall=0.20, top latent: physical phenomena transmission / wave-like behavi...
+
+  Skipped 4 known structural latents: [512, 57, 1895, 114]
 
   WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -888,13 +1043,18 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 48: recall=0.20, top latent: start of turn questions...
+  Query 48: recall=0.40, top latent: computer network infrastructure...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 3 known structural latents: [512, 57, 114]
+
+  WARNING: Skipped 7 latents without auto-interp descriptions:
     - Rank #1: Latent 130
     - Rank #2: Latent 143
     - Rank #5: Latent 259
     - Rank #8: Latent 413
+    - Rank #11: Latent 423
+    - Rank #12: Latent 911
+    - Rank #14: Latent 2505
 
 
 
@@ -906,14 +1066,20 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 49: recall=0.40, top latent: atoms, particles, and quantum concepts...
+  Query 49: recall=0.60, top latent: atoms, particles, and quantum concepts...
 
-  WARNING: Skipped 5 latents without auto-interp descriptions:
-    - Rank #2: Latent 143Processing queries:  51%|█████     | 51/100 [09:33<07:52,  9.64s/it]Processing queries:  52%|█████▏    | 52/100 [09:43<07:50,  9.80s/it]Processing queries:  53%|█████▎    | 53/100 [09:54<07:54, 10.10s/it]Processing queries:  54%|█████▍    | 54/100 [10:04<07:42, 10.06s/it]Processing queries:  55%|█████▌    | 55/100 [10:13<07:20,  9.78s/it]Processing queries:  56%|█████▌    | 56/100 [10:22<07:03,  9.63s/it]Processing queries:  57%|█████▋    | 57/100 [10:32<06:59,  9.75s/it]Processing queries:  58%|█████▊    | 58/100 [10:42<06:44,  9.63s/it]Processing queries:  59%|█████▉    | 59/100 [10:53<06:48,  9.98s/it]Processing queries:  60%|██████    | 60/100 [11:03<06:39,  9.99s/it]Processing queries:  61%|██████    | 61/100 [11:12<06:22,  9.80s/it]Processing queries:  62%|██████▏   | 62/100 [11:22<06:17,  9.93s/it]Processing queries:  63%|██████▎   | 63/100 [11:32<06:04,  9.84s/it]Processing queries:  64%|██████▍   | 64/100 [11:41<05:48,  9.68s/it]Processing queries:  65%|██████▌   | 65/100 [11:51<05:42,  9.78s/it]Processing queries:  66%|██████▌   | 66/100 [12:01<05:33,  9.80s/it]Processing queries:  67%|██████▋   | 67/100 [12:11<05:20,  9.72s/it]Processing queries:  68%|██████▊   | 68/100 [12:20<05:05,  9.55s/it]Processing queries:  69%|██████▉   | 69/100 [12:29<04:52,  9.43s/it]Processing queries:  70%|███████   | 70/100 [12:39<04:49,  9.65s/it]Processing queries:  71%|███████   | 71/100 [12:50<04:49,  9.99s/it]Processing queries:  72%|███████▏  | 72/100 [13:00<04:42, 10.10s/it]Processing queries:  73%|███████▎  | 73/100 [13:10<04:33, 10.13s/it]Processing queries:  74%|███████▍  | 74/100 [13:20<04:20, 10.03s/it]
+  Skipped 3 known structural latents: [512, 57, 114]
+
+  WARNING: Skipped 9 latents without auto-interp descriptions:
+    - Rank #2: Latent 143
     - Rank #4: Latent 423
     - Rank #6: Latent 259
     - Rank #8: Latent 130
     - Rank #9: Latent 3583
+    - Rank #11: Latent 397
+    - Rank #13: Latent 500
+    - Rank #15: Latent 228
+    - Rank #16: Latent 4068
 
 
 
@@ -925,30 +1091,38 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 50: recall=0.40, top latent: start of turn questions...
+  Query 50: recall=0.60, top latent: holidays and dates...
 
-  WARNING: Skipped 2 latents without auto-interp descriptions:
-    - Rank #1: Latent 423
-    - Rank #3: Latent 143
-
-
-
-
-
-WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
-
-
-
-
-
-  Query 51: recall=0.40, top latent: start of turn questions...
+  Skipped 5 known structural latents: [512, 57, 102, 3870, 11672]
 
   WARNING: Skipped 5 latents without auto-interp descriptions:
+    - Rank #1: Latent 423
+    - Rank #3: Latent 143
+    - Rank #8: Latent 228
+    - Rank #9: Latent 291
+    - Rank #11: Latent 969
+
+
+
+
+
+WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=torch.bfloat16)
+
+
+
+
+
+  Query 51: recall=0.80, top latent: internet and online platforms...
+
+  Skipped 3 known structural latents: [114, 512, 57]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 130
     - Rank #6: Latent 259
     - Rank #8: Latent 228
     - Rank #9: Latent 423
+    - Rank #12: Latent 500
 
 
 
@@ -960,7 +1134,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 52: recall=0.00, top latent: Russian employment context...
+  Query 52: recall=0.20, top latent: jazz, saxophone, riffs, improvisation...
+
+  Skipped 3 known structural latents: [512, 57, 3870]
 
   WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -980,15 +1156,19 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 53: recall=0.00, top latent: start of turn questions...
+  Query 53: recall=0.20, top latent: Korean, Roman, French, yoga, cricket...
 
-  WARNING: Skipped 6 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [57, 114, 512, 1895]
+
+  WARNING: Skipped 8 latents without auto-interp descriptions:
     - Rank #1: Latent 130
     - Rank #5: Latent 228
     - Rank #6: Latent 259
     - Rank #8: Latent 343
     - Rank #9: Latent 500
     - Rank #10: Latent 423
+    - Rank #13: Latent 439
+    - Rank #16: Latent 143
 
 
 
@@ -1000,7 +1180,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 54: recall=0.40, top latent: Greek and related historical terms...
+  Query 54: recall=0.80, top latent: Greek and related historical terms...
+
+  Skipped 3 known structural latents: [512, 57, 102]
 
   WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -1018,13 +1200,18 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 55: recall=0.20, top latent: start of turn questions...
+  Query 55: recall=0.80, top latent: clothing and attire...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 2 known structural latents: [512, 57]
+
+  WARNING: Skipped 7 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 423
     - Rank #5: Latent 397
     - Rank #7: Latent 500
+    - Rank #11: Latent 259
+    - Rank #12: Latent 139
+    - Rank #13: Latent 228
 
 
 
@@ -1036,7 +1223,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 56: recall=0.20, top latent: start of turn questions...
+  Query 56: ERROR - Expecting ',' delimiter: line 5 column 113 (char 437)
+
+  Skipped 2 known structural latents: [512, 57]
 
   WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #2: Latent 423
@@ -1055,14 +1244,20 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
+Processing queries:  58%|█████▊    | 58/100 [11:06<07:40, 10.96s/it]Processing queries:  59%|█████▉    | 59/100 [11:16<07:16, 10.64s/it]Processing queries:  60%|██████    | 60/100 [11:27<07:13, 10.83s/it]Processing queries:  61%|██████    | 61/100 [11:38<06:57, 10.71s/it]Processing queries:  62%|██████▏   | 62/100 [11:50<07:06, 11.23s/it]Processing queries:  63%|██████▎   | 63/100 [12:00<06:39, 10.80s/it]Processing queries:  64%|██████▍   | 64/100 [12:10<06:21, 10.61s/it]Processing queries:  65%|██████▌   | 65/100 [12:20<06:03, 10.37s/it]Processing queries:  66%|██████▌   | 66/100 [12:30<05:53, 10.39s/it]Processing queries:  67%|██████▋   | 67/100 [12:41<05:43, 10.39s/it]Processing queries:  68%|██████▊   | 68/100 [12:50<05:22, 10.06s/it]Processing queries:  69%|██████▉   | 69/100 [13:00<05:10, 10.02s/it]Processing queries:  70%|███████   | 70/100 [13:09<04:56,  9.90s/it]Processing queries:  71%|███████   | 71/100 [13:19<04:42,  9.75s/it]Processing queries:  72%|███████▏  | 72/100 [13:29<04:33,  9.77s/it]Processing queries:  73%|███████▎  | 73/100 [13:39<04:28,  9.95s/it]Processing queries:  74%|███████▍  | 74/100 [13:49<04:18,  9.92s/it]Processing queries:  75%|███████▌  | 75/100 [14:00<04:17, 10.30s/it]Processing queries:  76%|███████▌  | 76/100 [14:10<04:07, 10.31s/it]
+  Query 57: recall=0.60, top latent: Security, Military, Safety...
 
-  Query 57: recall=0.40, top latent: start of turn questions...
+  Skipped 4 known structural latents: [512, 57, 3870, 11672]
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  WARNING: Skipped 8 latents without auto-interp descriptions:
     - Rank #1: Latent 423
     - Rank #2: Latent 143
     - Rank #5: Latent 3583
     - Rank #6: Latent 228
+    - Rank #10: Latent 500
+    - Rank #11: Latent 397
+    - Rank #12: Latent 260
+    - Rank #14: Latent 259
 
 
 
@@ -1074,13 +1269,20 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 58: recall=0.40, top latent: start of turn questions...
+  Query 58: recall=0.60, top latent: ." followed by "...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 6 known structural latents: [512, 57, 102, 114, 3870, 1895]
+
+  WARNING: Skipped 9 latents without auto-interp descriptions:
     - Rank #2: Latent 423
     - Rank #3: Latent 143
     - Rank #7: Latent 201
     - Rank #8: Latent 500
+    - Rank #10: Latent 228
+    - Rank #15: Latent 343
+    - Rank #16: Latent 291
+    - Rank #17: Latent 1991
+    - Rank #19: Latent 439
 
 
 
@@ -1092,13 +1294,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 59: recall=0.20, top latent: start of turn questions...
+  Query 59: recall=0.20, top latent: urban and city concepts...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [512, 102, 57, 1895, 3870]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #2: Latent 423
     - Rank #3: Latent 143
     - Rank #6: Latent 238
     - Rank #8: Latent 454
+    - Rank #10: Latent 4052
+    - Rank #12: Latent 259
 
 
 
@@ -1110,12 +1316,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 60: recall=0.20, top latent: start of turn questions...
+  Query 60: recall=0.60, top latent: neuroscience...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [512, 102, 57, 11672, 3870]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 423
     - Rank #7: Latent 238
+    - Rank #9: Latent 201
+    - Rank #10: Latent 454
+    - Rank #12: Latent 259
 
 
 
@@ -1127,11 +1338,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 61: recall=0.20, top latent: start of turn questions...
+  Query 61: recall=0.40, top latent: planning and organizing items...
 
-  WARNING: Skipped 2 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [512, 57, 102, 3870, 114]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
+    - Rank #8: Latent 228
+    - Rank #9: Latent 259
+    - Rank #11: Latent 397
 
 
 
@@ -1143,12 +1359,15 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 62: recall=0.40, top latent: start of turn questions...
+  Query 62: recall=0.40, top latent: low self-esteem and insecurity...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [512, 57, 114, 3870, 543]
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
     - Rank #4: Latent 259
+    - Rank #9: Latent 228
 
 
 
@@ -1160,7 +1379,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 63: recall=0.20, top latent: start of turn questions...
+  Query 63: recall=0.00, top latent: errors and feedback...
+
+  Skipped 6 known structural latents: [512, 102, 57, 114, 3870, 1895]
 
   WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -1177,14 +1398,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 64: recall=0.20, top latent: start of turn questions...
+  Query 64: recall=0.40, top latent: making decisions...
 
-  WARNING: Skipped 5 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 114, 102]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 259
     - Rank #4: Latent 130
     - Rank #7: Latent 413
     - Rank #9: Latent 3471
+    - Rank #14: Latent 423
 
 
 
@@ -1196,13 +1420,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 65: recall=0.40, top latent: memorization, flashcards, spaced repetition...
+  Query 65: recall=0.20, top latent: memorization, flashcards, spaced repetition...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [512, 57, 114, 1895, 3870]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 259
     - Rank #4: Latent 423
     - Rank #5: Latent 130
+    - Rank #14: Latent 413
 
 
 
@@ -1214,7 +1441,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 66: recall=0.20, top latent: start of turn questions...
+  Query 66: recall=0.60, top latent: kinds of entities...
+
+  Skipped 5 known structural latents: [512, 114, 57, 543, 3870]
 
   WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -1233,7 +1462,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 67: recall=0.20, top latent: positive mindset and perseverance...
+  Query 67: recall=0.40, top latent: positive mindset and perseverance...
+
+  Skipped 4 known structural latents: [512, 102, 57, 1895]
 
   WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #1: Latent 423
@@ -1250,12 +1481,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 68: recall=0.20, top latent: start of turn questions...
+  Query 68: recall=0.20, top latent: listen to...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [512, 57, 102, 3870, 114]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
     - Rank #4: Latent 259
+    - Rank #9: Latent 228
+    - Rank #14: Latent 447
 
 
 
@@ -1267,13 +1502,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 69: recall=0.40, top latent: start of turn questions...
+  Query 69: recall=0.40, top latent: errors and feedback...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 3 known structural latents: [512, 57, 543]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 259
     - Rank #3: Latent 423
     - Rank #7: Latent 397
+    - Rank #11: Latent 130
 
 
 
@@ -1285,7 +1523,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 70: recall=0.20, top latent: start of turn questions...
+  Query 70: recall=0.20, top latent: superheroes and comics...
+
+  Skipped 3 known structural latents: [512, 57, 3870]
 
   WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 423
@@ -1303,12 +1543,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 71: recall=0.00, top latent: start of turn questions...
+  Query 71: recall=0.20, top latent: strong swimming...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [512, 57, 114, 543, 3870]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 423
     - Rank #6: Latent 259
+    - Rank #10: Latent 130
+    - Rank #11: Latent 228
 
 
 
@@ -1320,7 +1564,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 72: recall=0.40, top latent: quantum physics concepts...
+  Query 72: recall=0.00, top latent: quantum physics concepts...
+
+  Skipped 2 known structural latents: [512, 57]
 
   WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 397
@@ -1342,12 +1588,15 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
   Query 73: recall=0.00, top latent: weird questions and facts...
 
-  WARNING: Skipped 5 latents without auto-interp descriptions:
-    - Rank #1: Latent 143Processing queries:  75%|███████▌  | 75/100 [13:30<04:05,  9.82s/it]Processing queries:  76%|███████▌  | 76/100 [13:39<03:54,  9.77s/it]Processing queries:  77%|███████▋  | 77/100 [13:50<03:54, 10.20s/it]Processing queries:  78%|███████▊  | 78/100 [14:00<03:40, 10.04s/it]Processing queries:  79%|███████▉  | 79/100 [14:09<03:25,  9.79s/it]Processing queries:  80%|████████  | 80/100 [14:19<03:12,  9.64s/it]Processing queries:  81%|████████  | 81/100 [14:29<03:08,  9.93s/it]Processing queries:  82%|████████▏ | 82/100 [14:39<02:57,  9.85s/it]Processing queries:  83%|████████▎ | 83/100 [14:48<02:46,  9.78s/it]Processing queries:  84%|████████▍ | 84/100 [14:58<02:37,  9.87s/it]Processing queries:  85%|████████▌ | 85/100 [15:08<02:28,  9.91s/it]Processing queries:  86%|████████▌ | 86/100 [15:18<02:18,  9.87s/it]Processing queries:  87%|████████▋ | 87/100 [15:30<02:13, 10.29s/it]Processing queries:  88%|████████▊ | 88/100 [15:39<02:02, 10.18s/it]Processing queries:  89%|████████▉ | 89/100 [15:54<02:05, 11.39s/it]Processing queries:  90%|█████████ | 90/100 [16:04<01:50, 11.05s/it]Processing queries:  91%|█████████ | 91/100 [16:13<01:34, 10.50s/it]Processing queries:  92%|█████████▏| 92/100 [16:23<01:22, 10.27s/it]Processing queries:  93%|█████████▎| 93/100 [16:32<01:09,  9.98s/it]Processing queries:  94%|█████████▍| 94/100 [16:41<00:58,  9.73s/it]Processing queries:  95%|█████████▌| 95/100 [16:51<00:48,  9.65s/it]Processing queries:  96%|█████████▌| 96/100 [17:00<00:37,  9.42s/it]Processing queries:  97%|█████████▋| 97/100 [17:10<00:28,  9.63s/it]Processing queries:  98%|█████████▊| 98/100 [17:19<00:19,  9.56s/it]
+  Skipped 2 known structural latents: [512, 57]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
+    - Rank #1: Latent 143
     - Rank #3: Latent 423
     - Rank #6: Latent 397
     - Rank #7: Latent 259
     - Rank #8: Latent 130
+    - Rank #12: Latent 228
 
 
 
@@ -1359,7 +1608,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 74: ERROR - Expecting ',' delimiter: line 7 column 137 (char 697)
+  Query 74: ERROR - Expecting ',' delimiter: line 5 column 117 (char 397)
+
+  Skipped 2 known structural latents: [512, 57]
 
   WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -1376,13 +1627,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 75: recall=0.20, top latent: start of turn questions...
+  Query 75: recall=0.40, top latent: lottery ticket chances...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 11672, 102]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 423
     - Rank #5: Latent 259
     - Rank #7: Latent 397
+    - Rank #11: Latent 447
 
 
 
@@ -1394,7 +1648,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 76: recall=0.40, top latent: start of turn questions...
+  Query 76: recall=0.40, top latent: vacation and trip planning...Processing queries:  77%|███████▋  | 77/100 [14:20<03:49,  9.99s/it]Processing queries:  78%|███████▊  | 78/100 [14:29<03:38,  9.92s/it]Processing queries:  79%|███████▉  | 79/100 [14:40<03:31, 10.05s/it]Processing queries:  80%|████████  | 80/100 [14:50<03:21, 10.08s/it]Processing queries:  81%|████████  | 81/100 [15:01<03:15, 10.30s/it]Processing queries:  82%|████████▏ | 82/100 [15:12<03:12, 10.71s/it]Processing queries:  83%|████████▎ | 83/100 [15:23<03:02, 10.71s/it]Processing queries:  84%|████████▍ | 84/100 [15:34<02:52, 10.76s/it]Processing queries:  85%|████████▌ | 85/100 [15:44<02:39, 10.66s/it]Processing queries:  86%|████████▌ | 86/100 [15:55<02:29, 10.65s/it]Processing queries:  87%|████████▋ | 87/100 [16:05<02:16, 10.48s/it]Processing queries:  88%|████████▊ | 88/100 [16:15<02:03, 10.29s/it]Processing queries:  89%|████████▉ | 89/100 [16:25<01:52, 10.27s/it]Processing queries:  90%|█████████ | 90/100 [16:35<01:40, 10.01s/it]Processing queries:  91%|█████████ | 91/100 [16:44<01:29,  9.96s/it]Processing queries:  92%|█████████▏| 92/100 [16:56<01:23, 10.47s/it]Processing queries:  93%|█████████▎| 93/100 [17:08<01:17, 11.03s/it]Processing queries:  94%|█████████▍| 94/100 [17:19<01:05, 10.93s/it]Processing queries:  95%|█████████▌| 95/100 [17:30<00:53, 10.80s/it]Processing queries:  96%|█████████▌| 96/100 [17:39<00:41, 10.42s/it]
+
+  Skipped 2 known structural latents: [512, 57]
 
   WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #2: Latent 423
@@ -1413,7 +1669,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 77: recall=0.00, top latent: start of turn questions...
+  Query 77: recall=0.60, top latent: proper nouns and specific entities...
+
+  Skipped 3 known structural latents: [512, 57, 11672]
 
   WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #2: Latent 143
@@ -1432,14 +1690,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 78: recall=0.20, top latent: start of turn questions...
+  Query 78: recall=0.40, top latent: proper nouns and specific entities...
 
-  WARNING: Skipped 5 latents without auto-interp descriptions:
+  Skipped 2 known structural latents: [512, 57]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #2: Latent 259
     - Rank #3: Latent 130
     - Rank #4: Latent 143
     - Rank #5: Latent 423
     - Rank #8: Latent 228
+    - Rank #11: Latent 397
 
 
 
@@ -1451,7 +1712,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 79: recall=0.40, top latent: start of turn questions...
+  Query 79: recall=0.60, top latent: unusual and strange...
+
+  Skipped 4 known structural latents: [57, 512, 1895, 114]
 
   WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -1469,13 +1732,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 80: recall=0.00, top latent: mathematical calculations and equations...
+  Query 80: recall=0.60, top latent: mathematical calculations and equations...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [512, 57, 1895, 102, 3870]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #2: Latent 143
     - Rank #3: Latent 423
     - Rank #5: Latent 259
     - Rank #6: Latent 130
+    - Rank #10: Latent 228
 
 
 
@@ -1487,7 +1753,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 81: recall=0.20, top latent: Fibonacci and ratio...
+  Query 81: recall=0.40, top latent: Fibonacci and ratio...
+
+  Skipped 1 known structural latents: [57]
 
   WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #2: Latent 143
@@ -1504,7 +1772,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 82: recall=0.40, top latent: exponential growth and amplification...
+  Query 82: recall=0.80, top latent: exponential growth and amplification...
+
+  Skipped 2 known structural latents: [57, 512]
 
   WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #2: Latent 143
@@ -1523,6 +1793,8 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
   Query 83: recall=0.40, top latent: probability expectation...
 
+  Skipped 3 known structural latents: [512, 57, 102]
+
   WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 423
@@ -1540,11 +1812,14 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 84: recall=0.20, top latent: correlation between variables...
+  Query 84: recall=0.40, top latent: correlation between variables...
 
-  WARNING: Skipped 2 latents without auto-interp descriptions:
+  Skipped 2 known structural latents: [114, 57]
+
+  WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #1: Latent 130
     - Rank #3: Latent 259
+    - Rank #8: Latent 143
 
 
 
@@ -1556,7 +1831,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 85: recall=0.20, top latent: area of geometric shapes...
+  Query 85: recall=0.40, top latent: area of geometric shapes...
+
+  Skipped 6 known structural latents: [512, 57, 543, 102, 114, 1895]
 
   WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -1574,13 +1851,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 86: recall=0.20, top latent: start of turn questions...
+  Query 86: recall=0.40, top latent: economics and market behavior...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 6 known structural latents: [512, 102, 114, 1895, 57, 3870]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
     - Rank #5: Latent 259
     - Rank #6: Latent 130
+    - Rank #13: Latent 5095
+    - Rank #16: Latent 343
 
 
 
@@ -1592,7 +1873,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 87: recall=0.20, top latent: start of turn questions...
+  Query 87: recall=0.40, top latent: infinite and limits...
+
+  Skipped 2 known structural latents: [114, 512]
 
   WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -1611,12 +1894,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 88: recall=0.20, top latent: prime number checking or generation...
+  Query 88: recall=0.40, top latent: prime number checking or generation...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [512, 102, 57, 1895, 3870]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #3: Latent 423
     - Rank #7: Latent 259
+    - Rank #9: Latent 130
+    - Rank #12: Latent 911
 
 
 
@@ -1628,13 +1915,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 89: recall=0.20, top latent: start of turn questions...
+  Query 89: recall=0.60, top latent: cryptography and hashing...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 3 known structural latents: [512, 57, 114]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 423
     - Rank #2: Latent 143
     - Rank #5: Latent 259
     - Rank #8: Latent 228
+    - Rank #10: Latent 1388
 
 
 
@@ -1646,7 +1936,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 90: recall=0.20, top latent: start of turn questions...
+  Query 90: recall=0.20, top latent: the most tempting decision...
+
+  Skipped 2 known structural latents: [512, 57]
 
   WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -1664,12 +1956,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 91: recall=0.20, top latent: start of turn questions...
+  Query 91: recall=0.40, top latent: neuroscience...
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 102, 3870]
+
+  WARNING: Skipped 6 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 423
     - Rank #5: Latent 259
+    - Rank #10: Latent 228
+    - Rank #11: Latent 397
+    - Rank #13: Latent 392
 
 
 
@@ -1681,13 +1978,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 92: recall=0.20, top latent: start of turn questions...
+  Query 92: recall=0.20, top latent: happiness and life satisfaction...
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  Skipped 4 known structural latents: [512, 57, 543, 114]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #2: Latent 259
     - Rank #3: Latent 423
     - Rank #4: Latent 130
+    - Rank #10: Latent 888
 
 
 
@@ -1699,7 +1999,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 93: recall=0.20, top latent: start of turn questions...
+  Query 93: recall=0.40, top latent: an irregular...
+
+  Skipped 2 known structural latents: [512, 57]
 
   WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #2: Latent 423
@@ -1716,11 +2018,15 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 94: recall=0.20, top latent: start of turn questions...
+  Query 94: recall=0.40, top latent: philosophical reasoning...
 
-  WARNING: Skipped 2 latents without auto-interp descriptions:
+  Skipped 5 known structural latents: [102, 512, 57, 1895, 3870]
+
+  WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
     - Rank #4: Latent 423
+    - Rank #10: Latent 807
+    - Rank #13: Latent 259
 
 
 
@@ -1732,7 +2038,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 95: recall=0.40, top latent: multilingual technical terms...
+  Query 95: recall=0.60, top latent: ethical considerations...
+
+  Skipped 5 known structural latents: [512, 57, 3870, 102, 114]
 
   WARNING: Skipped 4 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -1750,12 +2058,17 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 96: recall=0.60, top latent: start of turn questions...
+  Query 96: recall=0.60, top latent: creation, creator, humanity, life, humans...Processing queries:  97%|█████████▋| 97/100 [17:49<00:30, 10.33s/it]Processing queries:  98%|█████████▊| 98/100 [18:01<00:21, 10.81s/it]Processing queries:  99%|█████████▉| 99/100 [18:11<00:10, 10.41s/it]Processing queries: 100%|██████████| 100/100 [18:21<00:00, 10.39s/it]Processing queries: 100%|██████████| 100/100 [18:21<00:00, 11.02s/it]
 
-  WARNING: Skipped 3 latents without auto-interp descriptions:
+
+  Skipped 6 known structural latents: [512, 57, 102, 114, 3870, 543]
+
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 423
     - Rank #2: Latent 143
     - Rank #4: Latent 228
+    - Rank #12: Latent 447
+    - Rank #13: Latent 259
 
 
 
@@ -1767,7 +2080,9 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 97: recall=0.40, top latent: start of turn questions...
+  Query 97: recall=0.40, top latent: rights and freedoms...
+
+  Skipped 3 known structural latents: [512, 57, 3870]
 
   WARNING: Skipped 3 latents without auto-interp descriptions:
     - Rank #1: Latent 143
@@ -1784,14 +2099,16 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 98: recall=0.40, top latent: start of turn questions...Processing queries:  99%|█████████▉| 99/100 [17:28<00:09,  9.48s/it]Processing queries: 100%|██████████| 100/100 [17:38<00:00,  9.43s/it]Processing queries: 100%|██████████| 100/100 [17:38<00:00, 10.58s/it]
+  Query 98: recall=0.20, top latent: beauty, beautiful, and aesthetic qualities...
 
+  Skipped 6 known structural latents: [512, 102, 57, 11672, 1895, 3870]
 
-  WARNING: Skipped 4 latents without auto-interp descriptions:
+  WARNING: Skipped 5 latents without auto-interp descriptions:
     - Rank #1: Latent 423
     - Rank #4: Latent 143
     - Rank #7: Latent 228
     - Rank #8: Latent 201
+    - Rank #12: Latent 969
 
 
 
@@ -1803,7 +2120,7 @@ WARNING: Large norm detected in batch! tensor([[692.]], device='cuda:0', dtype=t
 
 
 
-  Query 99: recall=0.20, top latent: start of turn questions...
+  Query 99: recall=0.60, top latent: AI and robots programmed...
 
 ================================================================================
 Calculating Metrics
@@ -1816,32 +2133,32 @@ EXPERIMENT SUMMARY
 ================================================================================
 
 --- Overall Results ---
-Successful Queries: 99
-Failed Queries: 1
+Successful Queries: 98
+Failed Queries: 2
 
 --- Recall Statistics ---
-Mean Recall: 0.259 +/- 0.143
-Median Recall: 0.200
-Range: [0.000, 0.600]
+Mean Recall: 0.408 +/- 0.198
+Median Recall: 0.400
+Range: [0.000, 0.800]
 
 --- Recall Distribution ---
-  0.0: 12 queries
-  0.2: 49 queries
-  0.4: 35 queries
-  0.6: 3 queries
-  0.8: 0 queries
+  0.0: 6 queries
+  0.2: 22 queries
+  0.4: 38 queries
+  0.6: 26 queries
+  0.8: 6 queries
   1.0: 0 queries
 
 --- Top 10 Most Common Latents ---
-  1. Latent 512 (count=93): start of turn questions...
-  2. Latent 57 (count=88): 't / <start_of_turn>...
-  3. Latent 102 (count=35): multilingual technical terms...
-  4. Latent 114 (count=25): Russian employment context...
-  5. Latent 1895 (count=9): refrigerants...
-  6. Latent 3870 (count=7): lucid dreams...
-  7. Latent 11672 (count=6): company name...
-  8. Latent 543 (count=6): internet addresses...
-  9. Latent 537 (count=4): instructions and advice...
-  10. Latent 812 (count=3): weather conditions...
+  1. Latent 3770 (count=7): tips and advice...
+  2. Latent 537 (count=7): instructions and advice...
+  3. Latent 42 (count=7): Security, Military, Safety...
+  4. Latent 2371 (count=5): physical phenomena transmission / wave-like behavior...
+  5. Latent 2299 (count=5): Arrakis substring...
+  6. Latent 977 (count=5): life in different languages...
+  7. Latent 8621 (count=5): existence and reality...
+  8. Latent 87 (count=4): political future implications...
+  9. Latent 7082 (count=4): kinds of entities...
+  10. Latent 12798 (count=4): computer processing hardware...
 ================================================================================
 Plots saved to: /root/activation-oracles/experiments/sae_open_ended/figures

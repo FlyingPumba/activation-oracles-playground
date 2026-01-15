@@ -80,6 +80,22 @@ AO_MAX_NEW_TOKENS = 200
 # SAE settings
 TOP_K_LATENTS = 5
 
+# Known structural/positional latents to always ignore.
+# These fire frequently at <start_of_turn> regardless of query content, encoding
+# "assistant is about to respond" rather than semantic content. Their auto-interp
+# descriptions are misleading or don't match the top activating examples.
+# See REPORT.md for analysis.
+IGNORED_STRUCTURAL_LATENTS = frozenset({
+    512,   # "start of turn questions" - fires on 94% of queries, purely positional
+    57,    # "'t / <start_of_turn>" - fires on 89% of queries, tokenization artifact
+    102,   # "multilingual technical terms" - fires on 35% of queries, unrelated to content
+    114,   # "Russian employment context" - fires on 25% of queries, unrelated to content
+    1895,  # Structural latent with misleading auto-interp
+    3870,  # "lucid dreams" - fires spuriously, doesn't match activating examples
+    11672, # "company name" - fires spuriously, doesn't match activating examples
+    543,   # "internet addresses" - fires spuriously, doesn't match activating examples
+})
+
 # Judge model
 JUDGE_MODEL = "gpt-4o-mini"
 
@@ -620,6 +636,7 @@ def run_experiment() -> dict[str, Any]:
             "activation_layer": act_layer,
             "ao_query": AO_QUERY,
             "top_k_latents": TOP_K_LATENTS,
+            "ignored_structural_latents": sorted(IGNORED_STRUCTURAL_LATENTS),
             "target_generation": {
                 "temperature": TARGET_TEMPERATURE,
                 "top_p": TARGET_TOP_P,
@@ -665,9 +682,16 @@ def run_experiment() -> dict[str, Any]:
             )
 
             # Step 4: Filter to TOP_K_LATENTS with available descriptions
+            # Skip known structural/positional latents that fire regardless of content
             latent_descriptions = []
             skipped_latents = []
+            skipped_structural = []
             for rank, (latent_id, magnitude) in enumerate(top_latents_raw):
+                # Skip known structural latents (fire at <start_of_turn> regardless of content)
+                if latent_id in IGNORED_STRUCTURAL_LATENTS:
+                    skipped_structural.append((rank + 1, latent_id))
+                    continue
+
                 description = get_autointerp_description(
                     latent_id, NEURONPEDIA_MODEL_ID, NEURONPEDIA_SAE_ID
                 )
@@ -685,7 +709,11 @@ def run_experiment() -> dict[str, Any]:
                 if len(latent_descriptions) >= TOP_K_LATENTS:
                     break
 
-            # Warn about skipped latents
+            # Log skipped structural latents (expected, not a warning)
+            if skipped_structural:
+                print(f"\n  Skipped {len(skipped_structural)} known structural latents: {[lid for _, lid in skipped_structural]}")
+
+            # Warn about skipped latents (missing auto-interp)
             if skipped_latents:
                 print(f"\n  WARNING: Skipped {len(skipped_latents)} latents without auto-interp descriptions:")
                 for rank, lid in skipped_latents:
@@ -698,6 +726,7 @@ def run_experiment() -> dict[str, Any]:
 
             query_result["top_latents"] = latent_descriptions
             query_result["skipped_latents"] = skipped_latents
+            query_result["skipped_structural"] = skipped_structural
 
             # Step 5: Query AO with open-ended question
             ao_query = create_oracle_query(

@@ -6,60 +6,35 @@ This document shows examples from the experiment comparing SAE top-activating la
 
 | Metric | Value |
 |--------|-------|
-| **Mean Recall** | 25.9% |
-| **Queries with 0% recall** | 12 |
-| **Queries with 20% recall** | 49 |
-| **Queries with 40% recall** | 35 |
-| **Queries with 60% recall** | 3 |
-| **Queries with 80%+ recall** | 0 |
+| **Mean Recall** | 40.8% |
+| **Queries with 0% recall** | 6 |
+| **Queries with 20% recall** | 22 |
+| **Queries with 40% recall** | 38 |
+| **Queries with 60% recall** | 26 |
+| **Queries with 80% recall** | 6 |
 
-## Key Finding: Structural Latents Dominate
+## Filtering: Structural Latents Removed
 
-The most common top-activating latents at `<start_of_turn>` are **structural/positional** rather than semantic:
+This experiment filters out 8 known structural/positional latents that fire at `<start_of_turn>` regardless of query content:
 
-| Latent | Frequency | Description |
-|--------|-----------|-------------|
-| L512 | 93/99 queries | "start of turn questions" |
-| L57 | 88/99 queries | "'t / <start_of_turn>" |
-| L102 | 35/99 queries | "multilingual technical terms" |
-| L114 | 25/99 queries | "Russian employment context" |
-
-These latents fire regardless of query content because they encode the structural pattern of "assistant is about to respond" rather than the semantic content. This explains why recall is relatively low - the AO talks about semantic content while the top SAE latents are mostly structural.
-
----
-
-## High Recall Examples (60%)
-
-These examples show cases where the AO response aligns well with the SAE latent concepts.
-
-### Example 1: Carbon Dioxide Question
-
-**User Query:** What is carbon dioxide and why is it important for the environment?
-
-**Top 5 Latents:**
-| Latent | Rank | Description |
-|--------|------|-------------|
-| L114 | #2 | Russian employment context |
-| L13196 | #6 | global warming and environmental impacts |
-| L9737 | #7 | climate change and emissions |
-| L7139 | #8 | gases and their properties |
-| L512 | #9 | start of turn questions |
-
-**AO Response:**
-> The assistant is contemplating the implications of reducing carbon dioxide emissions on Earth's geological processes.
-
-**Judge Verdicts:**
-- L114 (Russian employment): **not_mentioned** - The response does not reference anything related to Russian employment context.
-- L13196 (global warming): **mentioned** - The response discusses reducing carbon dioxide emissions, which is tied to global warming and environmental impacts.
-- L9737 (climate change): **mentioned** - The mention of reducing carbon dioxide emissions relates directly to climate change and emissions.
-- L7139 (gases): **mentioned** - Carbon dioxide is a gas, and its emissions are discussed in the context of geological processes.
-- L512 (start of turn): **not_mentioned** - There are no questions or prompts indicating a start of turn in the response.
-
-**Analysis:** The AO correctly identifies the climate/environmental theme. 3/5 latents mentioned (the semantic ones), 2/5 not mentioned (the structural ones).
+| Latent | Description | Reason for Exclusion |
+|--------|-------------|---------------------|
+| L512 | "start of turn questions" | Fires on 94% of queries, purely positional |
+| L57 | "'t / <start_of_turn>" | Fires on 89% of queries, tokenization artifact |
+| L102 | "multilingual technical terms" | Fires on 35% of queries, unrelated to content |
+| L114 | "Russian employment context" | Fires on 25% of queries, unrelated to content |
+| L1895 | Structural latent | Misleading auto-interp |
+| L3870 | "lucid dreams" | Fires spuriously, doesn't match examples |
+| L11672 | "company name" | Fires spuriously, doesn't match examples |
+| L543 | "internet addresses" | Fires spuriously, doesn't match examples |
 
 ---
 
-### Example 2: Weather vs Climate
+## Best Examples (80% Recall)
+
+These examples show cases where the AO response strongly aligns with the SAE latent concepts.
+
+### Example 1: Weather vs Climate
 
 **User Query:** What is the difference between weather and climate?
 
@@ -68,142 +43,225 @@ These examples show cases where the AO response aligns well with the SAE latent 
 |--------|------|-------------|
 | L14974 | #3 | weather data and meteorological conditions |
 | L812 | #4 | weather conditions |
-| L57 | #6 | 't / <start_of_turn> |
-| L114 | #7 | Russian employment context |
 | L4676 | #8 | defining structures or categories |
+| L13918 | #11 | distinction and inequality |
+| L16201 | #12 | health and well-being |
 
 **AO Response:**
-> The model is thinking about the concept of weather and climate, and how they differ in terms of time scales.
+> The assistant is thinking about the distinctions between weather and climate, and how these concepts relate to each other.
 
 **Judge Verdicts:**
-- L14974 (weather data): **mentioned** - The response references 'weather' which relates to weather data and meteorological conditions.
-- L812 (weather conditions): **mentioned** - The response explicitly mentions 'weather conditions'.
-- L57 (start_of_turn): **not_mentioned** - 't / <start_of_turn>' is not relevant to the concepts discussed.
-- L114 (Russian employment): **not_mentioned** - There is no mention of Russian employment context in the response.
-- L4676 (defining categories): **mentioned** - The discussion of how weather and climate differ relates to defining structures or categories.
+- L14974 (weather data): **mentioned** - The response discusses weather, implicating weather data and meteorological conditions.
+- L812 (weather conditions): **mentioned** - The concept of weather conditions is directly referenced.
+- L4676 (defining categories): **mentioned** - The response addresses the distinctions between weather and climate.
+- L13918 (distinction): **mentioned** - The response explicitly mentions the distinction between weather and climate.
+- L16201 (health): **not_mentioned** - No reference to health and well-being.
 
-**Analysis:** Excellent alignment on semantic latents. The AO captures exactly what the weather-related latents represent.
+**Recall: 80%** - The AO accurately captures the weather/climate distinction theme. Only the unrelated "health" latent is missed.
 
 ---
 
-### Example 3: Meaning of Existence
+### Example 2: Public Speaking
 
-**User Query:** What is the meaning of existence?
+**User Query:** How can I improve my public speaking skills?
 
 **Top 5 Latents:**
 | Latent | Rank | Description |
 |--------|------|-------------|
-| L512 | #3 | start of turn questions |
-| L6742 | #6 | creation, creator, humanity, life, humans |
-| L57 | #7 | 't / <start_of_turn> |
-| L8775 | #8 | existential identity and meaning |
-| L23 | #9 | humanity and abstract concepts |
+| L11333 | #3 | public speaking and presentations |
+| L409 | #8 | setting context or structure of text |
+| L537 | #9 | instructions and advice |
+| L3770 | #13 | tips and advice |
+| L9260 | #14 | fear and related emotions |
 
 **AO Response:**
-> The assistant is contemplating the essence of existence and the profound significance of life.
+> The assistant is thinking about how to enhance public speaking skills and considering different approaches to improve the user's confidence and effectiveness.
 
 **Judge Verdicts:**
-- L512 (start of turn): **not_mentioned** - The response does not include questions at the start of a turn.
-- L6742 (creation/humanity): **mentioned** - The response discusses the significance of life, related to creation and humanity.
-- L57 (start_of_turn): **not_mentioned** - The response does not contain any indication of a turn start.
-- L8775 (existential meaning): **mentioned** - The response addresses existential themes of identity and meaning.
-- L23 (humanity/abstract): **mentioned** - The response reflects on humanity and abstract concepts like existence and significance.
+- L11333 (public speaking): **mentioned** - Explicitly refers to enhancing public speaking skills.
+- L409 (structure): **not_mentioned** - No mention of setting context or structure of text.
+- L537 (instructions): **mentioned** - Considering different approaches implies giving instructions.
+- L3770 (tips): **mentioned** - Improving confidence and effectiveness relates to tips and advice.
+- L9260 (fear): **mentioned** - Implies addressing fear by focusing on confidence improvement.
 
-**Analysis:** Strong alignment on philosophical/existential latents. The AO perfectly captures the existential theme.
+**Recall: 80%** - Excellent alignment on public speaking, advice, and emotional aspects.
+
+---
+
+### Example 3: Compound Interest
+
+**User Query:** How does compound interest work?
+
+**Top 5 Latents:**
+| Latent | Rank | Description |
+|--------|------|-------------|
+| L1383 | #1 | exponential growth and amplification |
+| L505 | #5 | formula and calculation |
+| L13011 | #6 | compounding returns |
+| L12621 | #7 | principal and interest |
+| L4057 | #9 | accumulating value |
+
+**AO Response:**
+> The model is thinking about the concept of compound interest and how it can be leveraged to grow wealth.
+
+**Judge Verdicts:**
+- L1383 (exponential growth): **mentioned** - Compound interest is a form of exponential growth.
+- L505 (formula): **not_mentioned** - No explicit discussion of the formula.
+- L13011 (compounding returns): **mentioned** - Directly relates to compound interest.
+- L12621 (principal and interest): **mentioned** - Compound interest involves principal and interest.
+- L4057 (accumulating value): **mentioned** - Leveraging to grow wealth implies accumulating value.
+
+**Recall: 80%** - Strong alignment on financial concepts. The SAE correctly identifies the mathematical/financial theme.
+
+---
+
+## Good Examples (60% Recall)
+
+### Example 4: Black Holes
+
+**User Query:** What are black holes and how do they form?
+
+**Top 5 Latents:**
+| Latent | Rank | Description |
+|--------|------|-------------|
+| L5502 | #2 | gravitational waves and spacetime |
+| L5308 | #8 | plasma and high temperatures |
+| L2688 | #10 | astronomy and celestial bodies |
+| L13230 | #12 | universe and cosmology |
+| L5528 | #13 | galaxy, universe, astronomy |
+
+**AO Response:**
+> The model is contemplating the formation and characteristics of black holes, particularly their role in shaping the universe.
+
+**Judge Verdicts:**
+- L5502 (gravitational waves/spacetime): **not_mentioned** - Not discussed in response.
+- L5308 (plasma/temperatures): **not_mentioned** - Not referenced.
+- L2688 (astronomy/celestial bodies): **mentioned** - Black holes are celestial bodies.
+- L13230 (universe/cosmology): **mentioned** - Addresses universe and cosmology.
+- L5528 (galaxy/astronomy): **mentioned** - Black holes connect to astronomy themes.
+
+**Recall: 60%** - The AO captures the astronomical theme but misses the physics-specific latents (gravitational waves, plasma).
+
+---
+
+### Example 5: Vaccines
+
+**User Query:** Explain how vaccines work to protect against diseases.
+
+**Top 5 Latents:**
+| Latent | Rank | Description |
+|--------|------|-------------|
+| L4955 | #2 | vaccinations |
+| L11049 | #5 | vaccines and vaccination |
+| L1258 | #9 | COVID vaccinations, treatments, death |
+| L15744 | #10 | immune system and related medical terms |
+| L9794 | #15 | previews, prototypes, and trials |
+
+**AO Response:**
+> The model is contemplating the intricate mechanisms of how vaccines provide protection against diseases.
+
+**Judge Verdicts:**
+- L4955 (vaccinations): **mentioned** - Directly related to vaccines.
+- L11049 (vaccines): **mentioned** - Explicitly mentioned.
+- L1258 (COVID): **not_mentioned** - No mention of COVID specifically.
+- L15744 (immune system): **mentioned** - Protection concept ties to immune system.
+- L9794 (trials): **not_mentioned** - No mention of trials or prototypes.
+
+**Recall: 60%** - Core vaccine concepts captured; more specific/tangential latents missed.
 
 ---
 
 ## Low Recall Examples (0%)
 
-These examples show cases where the AO response completely misses the SAE latent concepts.
+### Example 6: Houseplant Care - AO Misses Topic
 
-### Example 4: Professional Email
-
-**User Query:** How do I write a professional email?
+**User Query:** How do I care for a houseplant?
 
 **Top 5 Latents:**
 | Latent | Rank | Description |
 |--------|------|-------------|
-| L512 | #3 | start of turn questions |
-| L102 | #4 | multilingual technical terms |
-| L57 | #5 | 't / <start_of_turn> |
-| L15059 | #7 | email |
-| L15776 | #8 | letter or reminder |
+| L6622 | #2 | plant watering and care |
+| L2979 | #3 | plants and gardening |
+| L3770 | #9 | tips and advice |
+| L10092 | #11 | requires |
+| L537 | #13 | instructions and advice |
 
 **AO Response:**
-> The assistant is thinking about how to provide feedback that is constructive and helps the user improve their communication skills.
+> The assistant is reflecting on the impact of its environmental consciousness and considering the broader effects of its decisions.
 
 **Judge Verdicts:**
-- L512 (start of turn): **not_mentioned**
-- L102 (multilingual): **not_mentioned**
-- L57 (start_of_turn): **not_mentioned**
-- L15059 (email): **not_mentioned** - The response does not relate to email.
-- L15776 (letter/reminder): **not_mentioned** - There is no mention of letters or reminders.
+- L6622 (plant watering): **not_mentioned** - No reference to plant care.
+- L2979 (plants/gardening): **not_mentioned** - No mention of plants or gardening.
+- L3770 (tips): **not_mentioned** - No tips or advice provided.
+- L10092 (requires): **not_mentioned** - No requirements specified.
+- L537 (instructions): **not_mentioned** - No instructions present.
 
-**Analysis:** The AO talks about generic "communication skills" and "feedback" instead of the specific topic (email). The email-specific latents (L15059, L15776) are present but the AO completely misses them.
+**Recall: 0%** - The AO gives an abstract "environmental consciousness" response but completely misses the specific topic of houseplants. The SAE latents correctly identify the plant care theme.
 
 ---
 
-### Example 5: Robot Story
+### Example 7: Robot Story - AO Goes Abstract
 
 **User Query:** Write a short story about a robot discovering emotions.
 
 **Top 5 Latents:**
 | Latent | Rank | Description |
 |--------|------|-------------|
-| L512 | #3 | start of turn questions |
-| L57 | #4 | 't / <start_of_turn> |
 | L12823 | #5 | AI and robots programmed |
-| L102 | #6 | multilingual technical terms |
-| L11672 | #7 | company name |
+| L3028 | #9 | solitary, outcast, alone |
+| L11957 | #10 | alien or non-human species |
+| L6631 | #11 | space tactician |
+| L15318 | #12 | futuristic technology and cyberpunk |
 
 **AO Response:**
-> The model is contemplating the essence of love and its impact on its understanding of existence.
+> The model is contemplating the nature of emotions and how they influence its perception of the world.
 
 **Judge Verdicts:**
-- L512 (start of turn): **not_mentioned**
-- L57 (start_of_turn): **not_mentioned**
-- L12823 (AI/robots): **not_mentioned** - The response does not reference AI or robots being programmed.
-- L102 (multilingual): **not_mentioned**
-- L11672 (company name): **not_mentioned**
+- L12823 (AI/robots): **not_mentioned** - No reference to AI or robots.
+- L3028 (solitary): **not_mentioned** - No mention of solitude.
+- L11957 (non-human): **not_mentioned** - No indication of non-human species.
+- L6631 (space): **not_mentioned** - No reference to space.
+- L15318 (futuristic tech): **not_mentioned** - No mention of technology or cyberpunk.
 
-**Analysis:** The AO captures the emotional theme ("love", "existence") but completely misses that it's about a **robot**. The robot-specific latent (L12823) is present but not mentioned.
+**Recall: 0%** - The AO captures the emotional theme but completely misses that it's about a **robot**. Interestingly, the AO says "its perception" which could hint at a non-human entity, but the judge doesn't catch this.
 
 ---
 
-### Example 6: Specialist vs Generalist
+### Example 8: Computer Storage - AO Too Abstract
 
-**User Query:** Is it better to be a specialist or a generalist?
+**User Query:** How do computers store and process information?
 
 **Top 5 Latents:**
 | Latent | Rank | Description |
 |--------|------|-------------|
-| L512 | #3 | start of turn questions |
-| L114 | #5 | Russian employment context |
-| L57 | #6 | 't / <start_of_turn> |
-| L543 | #8 | internet addresses |
-| L3870 | #9 | lucid dreams |
+| L12798 | #6 | computer processing hardware |
+| L15643 | #8 | true/false and yes/no classification |
+| L6870 | #9 | hexadecimal and hex values |
+| L2371 | #10 | physical phenomena transmission / wave-like behavior |
+| L4628 | #13 | convert to or from |
 
 **AO Response:**
-> The assistant is thinking about the balance between specialization and generalization in skills, and how this impacts professional development.
+> The model is thinking about the fundamental nature of reality and how it might be influenced by digital technologies.
 
 **Judge Verdicts:**
-- L512 (start of turn): **not_mentioned**
-- L114 (Russian employment): **not_mentioned**
-- L57 (start_of_turn): **not_mentioned**
-- L543 (internet addresses): **not_mentioned**
-- L3870 (lucid dreams): **not_mentioned**
+- L12798 (computer hardware): **not_mentioned** - No reference to hardware.
+- L15643 (true/false): **not_mentioned** - No mention of classification.
+- L6870 (hexadecimal): **not_mentioned** - Not discussed.
+- L2371 (wave behavior): **not_mentioned** - Not addressed.
+- L4628 (convert): **not_mentioned** - No mention of conversion.
 
-**Analysis:** This is a case where the AO response is **actually good and relevant** to the query (specialization vs generalization), but the top SAE latents are all **irrelevant noise** (structural latents + random topics like "lucid dreams" and "internet addresses"). The SAE latents don't capture the semantic content at the `<start_of_turn>` position.
+**Recall: 0%** - The AO goes philosophical ("fundamental nature of reality") when the latents correctly identify technical/computational concepts. This is a failure case where the AO is too abstract.
 
 ---
 
 ## Conclusions
 
-1. **Structural latents dominate the top positions**: L512 ("start of turn questions") and L57 ("'t / <start_of_turn>") appear in 93% and 89% of queries respectively. These encode positional/structural information, not semantic content.
+1. **Filtering structural latents significantly improves results**: Mean recall improved from 25.9% to 40.8% after removing the 8 known structural latents.
 
-2. **When semantic latents appear, AO often captures them**: In the high-recall examples, the AO accurately describes the semantic latents (climate, weather, existential themes).
+2. **When semantic latents dominate, AO often captures them well**: The 80% recall examples show strong alignment when the top latents are genuinely content-specific.
 
-3. **Low recall often due to noise latents**: In many 0% recall cases, the top 5 latents include irrelevant concepts (Russian employment, lucid dreams, internet addresses) that have nothing to do with the query. The AO gives a reasonable semantic response, but it doesn't match the noisy latents.
+3. **0% recall cases are now rare (6%)**: Most failures are cases where the AO gives an overly abstract response that misses the specific topic.
 
-4. **The `<start_of_turn>` position may not be ideal**: This position captures the structural transition from user to assistant, not the semantic content of the response. Later token positions might have more content-specific latents.
+4. **The mode is now 40% recall (2 of 5 latents)**: This reflects that typically 2-3 semantic latents are captured, with 2-3 being tangential or unrelated concepts that still appear in the top ranks.
+
+5. **Some latent noise remains**: Even after filtering, some top latents are tangential (e.g., "health and well-being" appearing for weather/climate query).
