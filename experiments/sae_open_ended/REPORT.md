@@ -21,6 +21,24 @@ This experiment tests whether the Activation Oracle's open-ended description of 
 | Queries with 60%+ recall | 32 |
 | Queries with 0% recall | 6 |
 
+### Recall by Top-K Latents
+
+The table below shows how recall varies when considering only the top-1, top-2, etc. latents:
+
+| Metric | Top 1 | Top 2 | Top 3 | Top 4 | Top 5 |
+|--------|-------|-------|-------|-------|-------|
+| **Mean Recall** | 66.3% | 49.5% | 43.5% | 42.1% | 40.8% |
+| 100% Recall | 65 | 21 | 7 | 1 | 0 |
+| 60%+ Recall | 65 | 21 | 40 | 17 | 32 |
+| 0% Recall | 33 | 22 | 17 | 8 | 6 |
+
+**Key Observations:**
+- **Top-1 latent is mentioned 66% of the time** - The highest-activating semantic latent is usually captured by the AO
+- **Recall decreases with more latents** - Lower-ranked latents are increasingly tangential or noise
+- **Diminishing returns after top-3** - Mean recall stabilizes around 40-43% for top 3-5
+
+This suggests the AO primarily captures the dominant semantic concept (top-1), with partial coverage of secondary concepts.
+
 ---
 
 ## Experimental Setup
